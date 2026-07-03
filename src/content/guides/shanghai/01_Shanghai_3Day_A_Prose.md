@@ -103,3 +103,5 @@ Ticket is about ¥180, cheaper if bought online.
 **Weather**: Spring and autumn are the most comfortable. Summer is melt-into-a-puddle hot, winter is bone-chilling damp cold. If you can only come in summer, prepare to change clothes twice a day.
 
 **Accommodation**: Pick somewhere along Metro Lines 2 or 10. These two lines cover most of the attractions and have good interchange connections.
+
+If you want to wake up to the Bund every morning, check out the [Hyatt on the Bund (上海外滩茂悦大酒店)](https://www.trip.com/t/ge0boem5NV2) — it sits right at the northern end of the Bund where the Huangpu River meets Suzhou Creek, with floor-to-ceiling views of both the Bund and Lujiazui. Even if you don't stay there, their rooftop bar Vue Bar is worth a visit for sunset cocktails.
