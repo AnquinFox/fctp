@@ -14,7 +14,7 @@
 | 线上地址 | wonderquest.xyz |
 | 域名注册 | Spaceship |
 | 部署平台 | Vercel |
-| 部署方式 | Git push master → Vercel 自动构建 |
+| 部署方式 | Git push master → Vercel 自动构建 ✅ (验证通过 2026-07-03) |
 | 仓库 | github.com/AnquinFox/fctp |
 | 技术栈 | Astro 5 (SSG 静态生成) |
 | 产品负责人 | Anquin (老板 / Boss) |
@@ -573,5 +573,3 @@ npm install
 
 _此文件由马督工维护。每两天自动审查一次 (定时任务 18:00 CST)。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后检查 wonderquest-roadmap.md 了解当前进度。_
-
-<!-- auto-deploy test: git-vercel hook verification 2026-07-03 23:39 CST -->
