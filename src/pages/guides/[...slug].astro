@@ -13,13 +13,24 @@ const guide = guides.find(g => g.data.pageSlug === slug);
 
 if (!guide) return Astro.redirect('/404');
 const { Content } = await guide.render();
-const { title, city, duration, tags } = guide.data;
+const { title, city, duration, tags, cover, published, updated } = guide.data;
+
+const description = `${title} — A detailed ${city} travel guide with honest tips, local insights, and practical advice for foreign visitors.`;
 ---
 
-<BaseLayout title={title} description={`${title} — A WonderQuest travel guide for ${city}.`}>
+<BaseLayout
+  title={title}
+  description={description}
+  image={cover}
+  ogType="article"
+  published={published?.toISOString()}
+  updated={updated?.toISOString()}
+>
   <article style="max-width:800px;margin:0 auto;padding:2rem 1.5rem 4rem">
     <header style="margin-bottom:2.5rem">
-      <a href="/guides" style="font-size:0.9rem;color:#888">&larr; All Guides</a>
+      <nav aria-label="Breadcrumb">
+        <a href="/guides" style="font-size:0.9rem;color:#888">&larr; All Guides</a>
+      </nav>
       <h1 style="font-size:2.4rem;margin:0.75rem 0 0.5rem">{title}</h1>
       <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;color:#888;font-size:0.95rem">
         <span style="background:#e63946;color:#fff;padding:0.25rem 0.75rem;border-radius:12px;font-size:0.8rem">{city}</span>

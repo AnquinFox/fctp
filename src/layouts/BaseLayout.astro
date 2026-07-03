@@ -3,8 +3,45 @@ export interface Props {
   title: string;
   description?: string;
   image?: string;
+  ogType?: string;
+  published?: string;
+  updated?: string;
 }
-const { title, description, image } = Astro.props;
+
+const {
+  title,
+  description = `WonderQuest — Your ultimate guide to traveling in China.`,
+  image = '/images/general/wonderquest-og.jpg',
+  ogType = 'website',
+  published,
+  updated,
+} = Astro.props;
+
+const canonical = new URL(Astro.url.pathname, Astro.site);
+
+const jsonLd: Record<string, unknown> = {
+  '@context': 'https://schema.org',
+  '@graph': [
+    {
+      '@type': ogType === 'article' ? 'Article' : 'WebSite',
+      ...(ogType === 'article'
+        ? {
+            headline: title,
+            description,
+            image,
+            datePublished: published,
+            dateModified: updated || published,
+            author: { '@type': 'Organization', name: 'WonderQuest' },
+            publisher: { '@type': 'Organization', name: 'WonderQuest' },
+          }
+        : {
+            name: 'WonderQuest',
+            url: Astro.site,
+            description,
+          }),
+    },
+  ],
+};
 ---
 
 <!doctype html>
@@ -13,10 +50,26 @@ const { title, description, image } = Astro.props;
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} | WonderQuest</title>
-    <meta name="description" content={description || `WonderQuest — Your ultimate guide to traveling in China.`} />
-    {image && <meta property="og:image" content={image} />}
+    <meta name="description" content={description} />
+    <link rel="canonical" href={canonical.href} />
+
+    <!-- Open Graph -->
     <meta property="og:title" content={`${title} | WonderQuest`} />
-    <meta property="og:type" content="website" />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical.href} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:site_name" content="WonderQuest" />
+    {image && <meta property="og:image" content={new URL(image, Astro.site).href} />}
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={`${title} | WonderQuest`} />
+    <meta name="twitter:description" content={description} />
+    {image && <meta name="twitter:image" content={new URL(image, Astro.site).href} />}
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style is:global>
       *,*::before,*::after{box-sizing:border-box}
