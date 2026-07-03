@@ -19,13 +19,13 @@ const { title, description, image } = Astro.props;
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style is:global>
-      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      *,*::before,*::after{box-sizing:border-box}
       html{font-family:system-ui,-apple-system,sans-serif;line-height:1.6;color:#1a1a2e;background:#fafafa;scroll-behavior:smooth}
-      body{min-height:100vh}
+      body{margin:0;padding:0;min-height:100vh}
       a{color:#e63946;text-decoration:none}
       a:hover{text-decoration:underline}
       img{max-width:100%;height:auto;border-radius:8px}
-      h1,h2,h3{line-height:1.3}
+      h1,h2,h3,h4,h5,h6{line-height:1.3}
       .container{max-width:1200px;margin:0 auto;padding:0 1.5rem}
       header{background:#1a1a2e;color:#fff;padding:1rem 0}
       header .container{display:flex;justify-content:space-between;align-items:center}
@@ -33,6 +33,35 @@ const { title, description, image } = Astro.props;
       header .logo{font-size:1.5rem;font-weight:800}
       header nav{display:flex;gap:1.5rem}
       footer{background:#1a1a2e;color:rgba(255,255,255,0.7);padding:2rem 0;margin-top:4rem;text-align:center;font-size:0.9rem}
+
+      /* === Article Content Typography === */
+      .article-content{}
+      .article-content h1{font-size:2rem;margin:2.25rem 0 1rem;line-height:1.3}
+      .article-content h2{font-size:1.5rem;margin:2rem 0 0.75rem;padding-bottom:0.5rem;border-bottom:2px solid #f0f0f0;line-height:1.35}
+      .article-content h3{font-size:1.2rem;margin:1.5rem 0 0.5rem;line-height:1.4}
+      .article-content h4{font-size:1.05rem;margin:1.25rem 0 0.5rem}
+      .article-content p{margin:0 0 1.15rem;line-height:1.8}
+      .article-content ul,.article-content ol{margin:0 0 1.15rem;padding-left:1.75rem}
+      .article-content li{margin-bottom:0.35rem;line-height:1.7}
+      .article-content li:last-child{margin-bottom:0}
+      .article-content img{margin:1.5rem 0;display:block}
+      .article-content figure{margin:1.5rem 0}
+      .article-content figcaption{font-size:0.9rem;color:#888;margin-top:0.5rem;font-style:italic}
+      .article-content blockquote{margin:1.25rem 0;padding:0.85rem 1.25rem;border-left:4px solid #e63946;background:#fafafa;border-radius:0 8px 8px 0;color:#555}
+      .article-content blockquote p{margin-bottom:0.5rem}
+      .article-content blockquote p:last-child{margin-bottom:0}
+      .article-content strong{color:#1a1a2e}
+      .article-content em{font-style:italic}
+      .article-content hr{margin:2rem 0;border:none;border-top:1px solid #e8e8e8}
+      .article-content table{width:100%;margin:1.25rem 0;border-collapse:collapse;font-size:0.95rem}
+      .article-content th,.article-content td{padding:0.65rem 0.85rem;border:1px solid #e0e0e0;text-align:left}
+      .article-content th{background:#f5f5f5;font-weight:600;color:#333}
+      .article-content tr:nth-child(even) td{background:#fafafa}
+      .article-content code{background:#f4f4f4;color:#d63384;padding:0.15em 0.4em;border-radius:4px;font-size:0.9em;font-family:'Consolas','SF Mono','Menlo',monospace}
+      .article-content pre{background:#1a1a2e;color:#e0e0e0;padding:1rem 1.25rem;border-radius:8px;overflow-x:auto;margin:1.25rem 0;font-size:0.9rem;line-height:1.6}
+      .article-content pre code{background:none;color:inherit;padding:0;border-radius:0;font-size:inherit}
+      /* First element in article shouldn't have top margin */
+      .article-content > *:first-child{margin-top:0}
     </style>
   </head>
   <body>
