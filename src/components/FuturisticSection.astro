@@ -1,0 +1,505 @@
+---
+// FuturisticSection.astro — Sci-fi game UI / Cyberpunk China aesthetic
+const futuristicCities = [
+  {
+    name: 'Shanghai',
+    codename: 'EASTERN HUB',
+    population: '29M',
+    knownFor: 'The Bund Skyline, Maglev Train, French Concession',
+    status: 'ACTIVE',
+    coords: '31.2304°N 121.4737°E',
+    accent: '#00f0ff',
+  },
+  {
+    name: 'Shenzhen',
+    codename: 'SILICON DELTA',
+    population: '18M',
+    knownFor: 'Tech Giants, Huaqiangbei Market, Design District',
+    status: 'ACTIVE',
+    coords: '22.5431°N 114.0579°E',
+    accent: '#00ff88',
+  },
+  {
+    name: 'Chongqing',
+    codename: 'VERTICAL CITY',
+    population: '32M',
+    knownFor: 'Cyberpunk Nightscapes, Hotpot Capital, Yangtze River',
+    status: 'ACTIVE',
+    coords: '29.4316°N 106.9123°E',
+    accent: '#ff6b6b',
+  },
+  {
+    name: 'Guangzhou',
+    codename: 'TRADE NEXUS',
+    population: '19M',
+    knownFor: 'Canton Tower, Dim Sum, Canton Fair',
+    status: 'ACTIVE',
+    coords: '23.1291°N 113.2644°E',
+    accent: '#ffd700',
+  },
+];
+
+const stats = [
+  { label: 'High-Speed Rail', value: '45,000+ km', detail: 'LARGEST NETWORK ON EARTH' },
+  { label: '5G Coverage', value: '99.7%', detail: 'URBAN POPULATION COVERED' },
+  { label: 'Mobile Payment', value: '92%', detail: 'CASHLESS TRANSACTION RATE' },
+  { label: 'EV Adoption', value: '38%', detail: 'OF NEW CAR SALES ELECTRIC' },
+];
+---
+
+<section class="future-section">
+  <!-- Grid background -->
+  <div class="future-bg">
+    <div class="future-grid"></div>
+    <div class="future-glow future-glow-1"></div>
+    <div class="future-glow future-glow-2"></div>
+    <div class="future-scanlines"></div>
+  </div>
+
+  <div class="future-inner">
+    <div class="future-header">
+      <div class="future-header-line">
+        <span class="future-blip"></span>
+        <p class="future-eyebrow">SYS.CHINA_FUTURE // NODES ACTIVE: 4</p>
+      </div>
+      <h2 class="future-title">China of<br />Tomorrow</h2>
+      <p class="future-desc">
+        Where neon-lit skyscrapers pierce the clouds, maglev trains glide at 430 km/h,
+        and a cashless society runs on facial recognition. This isn't science fiction —
+        it's Tuesday in Shanghai.
+      </p>
+    </div>
+
+    <!-- Stats Panel -->
+    <div class="future-stats">
+      {stats.map(stat => (
+        <div class="future-stat">
+          <div class="future-stat-value">{stat.value}</div>
+          <div class="future-stat-label">{stat.label}</div>
+          <div class="future-stat-detail">{stat.detail}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- City Nodes -->
+    <div class="future-cities">
+      {futuristicCities.map(city => (
+        <div class="future-city-card" style={`--city-accent: ${city.accent}`}>
+          <div class="future-city-scanline"></div>
+          <div class="future-city-header">
+            <div class="future-city-status">
+              <span class="future-city-dot"></span>
+              {city.status}
+            </div>
+            <div class="future-city-coords">{city.coords}</div>
+          </div>
+          <h3 class="future-city-name">{city.name}</h3>
+          <div class="future-city-codename">{city.codename}</div>
+          <div class="future-city-data">
+            <div class="future-city-stat-row">
+              <span class="future-city-stat-label">POP</span>
+              <span class="future-city-stat-val">{city.population}</span>
+            </div>
+            <div class="future-city-stat-row">
+              <span class="future-city-stat-label">SIG</span>
+              <span class="future-city-stat-val">{city.knownFor}</span>
+            </div>
+          </div>
+          <div class="future-city-footer">
+            <span class="future-city-action">ACCESS NODE →</span>
+          </div>
+          <div class="future-city-glow" style={`background: radial-gradient(ellipse at center, ${city.accent}10 0%, transparent 70%)`}></div>
+        </div>
+      ))}
+    </div>
+
+    <div class="future-terminal">
+      <p class="future-terminal-text">
+        <span class="future-terminal-prompt">></span>
+        More city nodes coming online. Next: <span class="future-terminal-highlight">Hangzhou</span>, <span class="future-terminal-highlight">Chengdu</span>, <span class="future-terminal-highlight">Nanjing</span>...
+        <span class="future-terminal-cursor">█</span>
+      </p>
+    </div>
+
+    <div class="future-cta-row">
+      <a href="/guides/" class="future-cta-btn">ENTER NETWORK</a>
+    </div>
+  </div>
+</section>
+
+<style>
+  .future-section {
+    position: relative;
+    background: #06080d;
+    color: #c8d6e5;
+    overflow: hidden;
+    min-height: 100vh;
+  }
+
+  .future-bg {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+
+  .future-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+      linear-gradient(rgba(0, 240, 255, 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(0, 240, 255, 0.03) 1px, transparent 1px);
+    background-size: 60px 60px;
+    mask-image: radial-gradient(ellipse at 50% 0%, black 40%, transparent 70%);
+  }
+
+  .future-glow {
+    position: absolute;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    filter: blur(120px);
+    opacity: 0.12;
+  }
+  .future-glow-1 {
+    top: -200px;
+    left: 10%;
+    background: #00f0ff;
+  }
+  .future-glow-2 {
+    bottom: -200px;
+    right: 10%;
+    background: #00ff88;
+  }
+
+  .future-scanlines {
+    position: absolute;
+    inset: 0;
+    background: repeating-linear-gradient(
+      0deg,
+      transparent,
+      transparent 2px,
+      rgba(0, 0, 0, 0.04) 2px,
+      rgba(0, 0, 0, 0.04) 4px
+    );
+    opacity: 0.5;
+  }
+
+  .future-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 2rem 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .future-header {
+    margin-bottom: 64px;
+  }
+
+  .future-header-line {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .future-blip {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #00f0ff;
+    border-radius: 50%;
+    box-shadow: 0 0 8px #00f0ff;
+    animation: blip 2s ease-in-out infinite;
+  }
+
+  @keyframes blip {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .future-eyebrow {
+    font-family: "SF Mono", "Cascadia Code", "Consolas", monospace;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #00f0ff;
+    text-transform: uppercase;
+    margin: 0;
+  }
+
+  .future-title {
+    font-family: "Inter", "SF Pro Display", -apple-system, sans-serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 900;
+    line-height: 1.1;
+    color: #fff;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.02em;
+    text-shadow: 0 0 40px rgba(0, 240, 255, 0.15);
+  }
+
+  .future-desc {
+    font-size: 1.1rem;
+    color: #8892a4;
+    max-width: 560px;
+    line-height: 1.6;
+  }
+
+  /* Stats */
+  .future-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 4px;
+    overflow: hidden;
+    margin-bottom: 48px;
+  }
+
+  .future-stat {
+    padding: 1.5rem;
+    background: rgba(10, 12, 20, 0.6);
+    backdrop-filter: blur(10px);
+  }
+
+  .future-stat-value {
+    font-family: "SF Mono", "Consolas", monospace;
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: #00f0ff;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.02em;
+  }
+
+  .future-stat-label {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: #8892a4;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 0.35rem;
+  }
+
+  .future-stat-detail {
+    font-family: "SF Mono", "Consolas", monospace;
+    font-size: 0.6rem;
+    color: #555;
+    letter-spacing: 0.05em;
+  }
+
+  /* City Cards */
+  .future-cities {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 48px;
+  }
+
+  .future-city-card {
+    position: relative;
+    background: rgba(15, 18, 30, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 4px;
+    padding: 1.5rem;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+    transition: border-color 0.3s, transform 0.3s, box-shadow 0.3s;
+  }
+
+  .future-city-card:hover {
+    border-color: var(--city-accent);
+    transform: translateY(-4px);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4),
+                0 0 0 1px var(--city-accent);
+  }
+
+  .future-city-scanline {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: var(--city-accent);
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .future-city-card:hover .future-city-scanline {
+    opacity: 0.6;
+    animation: scanDown 2s linear infinite;
+  }
+
+  @keyframes scanDown {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(300px); }
+  }
+
+  .future-city-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+
+  .future-city-status {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-family: "SF Mono", "Consolas", monospace;
+    font-size: 0.65rem;
+    color: #00ff88;
+    letter-spacing: 0.08em;
+  }
+
+  .future-city-dot {
+    width: 6px;
+    height: 6px;
+    background: #00ff88;
+    border-radius: 50%;
+    box-shadow: 0 0 6px #00ff88;
+    animation: blip 2s ease-in-out infinite;
+  }
+
+  .future-city-coords {
+    font-family: "SF Mono", "Consolas", monospace;
+    font-size: 0.6rem;
+    color: #444;
+    letter-spacing: 0.05em;
+  }
+
+  .future-city-name {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 0.2rem;
+    letter-spacing: -0.01em;
+  }
+
+  .future-city-codename {
+    font-family: "SF Mono", "Consolas", monospace;
+    font-size: 0.65rem;
+    color: var(--city-accent);
+    letter-spacing: 0.15em;
+    margin-bottom: 1.25rem;
+  }
+
+  .future-city-data {
+    margin-bottom: 1.25rem;
+  }
+
+  .future-city-stat-row {
+    display: flex;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    font-size: 0.78rem;
+  }
+
+  .future-city-stat-label {
+    font-family: "SF Mono", "Consolas", monospace;
+    color: #555;
+    min-width: 32px;
+    font-size: 0.65rem;
+    letter-spacing: 0.08em;
+  }
+
+  .future-city-stat-val {
+    color: #8892a4;
+  }
+
+  .future-city-footer {
+    padding-top: 0.75rem;
+  }
+
+  .future-city-action {
+    font-family: "SF Mono", "Consolas", monospace;
+    font-size: 0.7rem;
+    color: var(--city-accent);
+    letter-spacing: 0.1em;
+  }
+
+  .future-city-glow {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+  .future-city-card:hover .future-city-glow {
+    opacity: 1;
+  }
+
+  /* Terminal */
+  .future-terminal {
+    background: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(0, 240, 255, 0.1);
+    border-radius: 4px;
+    padding: 1rem 1.25rem;
+    margin-bottom: 40px;
+  }
+
+  .future-terminal-text {
+    font-family: "SF Mono", "Consolas", "Courier New", monospace;
+    font-size: 0.82rem;
+    color: #666;
+    margin: 0;
+  }
+
+  .future-terminal-prompt {
+    color: #00f0ff;
+    margin-right: 0.5rem;
+  }
+
+  .future-terminal-highlight {
+    color: #8892a4;
+  }
+
+  .future-terminal-cursor {
+    color: #00f0ff;
+    animation: blip 1s ease-in-out infinite;
+  }
+
+  .future-cta-row {
+    text-align: center;
+  }
+
+  .future-cta-btn {
+    display: inline-block;
+    background: transparent;
+    color: #00f0ff;
+    border: 1.5px solid #00f0ff;
+    padding: 0.85rem 2.5rem;
+    font-family: "SF Mono", "Consolas", monospace;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-decoration: none;
+    border-radius: 2px;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  }
+
+  .future-cta-btn:hover {
+    background: #00f0ff;
+    color: #06080d;
+    box-shadow: 0 0 30px rgba(0, 240, 255, 0.3);
+  }
+
+  @media (max-width: 768px) {
+    .future-stats {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 640px) {
+    .future-inner {
+      padding: 60px 1.25rem 50px;
+    }
+    .future-cities {
+      grid-template-columns: 1fr;
+    }
+    .future-stats {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+</style>

@@ -6,6 +6,8 @@ export interface Props {
   ogType?: string;
   published?: string;
   updated?: string;
+  noHeader?: boolean;
+  noFooter?: boolean;
 }
 
 const {
@@ -15,6 +17,8 @@ const {
   ogType = 'website',
   published,
   updated,
+  noHeader = false,
+  noFooter = false,
 } = Astro.props;
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
@@ -121,22 +125,26 @@ const jsonLd: Record<string, unknown> = {
     </style>
   </head>
   <body>
-    <header>
-      <div class="container">
-        <a href="/" class="logo">🧭 WonderQuest</a>
-        <nav>
-          <a href="/">Home</a>
-          <a href="/guides">Guides</a>
-        </nav>
-      </div>
-    </header>
+    {!noHeader && (
+      <header>
+        <div class="container">
+          <a href="/" class="logo">🧭 WonderQuest</a>
+          <nav>
+            <a href="/">Home</a>
+            <a href="/guides">Guides</a>
+          </nav>
+        </div>
+      </header>
+    )}
     <main>
       <slot />
     </main>
-    <footer>
-      <div class="container">
-        <p>WonderQuest &copy; {new Date().getFullYear()} — Your guide to China</p>
-      </div>
-    </footer>
+    {!noFooter && (
+      <footer>
+        <div class="container">
+          <p>WonderQuest &copy; {new Date().getFullYear()} — Your guide to China</p>
+        </div>
+      </footer>
+    )}
   </body>
 </html>

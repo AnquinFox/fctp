@@ -1,44 +1,318 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import PrepSection from '../components/PrepSection.astro';
+import TraditionalSection from '../components/TraditionalSection.astro';
+import FuturisticSection from '../components/FuturisticSection.astro';
 ---
 
-<BaseLayout title="WonderQuest — Travel China Like a Local"
-  description="Discover China with insider guides written by locals and experienced travelers. Food, transport, hidden gems — everything you need for an unforgettable trip.">
-
-  <section style="text-align:center;padding:4rem 1.5rem 3rem">
-    <h1 style="font-size:2.8rem;margin-bottom:1rem">Travel China<br/>Like a Local</h1>
-    <p style="font-size:1.2rem;color:#555;max-width:600px;margin:0 auto 2rem">
-      Honest, detailed, no-BS travel guides for foreigners exploring China.
-      Written by people who actually live here.
+<BaseLayout
+  title="WonderQuest — Discover the Two Faces of China"
+  description="Practical China travel guides: ancient traditions meet futuristic cities. Everything you need to know before you land."
+  noHeader={true}
+  noFooter={true}
+>
+  <!-- ============================================ -->
+  <!-- HERO — Minimalist entry point                -->
+  <!-- ============================================ -->
+  <section class="hero">
+    <div class="hero-badge">
+      <span class="hero-badge-dot"></span>
+      GUIDES FOR FOREIGN TRAVELERS
+    </div>
+    <h1 class="hero-title">
+      China has<br /><em>two faces.</em>
+    </h1>
+    <p class="hero-desc">
+      One is five thousand years old. The other hasn't been built yet.<br />
+      We'll show you both — starting with what you need before you land.
     </p>
-    <a href="/guides" style="display:inline-block;background:#e63946;color:#fff;padding:0.85rem 2rem;border-radius:6px;font-size:1.1rem;font-weight:600">
-      Browse Guides →
-    </a>
-  </section>
-
-  <section class="container" style="padding-bottom:3rem">
-    <h2 style="text-align:center;margin-bottom:2rem">Popular Destinations</h2>
-    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem">
-      <a href="/guides/shanghai" style="display:block;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s">
-        <h3 style="font-size:1.4rem">🏙️ Shanghai</h3>
-        <p style="color:#666;margin-top:0.5rem">Futuristic skyline meets century-old laneways</p>
-      </a>
-      <a href="/guides/beijing" style="display:block;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s">
-        <h3 style="font-size:1.4rem">🏯 Beijing</h3>
-        <p style="color:#666;margin-top:0.5rem">Ancient capital, Great Wall, and imperial wonders</p>
-      </a>
-      <a href="/guides/chongqing" style="display:block;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s">
-        <h3 style="font-size:1.4rem">🌆 Chongqing</h3>
-        <p style="color:#666;margin-top:0.5rem">Cyberpunk city built on mountains and rivers</p>
-      </a>
-      <a href="/guides/xian" style="display:block;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s">
-        <h3 style="font-size:1.4rem">🗿 Xi'an</h3>
-        <p style="color:#666;margin-top:0.5rem">Terracotta Warriors and Silk Road history</p>
-      </a>
+    <div class="hero-scroll">
+      <span>Scroll to begin</span>
+      <div class="hero-scroll-line">
+        <div class="hero-scroll-dot"></div>
+      </div>
     </div>
   </section>
+
+  <!-- ============================================ -->
+  <!-- SECTION 1: Prep (Minimalist)                 -->
+  <!-- ============================================ -->
+  <div id="prep">
+    <PrepSection />
+  </div>
+
+  <!-- ============================================ -->
+  <!-- Transition: Minimalist → Futuristic          -->
+  <!-- ============================================ -->
+  <div class="transition future-transition">
+    <div class="transition-text">
+      <span class="transition-num">Ⅰ</span>
+      <p>Fast forward to tomorrow</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 2: Futuristic China                  -->
+  <!-- ============================================ -->
+  <div id="futuristic">
+    <FuturisticSection />
+  </div>
+
+  <!-- ============================================ -->
+  <!-- Transition: Futuristic → Traditional        -->
+  <!-- ============================================ -->
+  <div class="transition trad-transition-reverse">
+    <div class="transition-text">
+      <span class="transition-num">Ⅱ</span>
+      <p>Rewind five thousand years</p>
+    </div>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- SECTION 3: Traditional China                 -->
+  <!-- ============================================ -->
+  <div id="traditional">
+    <TraditionalSection />
+  </div>
+
+  <!-- ============================================ -->
+  <!-- Footer                                       -->
+  <!-- ============================================ -->
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <div class="site-footer-brand">
+        <p class="site-footer-logo">⚡ WONDERQUEST</p>
+        <p class="site-footer-tagline">The dual face of China, decoded for foreign travelers.</p>
+      </div>
+      <div class="site-footer-links">
+        <a href="/survival-kit/">Survival Kit</a>
+        <a href="/guides/">City Guides</a>
+        <a href="/toolkit/">Toolkit</a>
+        <a href="/about/">About</a>
+      </div>
+    </div>
+    <div class="site-footer-bottom">
+      <p>© 2026 WonderQuest. Made for explorers.</p>
+    </div>
+  </footer>
 </BaseLayout>
 
 <style>
-  a:hover { text-decoration: none !important; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important; }
+  /* ===== HERO ===== */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+    background: #fafafa;
+  }
+
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #888;
+    margin-bottom: 2rem;
+    padding: 0.5rem 1rem;
+    border: 1px solid #ddd;
+    border-radius: 50px;
+  }
+
+  .hero-badge-dot {
+    width: 6px;
+    height: 6px;
+    background: #00cc66;
+    border-radius: 50%;
+    animation: blip 2s ease-in-out infinite;
+  }
+
+  @keyframes blip {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+  }
+
+  .hero-title {
+    font-size: clamp(3rem, 8vw, 5.5rem);
+    font-weight: 900;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+    color: #111;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-title em {
+    font-style: normal;
+    background: linear-gradient(135deg, #c4a35a 0%, #8b5a2b 50%, #00f0ff 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .hero-desc {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 500px;
+    line-height: 1.6;
+    margin-bottom: 3rem;
+  }
+
+  .hero-scroll {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    color: #bbb;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+  }
+
+  .hero-scroll-line {
+    width: 1px;
+    height: 40px;
+    background: #ddd;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero-scroll-dot {
+    width: 3px;
+    height: 8px;
+    background: #999;
+    border-radius: 2px;
+    position: absolute;
+    top: 0;
+    left: -1px;
+    animation: scrollDown 2s ease-in-out infinite;
+  }
+
+  @keyframes scrollDown {
+    0% { top: -8px; opacity: 0; }
+    50% { opacity: 1; }
+    100% { top: 40px; opacity: 0; }
+  }
+
+  /* ===== TRANSITIONS ===== */
+  .transition {
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .future-transition {
+    background: linear-gradient(to bottom, #fafafa 0%, #06080d 100%);
+  }
+
+  .trad-transition-reverse {
+    background: linear-gradient(to bottom, #06080d 0%, #f5e6c8 100%);
+  }
+
+  .transition-text {
+    text-align: center;
+  }
+
+  .transition-num {
+    display: block;
+    font-size: 2rem;
+    font-weight: 200;
+    color: #999;
+    margin-bottom: 0.35rem;
+  }
+
+  .transition-text p {
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #888;
+    text-transform: uppercase;
+  }
+
+  .future-transition .transition-num,
+  .future-transition .transition-text p {
+    color: #444;
+  }
+
+  .trad-transition-reverse .transition-num,
+  .trad-transition-reverse .transition-text p {
+    color: #888;
+  }
+
+  /* ===== FOOTER ===== */
+  .site-footer {
+    background: #06080d;
+    color: #555;
+    padding: 3rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .site-footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 2rem;
+  }
+
+  .site-footer-logo {
+    font-weight: 800;
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    color: #8892a4;
+    margin-bottom: 0.5rem;
+  }
+
+  .site-footer-tagline {
+    font-size: 0.8rem;
+    color: #555;
+    max-width: 280px;
+  }
+
+  .site-footer-links {
+    display: flex;
+    gap: 1.5rem;
+  }
+
+  .site-footer-links a {
+    font-size: 0.8rem;
+    color: #666;
+    transition: color 0.2s;
+  }
+
+  .site-footer-links a:hover {
+    color: #00f0ff;
+  }
+
+  .site-footer-bottom {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .site-footer-bottom p {
+    font-size: 0.72rem;
+    color: #444;
+  }
+
+  @media (max-width: 640px) {
+    .hero {
+      padding: 1.5rem;
+      min-height: 90vh;
+    }
+    .hero-title {
+      font-size: clamp(2.2rem, 10vw, 3.5rem);
+    }
+    .site-footer-inner {
+      flex-direction: column;
+    }
+  }
 </style>

@@ -1,0 +1,336 @@
+---
+// TraditionalSection.astro — Parchment / Ancient China aesthetic
+const traditionalDestinations = [
+  {
+    name: 'Beijing',
+    tagline: 'The Imperial Capital',
+    spots: ['Forbidden City', 'Great Wall', 'Temple of Heaven', 'Hutongs'],
+    image: '🏯',
+  },
+  {
+    name: "Xi'an",
+    tagline: 'Silk Road Gateway',
+    spots: ['Terracotta Warriors', 'Ancient City Wall', 'Muslim Quarter', 'Big Wild Goose Pagoda'],
+    image: '🏛️',
+  },
+  {
+    name: 'Hangzhou',
+    tagline: 'Heaven on Earth',
+    spots: ['West Lake', 'Lingyin Temple', 'Longjing Tea Fields', 'Grand Canal'],
+    image: '🏞️',
+  },
+  {
+    name: 'Chengdu',
+    tagline: 'Land of Abundance',
+    spots: ['Giant Pandas', 'Jinli Ancient Street', 'Wuhou Shrine', 'Sichuan Opera'],
+    image: '🐼',
+  },
+  {
+    name: 'Guilin',
+    tagline: 'Karst Wonderland',
+    spots: ['Li River Cruise', 'Yangshuo Countryside', 'Reed Flute Cave', 'Longji Terraces'],
+    image: '⛰️',
+  },
+  {
+    name: 'Lhasa',
+    tagline: 'Roof of the World',
+    spots: ['Potala Palace', 'Jokhang Temple', 'Barkhor Street', 'Namtso Lake'],
+    image: '🛕',
+  },
+];
+---
+
+<section class="traditional-section">
+  <!-- Decorative top border -->
+  <div class="trad-border-top"></div>
+
+  <div class="trad-inner">
+    <div class="trad-header">
+      <div class="trad-seal">傳</div>
+      <p class="trad-eyebrow">FIVE THOUSAND YEARS OF CIVILIZATION</p>
+      <h2 class="trad-title">China of<br />Five Thousand Years</h2>
+      <p class="trad-desc">
+        Step into a land where emperors ruled from forbidden palaces, poets wrote under
+        willow trees, and the Silk Road carried silk, tea, and ideas across continents.
+        This China still lives — in stone, in ink, in the morning mist over ancient lakes.
+      </p>
+    </div>
+
+    <div class="trad-grid">
+      {traditionalDestinations.map(dest => (
+        <div class="trad-card">
+          <div class="trad-card-border">
+            <div class="trad-card-corner tl"></div>
+            <div class="trad-card-corner tr"></div>
+            <div class="trad-card-corner bl"></div>
+            <div class="trad-card-corner br"></div>
+          </div>
+          <div class="trad-card-content">
+            <div class="trad-card-icon">{dest.image}</div>
+            <h3 class="trad-card-name">{dest.name}</h3>
+            <p class="trad-card-tagline">{dest.tagline}</p>
+            <ul class="trad-card-spots">
+              {dest.spots.map(spot => (
+                <li>{spot}</li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <div class="trad-footer-note">
+      <span class="trad-divider">✦</span>
+      <p>Each destination includes full guides: where to stay, eat, and what to avoid.</p>
+      <a href="/guides/" class="trad-explore-link">Explore All Ancient Destinations →</a>
+    </div>
+  </div>
+
+  <div class="trad-border-bottom"></div>
+</section>
+
+<style>
+  .traditional-section {
+    position: relative;
+    background:
+      /* Parchment base */
+      linear-gradient(175deg,
+        #f5e6c8 0%,
+        #eed9b4 15%,
+        #f2dfbf 30%,
+        #e8d3a8 50%,
+        #f0dbb8 70%,
+        #ebd2a5 85%,
+        #f4e2c2 100%
+      ),
+      /* Subtle fiber texture */
+      repeating-linear-gradient(
+        2deg,
+        transparent,
+        transparent 2px,
+        rgba(139, 90, 43, 0.02) 2px,
+        rgba(139, 90, 43, 0.02) 4px
+      );
+    color: #3d2b1a;
+    overflow: hidden;
+  }
+
+  /* Aged paper edge effect */
+  .traditional-section::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(ellipse at 10% 20%, rgba(160, 100, 40, 0.12) 0%, transparent 60%),
+      radial-gradient(ellipse at 90% 80%, rgba(160, 100, 40, 0.10) 0%, transparent 60%),
+      radial-gradient(ellipse at 50% 50%, rgba(139, 69, 19, 0.04) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .trad-border-top,
+  .trad-border-bottom {
+    height: 6px;
+    background: repeating-linear-gradient(
+      90deg,
+      #8b5a2b 0px,
+      #8b5a2b 8px,
+      #c4a35a 8px,
+      #c4a35a 16px,
+      #a0764a 16px,
+      #a0764a 20px,
+      transparent 20px,
+      transparent 24px
+    );
+    opacity: 0.6;
+  }
+
+  .trad-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 100px 2rem 80px;
+    position: relative;
+    z-index: 1;
+  }
+
+  .trad-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .trad-seal {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 64px;
+    height: 64px;
+    background: #8b1a1a;
+    color: #f5e6c8;
+    font-size: 1.6rem;
+    font-weight: 900;
+    font-family: "Noto Serif SC", "SimSun", "STSong", serif;
+    border-radius: 4px;
+    margin-bottom: 1.5rem;
+    box-shadow: 2px 2px 0 rgba(139, 26, 26, 0.3);
+    transform: rotate(-2deg);
+  }
+
+  .trad-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.3em;
+    color: #8b5a2b;
+    margin-bottom: 1rem;
+  }
+
+  .trad-title {
+    font-family: "Noto Serif SC", "Georgia", "Times New Roman", serif;
+    font-size: clamp(2.4rem, 5vw, 3.6rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: #3d2b1a;
+    margin-bottom: 1.25rem;
+    letter-spacing: -0.01em;
+  }
+
+  .trad-desc {
+    font-family: "Georgia", "Noto Serif SC", serif;
+    font-size: 1.1rem;
+    color: #6b4d2f;
+    max-width: 580px;
+    margin: 0 auto;
+    line-height: 1.7;
+    font-style: italic;
+  }
+
+  .trad-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .trad-card {
+    position: relative;
+    background: linear-gradient(175deg,
+      rgba(245, 230, 200, 0.7) 0%,
+      rgba(235, 215, 175, 0.8) 100%
+    );
+    border: 1.5px solid #c4a35a;
+    border-radius: 2px;
+    padding: 2rem 1.75rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .trad-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 24px rgba(139, 90, 43, 0.15);
+  }
+
+  /* Corner decorations */
+  .trad-card-border {
+    position: absolute;
+    inset: -3px;
+    pointer-events: none;
+  }
+
+  .trad-card-corner {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    border-color: #8b5a2b;
+    border-style: solid;
+  }
+  .trad-card-corner.tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
+  .trad-card-corner.tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
+  .trad-card-corner.bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
+  .trad-card-corner.br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
+
+  .trad-card-content {
+    position: relative;
+  }
+
+  .trad-card-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .trad-card-name {
+    font-family: "Noto Serif SC", "Georgia", serif;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #3d2b1a;
+    margin-bottom: 0.25rem;
+  }
+
+  .trad-card-tagline {
+    font-family: "Georgia", serif;
+    font-size: 0.9rem;
+    color: #8b5a2b;
+    font-style: italic;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px dotted #c4a35a;
+  }
+
+  .trad-card-spots {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+
+  .trad-card-spots li {
+    font-size: 0.8rem;
+    color: #6b4d2f;
+    background: rgba(196, 163, 90, 0.2);
+    padding: 0.25rem 0.65rem;
+    border-radius: 3px;
+    font-family: "Georgia", serif;
+  }
+
+  .trad-footer-note {
+    text-align: center;
+    margin-top: 64px;
+  }
+
+  .trad-divider {
+    display: block;
+    color: #c4a35a;
+    font-size: 1.4rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .trad-footer-note p {
+    font-family: "Georgia", serif;
+    font-size: 1rem;
+    color: #6b4d2f;
+    margin-bottom: 1rem;
+  }
+
+  .trad-explore-link {
+    display: inline-block;
+    font-family: "Georgia", serif;
+    color: #8b1a1a;
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 1rem;
+    border-bottom: 1.5px solid #8b1a1a;
+    padding-bottom: 2px;
+    transition: color 0.2s, border-color 0.2s;
+  }
+
+  .trad-explore-link:hover {
+    color: #5c1111;
+    border-color: #5c1111;
+  }
+
+  @media (max-width: 640px) {
+    .trad-inner {
+      padding: 60px 1.25rem 50px;
+    }
+    .trad-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>

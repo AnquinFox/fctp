@@ -1,0 +1,233 @@
+---
+// PrepSection.astro — Minimalist "Before You Land" section
+const prepItems = [
+  {
+    num: '01',
+    icon: '💳',
+    title: 'Set Up Payments',
+    desc: 'Alipay + WeChat Pay. Link your foreign card before departure. Takes 10 minutes, saves hours of frustration.',
+    link: '/survival-kit/#payments',
+  },
+  {
+    num: '02',
+    icon: '📱',
+    title: 'Install Essential Apps',
+    desc: 'Amap for navigation, Didi for taxis, Trip.com for bookings. Google Maps doesn\'t work here.',
+    link: '/survival-kit/#apps',
+  },
+  {
+    num: '03',
+    icon: '🌐',
+    title: 'Sort Your Internet',
+    desc: 'eSIM is the easiest option. VPN if you need WhatsApp/Instagram. Don\'t wait until you land.',
+    link: '/survival-kit/#internet',
+  },
+  {
+    num: '04',
+    icon: '🗺️',
+    title: 'Download Offline Maps',
+    desc: 'Chinese map apps are great — but only when you have internet. Download city packs ahead.',
+    link: '/survival-kit/#navigation',
+  },
+  {
+    num: '05',
+    icon: '🎫',
+    title: 'Book Key Attractions',
+    desc: 'Forbidden City sells out 7 days ahead. Train tickets open 15 days out. Plan early.',
+    link: '/survival-kit/#bookings',
+  },
+  {
+    num: '06',
+    icon: '🚫',
+    title: 'Learn Common Scams',
+    desc: 'Tea ceremony invitations, fake taxis, art student exhibitions. 5 minutes of reading saves hundreds of dollars.',
+    link: '/survival-kit/#scams',
+  },
+];
+---
+
+<section class="prep-section">
+  <div class="prep-header">
+    <p class="prep-eyebrow">BEFORE YOU LAND</p>
+    <h2 class="prep-title">Six things. Thirty minutes.<br />The difference between a smooth trip and a rough one.</h2>
+    <p class="prep-subtitle">
+      Most China travel problems happen because you waited until arrival.
+      Handle these now. Thank yourself later.
+    </p>
+  </div>
+
+  <div class="prep-grid">
+    {prepItems.map(item => (
+      <a href={item.link} class="prep-card">
+        <span class="prep-num">{item.num}</span>
+        <div class="prep-card-body">
+          <h3 class="prep-card-title">
+            <span class="prep-card-icon">{item.icon}</span>
+            {item.title}
+          </h3>
+          <p class="prep-card-desc">{item.desc}</p>
+        </div>
+        <span class="prep-arrow">→</span>
+      </a>
+    ))}
+  </div>
+
+  <div class="prep-cta">
+    <a href="/survival-kit/" class="prep-cta-btn">📋 Full Survival Kit</a>
+    <span class="prep-cta-time">⏱️ 30 min read</span>
+  </div>
+</section>
+
+<style>
+  .prep-section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 120px 2rem 100px;
+  }
+
+  .prep-header {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+
+  .prep-eyebrow {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    color: #999;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+  }
+
+  .prep-title {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    color: #111;
+    margin-bottom: 1.25rem;
+  }
+
+  .prep-subtitle {
+    font-size: 1.1rem;
+    color: #666;
+    max-width: 520px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+
+  .prep-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 1px;
+    background: #e5e5e5;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid #e5e5e5;
+  }
+
+  .prep-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+    padding: 2rem 1.75rem;
+    background: #fff;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.2s;
+    position: relative;
+  }
+
+  .prep-card:hover {
+    background: #fafafa;
+  }
+
+  .prep-num {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #ccc;
+    letter-spacing: 0.05em;
+    min-width: 28px;
+    padding-top: 2px;
+  }
+
+  .prep-card-body {
+    flex: 1;
+  }
+
+  .prep-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .prep-card-icon {
+    font-size: 1.1rem;
+  }
+
+  .prep-card-desc {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.55;
+    margin: 0;
+  }
+
+  .prep-arrow {
+    color: #ccc;
+    font-size: 1.1rem;
+    transition: color 0.2s, transform 0.2s;
+    padding-top: 2px;
+  }
+
+  .prep-card:hover .prep-arrow {
+    color: #111;
+    transform: translateX(3px);
+  }
+
+  .prep-cta {
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+  }
+
+  .prep-cta-btn {
+    display: inline-block;
+    background: #111;
+    color: #fff;
+    padding: 0.85rem 2rem;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: background 0.2s, transform 0.2s;
+  }
+
+  .prep-cta-btn:hover {
+    background: #333;
+    transform: translateY(-1px);
+  }
+
+  .prep-cta-time {
+    font-size: 0.85rem;
+    color: #999;
+  }
+
+
+  @media (max-width: 640px) {
+    .prep-section {
+      padding: 80px 1.25rem 60px;
+    }
+    .prep-grid {
+      grid-template-columns: 1fr;
+    }
+    .prep-card {
+      padding: 1.5rem 1.25rem;
+    }
+  }
+</style>
