@@ -573,3 +573,5 @@ npm install
 
 _此文件由马督工维护。每两天自动审查一次 (定时任务 18:00 CST)。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后检查 wonderquest-roadmap.md 了解当前进度。_
+
+<!-- auto-deploy test: git-vercel hook verification 2026-07-03 23:39 CST -->
