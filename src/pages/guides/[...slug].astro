@@ -1,0 +1,41 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides');
+  return guides.map(g => ({ params: { slug: g.data.pageSlug } }));
+}
+
+const { slug } = Astro.params;
+const guides = await getCollection('guides');
+const guide = guides.find(g => g.data.pageSlug === slug);
+
+if (!guide) return Astro.redirect('/404');
+const { Content } = await guide.render();
+const { title, city, duration, tags } = guide.data;
+---
+
+<BaseLayout title={title} description={`${title} — A WonderQuest travel guide for ${city}.`}>
+  <article style="max-width:800px;margin:0 auto;padding:2rem 1.5rem 4rem">
+    <header style="margin-bottom:2.5rem">
+      <a href="/guides" style="font-size:0.9rem;color:#888">&larr; All Guides</a>
+      <h1 style="font-size:2.4rem;margin:0.75rem 0 0.5rem">{title}</h1>
+      <div style="display:flex;flex-wrap:wrap;gap:0.75rem;align-items:center;color:#888;font-size:0.95rem">
+        <span style="background:#e63946;color:#fff;padding:0.25rem 0.75rem;border-radius:12px;font-size:0.8rem">{city}</span>
+        {duration && <span>⏱ {duration}</span>}
+        {tags.map(t => <span style="background:#f0f0f0;color:#555;padding:0.2rem 0.6rem;border-radius:12px;font-size:0.8rem">{t}</span>)}
+      </div>
+    </header>
+
+    <div style="font-size:1.1rem;line-height:1.8">
+      <Content />
+    </div>
+
+    <footer style="margin-top:4rem;padding-top:2rem;border-top:1px solid #eee">
+      <p style="color:#999;font-size:0.9rem">
+        Want more guides like this? <a href="/guides">Browse all {city} guides &rarr;</a>
+      </p>
+    </footer>
+  </article>
+</BaseLayout>

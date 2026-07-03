@@ -1,0 +1,44 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="WonderQuest — Travel China Like a Local"
+  description="Discover China with insider guides written by locals and experienced travelers. Food, transport, hidden gems — everything you need for an unforgettable trip.">
+
+  <section style="text-align:center;padding:4rem 1.5rem 3rem">
+    <h1 style="font-size:2.8rem;margin-bottom:1rem">Travel China<br/>Like a Local</h1>
+    <p style="font-size:1.2rem;color:#555;max-width:600px;margin:0 auto 2rem">
+      Honest, detailed, no-BS travel guides for foreigners exploring China.
+      Written by people who actually live here.
+    </p>
+    <a href="/guides" style="display:inline-block;background:#e63946;color:#fff;padding:0.85rem 2rem;border-radius:6px;font-size:1.1rem;font-weight:600">
+      Browse Guides →
+    </a>
+  </section>
+
+  <section class="container" style="padding-bottom:3rem">
+    <h2 style="text-align:center;margin-bottom:2rem">Popular Destinations</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1.5rem">
+      <a href="/guides/shanghai" style="display:block;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s">
+        <h3 style="font-size:1.4rem">🏙️ Shanghai</h3>
+        <p style="color:#666;margin-top:0.5rem">Futuristic skyline meets century-old laneways</p>
+      </a>
+      <a href="/guides/beijing" style="display:block;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s">
+        <h3 style="font-size:1.4rem">🏯 Beijing</h3>
+        <p style="color:#666;margin-top:0.5rem">Ancient capital, Great Wall, and imperial wonders</p>
+      </a>
+      <a href="/guides/chongqing" style="display:block;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s">
+        <h3 style="font-size:1.4rem">🌆 Chongqing</h3>
+        <p style="color:#666;margin-top:0.5rem">Cyberpunk city built on mountains and rivers</p>
+      </a>
+      <a href="/guides/xian" style="display:block;padding:2rem;background:#fff;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.08);transition:transform 0.2s">
+        <h3 style="font-size:1.4rem">🗿 Xi'an</h3>
+        <p style="color:#666;margin-top:0.5rem">Terracotta Warriors and Silk Road history</p>
+      </a>
+    </div>
+  </section>
+</BaseLayout>
+
+<style>
+  a:hover { text-decoration: none !important; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.12) !important; }
+</style>

@@ -1,0 +1,47 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const guides = await getCollection('guides', ({ data }) => !data.draft);
+const cities = [...new Set(guides.map(g => g.data.city))].sort();
+---
+
+<BaseLayout title="Travel Guides — WonderQuest" description="Browse all our China travel guides by city.">
+  <section style="padding:3rem 1.5rem 2rem">
+    <div class="container">
+      <h1 style="font-size:2.2rem;margin-bottom:0.5rem">Travel Guides</h1>
+      <p style="color:#666;font-size:1.1rem">Honest advice from locals and experienced travelers.</p>
+    </div>
+  </section>
+
+  <section class="container" style="padding-bottom:3rem">
+    {
+      cities.map(city => {
+        const cityGuides = guides.filter(g => g.data.city === city);
+        return (
+          <div style="margin-bottom:2.5rem">
+            <h2 style="font-size:1.6rem;margin-bottom:1rem;text-transform:capitalize">{city}</h2>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem">
+              {cityGuides.map(g => (
+                <a href={`/guides/${g.data.pageSlug}`} style="display:block;padding:1.5rem;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:transform 0.2s">
+                  <h3 style="font-size:1.2rem;margin-bottom:0.35rem">{g.data.title}</h3>
+                  {g.data.duration && <span style="font-size:0.85rem;color:#999">⏱ {g.data.duration}</span>}
+                  {g.data.tags.length > 0 && (
+                    <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem">
+                      {g.data.tags.map(t => <span style="font-size:0.75rem;background:#f0f0f0;color:#555;padding:0.2rem 0.6rem;border-radius:12px">{t}</span>)}
+                    </div>
+                  )}
+                </a>
+              ))}
+            </div>
+          </div>
+        );
+      })
+    }
+    {guides.length === 0 && <p style="text-align:center;color:#999;padding:2rem">No guides yet. Check back soon!</p>}
+  </section>
+</BaseLayout>
+
+<style>
+  a:hover { text-decoration: none !important; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important; }
+</style>
