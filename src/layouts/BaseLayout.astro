@@ -70,6 +70,9 @@ const jsonLd: Record<string, unknown> = {
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
 
+    <!-- Plausible Analytics -->
+    <script defer data-domain="wonderquest.xyz" src="https://plausible.io/js/script.js"></script>
+
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <style is:global>
       *,*::before,*::after{box-sizing:border-box}
