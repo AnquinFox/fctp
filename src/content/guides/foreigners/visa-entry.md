@@ -5,6 +5,11 @@ tags:
   - visa
   - entry
   - passport
+title: "\U0001F1E8\U0001F1F3 Visa & Entry Guide for Foreigners Coming to China (2026)"
+pageSlug: foreigners/visa-entry
+city: foreigners
+country: china
+draft: false
 ---
 # 🇨🇳 Visa & Entry Guide for Foreigners Coming to China (2026)
 

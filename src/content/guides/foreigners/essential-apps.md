@@ -4,6 +4,11 @@ tags:
   - survival-kit
   - apps
   - essential
+title: "\U0001F4F1 Essential Apps Guide for Foreigners in China (2026)"
+pageSlug: foreigners/essential-apps
+city: foreigners
+country: china
+draft: false
 ---
 # 📱 Essential Apps Guide for Foreigners in China (2026)
 

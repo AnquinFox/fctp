@@ -5,6 +5,11 @@ tags:
   - culture
   - food
   - etiquette
+title: "\U0001F38E Culture & Daily Life Guide for Foreigners in China (2026)"
+pageSlug: foreigners/culture-tips
+city: foreigners
+country: china
+draft: false
 ---
 # 🎎 Culture & Daily Life Guide for Foreigners in China (2026)
 

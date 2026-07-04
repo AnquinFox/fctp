@@ -5,6 +5,11 @@ tags:
   - payment
   - alipay
   - wechat
+title: "\U0001F4B3 Payment Setup Guide for Foreigners in China (2026)"
+pageSlug: foreigners/payment-setup
+city: foreigners
+country: china
+draft: false
 ---
 # 💳 Payment Setup Guide for Foreigners in China (2026)
 

@@ -5,6 +5,11 @@ tags:
   - internet
   - vpn
   - esim
+title: "\U0001F310 Internet & VPN Guide for Foreigners in China (2026)"
+pageSlug: foreigners/internet-vpn
+city: foreigners
+country: china
+draft: false
 ---
 # 🌐 Internet & VPN Guide for Foreigners in China (2026)
 

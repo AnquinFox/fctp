@@ -5,6 +5,11 @@ tags:
   - transport
   - metro
   - taxi
+title: "\U0001F687 Transportation Guide for Foreigners in China (2026)"
+pageSlug: foreigners/transportation
+city: foreigners
+country: china
+draft: false
 ---
 # 🚇 Transportation Guide for Foreigners in China (2026)
 

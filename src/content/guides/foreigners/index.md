@@ -3,6 +3,11 @@ cover: /images/general/cover-china.webp
 tags:
   - overview
   - survival-kit
+title: "\U0001F30D Foreigners Coming to China �?Complete Guide Series (2026)"
+pageSlug: foreigners/index
+city: foreigners
+country: china
+draft: false
 ---
 # 🌍 Foreigners Coming to China �?Complete Guide Series (2026)
 

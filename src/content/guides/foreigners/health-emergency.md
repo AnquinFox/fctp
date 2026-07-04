@@ -5,6 +5,11 @@ tags:
   - health
   - emergency
   - hospital
+title: "\U0001F3E5 Health & Emergency Guide for Foreigners in China (2026)"
+pageSlug: foreigners/health-emergency
+city: foreigners
+country: china
+draft: false
 ---
 # 🏥 Health & Emergency Guide for Foreigners in China (2026)
 
