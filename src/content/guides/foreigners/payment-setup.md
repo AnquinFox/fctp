@@ -1,17 +1,14 @@
 ---
-title: Payment Setup Guide for Foreigners in China (2026)
-pageSlug: foreigners/payment-setup
-city: foreigners
-country: china
+cover: /images/general/payment-qr.webp
 tags:
   - survival-kit
   - payment
   - alipay
   - wechat
-draft: false
-cover: /images/foreigners/payment-qr.webp
 ---
-![Mobile Payment](/images/foreigners/payment-qr.webp)
+# 💳 Payment Setup Guide for Foreigners in China (2026)
+
+![Mobile Payment](/images/general/payment-qr.webp)
 
 ## The Payment Revolution
 
@@ -27,15 +24,15 @@ WeChat Pay is China's most popular payment app, used by **over 1.3 billion peopl
 
 1. **Download WeChat** from your app store (search "微信")
 2. **Register** with your phone number (international numbers accepted)
-3. **Go to Me → Pay → Wallet**
-4. **Tap "Bank Card" → Add a new card**
+3. **Go to Me �?Pay �?Wallet**
+4. **Tap "Bank Card" �?Add a new card**
 5. **Enter your foreign Visa/Mastercard details**
 6. **Verify** via SMS code
 7. **Done!** You can now pay at most merchants
 
 ### What You Can Pay For:
 
-| ✅ Works | ❌ Doesn't Work |
+| �?Works | �?Doesn't Work |
 |----------|----------------|
 | Restaurants & cafes | International transfers |
 | Convenience stores | Sending money to friends |
@@ -58,13 +55,15 @@ WeChat Pay is China's most popular payment app, used by **over 1.3 billion peopl
 
 ## 💰 Alipay (The Other Giant)
 
-Alipay (支付宝) is equally powerful, especially for **online shopping** and **larger merchants**.
+![Alipay Mobile Payment](/images/general/payment-mobile.webp)
+
+Alipay (支付�? is equally powerful, especially for **online shopping** and **larger merchants**.
 
 ### Step-by-Step Setup:
 
-1. **Download Alipay** (search "支付宝")
+1. **Download Alipay** (search "支付�?)
 2. **Register** with phone number
-3. **Go to Me → Bank Cards**
+3. **Go to Me �?Bank Cards**
 4. **Add your foreign card** (Visa/Mastercard)
 5. **Complete verification**
 6. **Start paying!**
@@ -74,9 +73,9 @@ Alipay (支付宝) is equally powerful, especially for **online shopping** and *
 | Feature | WeChat Pay | Alipay |
 |---------|------------|--------|
 | **Social integration** | Built into WeChat | Separate app |
-| **International cards** | ✅ Supported | ✅ Supported |
-| **Mini programs** | ✅ Lots | ✅ Lots |
-| **Bill splitting** | ✅ Easy | ✅ Available |
+| **International cards** | �?Supported | �?Supported |
+| **Mini programs** | �?Lots | �?Lots |
+| **Bill splitting** | �?Easy | �?Available |
 | **Online shopping** | WeChat Store | Taobao/Tmall (better) |
 | **Transport** | Metro/bus | Metro/bus |
 | **Daily spending** | ¥10,000 | ¥10,000 |
@@ -116,10 +115,12 @@ Cash is still legal tender, but many merchants **prefer not to handle it**.
 
 ## 🏪 Setting Up In-Store Payments
 
+![Paying at a Vendor](/images/general/payment-vendor.webp)
+
 ### How to Pay at a Store:
 
 1. **Open WeChat Pay or Alipay**
-2. **Tap "Scan"** (扫)
+2. **Tap "Scan"** (�?
 3. **Scan the merchant's QR code** (usually at the counter)
 4. **Enter the amount** (or it's pre-entered)
 5. **Confirm payment** with Face ID/fingerprint
@@ -172,7 +173,7 @@ Cash is still legal tender, but many merchants **prefer not to handle it**.
 
 | Factor | Cash | Mobile Payment |
 |--------|------|----------------|
-| **Accepted everywhere** | ❌ Many don't accept | ✅ Almost everywhere |
+| **Accepted everywhere** | �?Many don't accept | �?Almost everywhere |
 | **Speed** | Slower | Instant |
 | **Safety** | Risk of theft | Very secure |
 | **Tracking** | No records | Full transaction history |
@@ -184,13 +185,13 @@ Cash is still legal tender, but many merchants **prefer not to handle it**.
 
 ## 💡 Pro Tips
 
-1. **Set up both WeChat Pay AND Alipay** — some merchants prefer one
+1. **Set up both WeChat Pay AND Alipay** �?some merchants prefer one
 2. **Keep a small cash reserve** (¥500-1000) for emergencies
 3. **Notify your bank** before traveling to avoid card blocks
-4. **Check your daily limits** — they reset at midnight China time
-5. **Use the app's "Help" section** — both apps have excellent English support
-6. **Scan QR codes carefully** — only scan from trusted merchants
-7. **Take screenshots** of your QR code setup — helpful if you need to re-add cards
+4. **Check your daily limits** �?they reset at midnight China time
+5. **Use the app's "Help" section** �?both apps have excellent English support
+6. **Scan QR codes carefully** �?only scan from trusted merchants
+7. **Take screenshots** of your QR code setup �?helpful if you need to re-add cards
 
 ---
 

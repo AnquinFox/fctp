@@ -1,17 +1,14 @@
 ---
-title: Culture & Daily Life Guide for Foreigners in China (2026)
-pageSlug: foreigners/culture-tips
-city: foreigners
-country: china
+cover: /images/general/culture-food.webp
 tags:
   - survival-kit
   - culture
   - food
   - etiquette
-draft: false
-cover: /images/foreigners/culture-food.webp
 ---
-![Chinese Food Culture](/images/foreigners/culture-food.webp)
+# 🎎 Culture & Daily Life Guide for Foreigners in China (2026)
+
+![Chinese Food Culture](/images/general/culture-food.webp)
 
 ## Understanding Chinese Culture
 
@@ -45,9 +42,11 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 
 ---
 
-## 🍽️ Dining Etiquette
+## 🍽�?Dining Etiquette
 
 ### Chopstick Rules:
+
+![Chopsticks Etiquette](/images/general/culture-chopsticks.webp)
 
 | Rule | Details |
 |------|---------|
@@ -67,6 +66,8 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 
 ### Toasting Etiquette:
 
+![Tea Culture](/images/general/culture-tea.webp)
+
 | Rule | Details |
 |------|---------|
 | **Hold glass with both hands** | Shows respect |
@@ -84,7 +85,7 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 | **Group dinner** | Usually split or take turns |
 | **Fighting for the bill** | Common and expected! |
 
-> 💡 **Pro tip**: Don't fight too hard for the bill the first time — offer once, then accept graciously if they insist.
+> 💡 **Pro tip**: Don't fight too hard for the bill the first time �?offer once, then accept graciously if they insist.
 
 ---
 
@@ -112,7 +113,7 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 
 ---
 
-## 🗣️ Useful Chinese Phrases
+## 🗣�?Useful Chinese Phrases
 
 ### Greetings:
 
@@ -120,9 +121,9 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 |---------|---------|--------|
 | **Hello** | 你好 | Nǐ hǎo |
 | **How are you?** | 你好吗？ | Nǐ hǎo ma? |
-| **I'm fine** | 我很好 | Wǒ hěn hǎo |
+| **I'm fine** | 我很�?| Wǒ hěn hǎo |
 | **Thank you** | 谢谢 | Xièxiè |
-| **You're welcome** | 不客气 | Bú kèqì |
+| **You're welcome** | 不客�?| Bú kèqì |
 | **Goodbye** | 再见 | Zàijiàn |
 
 ### Dining:
@@ -130,19 +131,19 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 | English | Chinese | Pinyin |
 |---------|---------|--------|
 | **The bill, please** | 买单 | Mǎidān |
-| **Delicious!** | 好吃！ | Hǎo chī! |
-| **I'm full** | 我饱了 | Wǒ bǎo le |
-| **No spicy, please** | 不要辣 | Bú yào là |
-| **More rice, please** | 再来点米饭 | Zài lái diǎn mǐfàn |
+| **Delicious!** | 好吃�?| Hǎo chī! |
+| **I'm full** | 我饱�?| Wǒ bǎo le |
+| **No spicy, please** | 不要�?| Bú yào là |
+| **More rice, please** | 再来点米�?| Zài lái diǎn mǐfàn |
 
 ### Shopping:
 
 | English | Chinese | Pinyin |
 |---------|---------|--------|
 | **How much?** | 多少钱？ | Duōshao qián? |
-| **Too expensive** | 太贵了 | Tài guì le |
+| **Too expensive** | 太贵�?| Tài guì le |
 | **Can you make it cheaper?** | 能便宜点吗？ | Néng piányi diǎn ma? |
-| **I'll take it** | 我要了 | Wǒ yào le |
+| **I'll take it** | 我要�?| Wǒ yào le |
 | **Can I try this?** | 可以试试吗？ | Kěyǐ shìshi ma? |
 
 ### Transportation:
@@ -152,44 +153,48 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 | **Where is...?** | ...在哪里？ | ...zài nǎlǐ? |
 | **How far is it?** | 有多远？ | Yǒu duō yuǎn? |
 | **Please take me here** | 请带我去这里 | Qǐng dài wǒ qù zhèlǐ |
-| **Stop here** | 在这里停车 | Zài zhèlǐ tíng chē |
-| **How do I get to...?** | 去...怎么走？ | Qù...zěnme zǒu? |
+| **Stop here** | 在这里停�?| Zài zhèlǐ tíng chē |
+| **How do I get to...?** | �?..怎么走？ | Qù...zěnme zǒu? |
 
 ---
 
-## 🛍️ Shopping Culture
+## 🛍�?Shopping Culture
 
 ### Bargaining:
 
+![Bargaining at a Market](/images/general/culture-bargaining.webp)
+
 | Situation | Bargain? | Tips |
 |-----------|----------|------|
-| **Street markets** | ✅ Yes | Start at 30-50% of asking price |
-| **Small shops** | ✅ Yes | Polite negotiation expected |
-| **Department stores** | ❌ No | Fixed prices |
-| **Supermarkets** | ❌ No | Fixed prices |
+| **Street markets** | �?Yes | Start at 30-50% of asking price |
+| **Small shops** | �?Yes | Polite negotiation expected |
+| **Department stores** | �?No | Fixed prices |
+| **Supermarkets** | �?No | Fixed prices |
 | **Tourist areas** | ⚠️ Maybe | Higher prices, some room to negotiate |
 
 ### How to Bargain:
 
-1. **Start low** — offer 30-50% of the asking price
-2. **Be polite** — smile and be friendly
-3. **Walk away** — if they don't meet your price
-4. **Meet in the middle** — usually works
-5. **Bundle items** — buy multiple for better price
+1. **Start low** �?offer 30-50% of the asking price
+2. **Be polite** �?smile and be friendly
+3. **Walk away** �?if they don't meet your price
+4. **Meet in the middle** �?usually works
+5. **Bundle items** �?buy multiple for better price
 
 ### Shopping Tips:
 
 | Tip | Details |
 |-----|---------|
-| **Check quality** — inspect before buying |
-| **Compare prices** — shop around first |
-| **Keep receipts** — for returns or disputes |
-| **Use Alipay/WeChat** — for better prices |
-| **Learn numbers** — essential for bargaining |
+| **Check quality** �?inspect before buying |
+| **Compare prices** �?shop around first |
+| **Keep receipts** �?for returns or disputes |
+| **Use Alipay/WeChat** �?for better prices |
+| **Learn numbers** �?essential for bargaining |
 
 ---
 
 ## 🎉 Festivals & Holidays
+
+![Chinese Festivals](/images/general/culture-festival.webp)
 
 ### Major Festivals:
 
@@ -203,11 +208,11 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 
 ### During Chinese New Year:
 
-- **Most shops close** — stock up on food beforehand
-- **Transportation crowded** — book tickets early
-- **Fireworks everywhere** — be prepared for noise
-- **Red envelopes** — gifts of money in red packets
-- **Family time** — many Chinese people go home to family
+- **Most shops close** �?stock up on food beforehand
+- **Transportation crowded** �?book tickets early
+- **Fireworks everywhere** �?be prepared for noise
+- **Red envelopes** �?gifts of money in red packets
+- **Family time** �?many Chinese people go home to family
 
 ---
 
@@ -235,22 +240,22 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 
 | Tip | Details |
 |-----|---------|
-| **Cash is king** — but mobile payment is better |
-| **Small bills** — for street vendors |
-| **ATMs** — available everywhere |
-| **Tipping** — not expected, not customary |
+| **Cash is king** �?but mobile payment is better |
+| **Small bills** �?for street vendors |
+| **ATMs** �?available everywhere |
+| **Tipping** �?not expected, not customary |
 
 ---
 
 ## 💡 Pro Tips
 
-1. **Learn basic Chinese** — even a few phrases go a long way
-2. **Be patient** — cultural differences take time to adjust
-3. **Observe locals** — watch what others do in social situations
-4. **Ask questions** — Chinese people are usually happy to explain
-5. **Keep an open mind** — different doesn't mean wrong
-6. **Smile a lot** — universal language of friendship
-7. **Download translation apps** — for real-time communication
+1. **Learn basic Chinese** �?even a few phrases go a long way
+2. **Be patient** �?cultural differences take time to adjust
+3. **Observe locals** �?watch what others do in social situations
+4. **Ask questions** �?Chinese people are usually happy to explain
+5. **Keep an open mind** �?different doesn't mean wrong
+6. **Smile a lot** �?universal language of friendship
+7. **Download translation apps** �?for real-time communication
 
 ---
 

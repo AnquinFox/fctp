@@ -1,17 +1,14 @@
 ---
-title: Transportation Guide for Foreigners in China (2026)
-pageSlug: foreigners/transportation
-city: foreigners
-country: china
+cover: /images/general/transport-metro.webp
 tags:
   - survival-kit
   - transport
   - metro
   - taxi
-draft: false
-cover: /images/foreigners/transport-metro.webp
 ---
-![Metro](/images/foreigners/transport-metro.webp)
+# 🚇 Transportation Guide for Foreigners in China (2026)
+
+![Metro](/images/general/transport-metro.webp)
 
 ## Getting Around China
 
@@ -27,12 +24,12 @@ China's metro systems are **fast, clean, affordable, and foreigner-friendly**.
 
 | City | Lines | Foreigner-Friendly |
 |------|-------|-------------------|
-| **Shanghai** | 20+ | ✅ English signage, top-up machines |
-| **Beijing** | 27+ | ✅ English signage, top-up machines |
-| **Guangzhou** | 16+ | ✅ English signage, top-up machines |
-| **Chengdu** | 13+ | ✅ English signage, top-up machines |
-| **Shenzhen** | 16+ | ✅ English signage, top-up machines |
-| **Hangzhou** | 12+ | ✅ English signage, top-up machines |
+| **Shanghai** | 20+ | �?English signage, top-up machines |
+| **Beijing** | 27+ | �?English signage, top-up machines |
+| **Guangzhou** | 16+ | �?English signage, top-up machines |
+| **Chengdu** | 13+ | �?English signage, top-up machines |
+| **Shenzhen** | 16+ | �?English signage, top-up machines |
+| **Hangzhou** | 12+ | �?English signage, top-up machines |
 
 ### How to Use Metro:
 
@@ -61,16 +58,18 @@ China's metro systems are **fast, clean, affordable, and foreigner-friendly**.
 
 ## 🚄 High-Speed Rail (HSR)
 
+![High-Speed Rail](/images/general/transport-rail.webp)
+
 China's high-speed rail network is the **world's largest and most advanced**.
 
 ### Key Routes:
 
 | Route | Distance | Time | Price |
 |-------|----------|------|-------|
-| **Beijing → Shanghai** | 1,318 km | 4.5 hours | ¥553 ($75) |
-| **Beijing → Guangzhou** | 2,300 km | 8 hours | ¥862 ($118) |
-| **Shanghai → Hangzhou** | 169 km | 45 min | ¥73 ($10) |
-| **Chengdu → Chongqing** | 320 km | 1.5 hours | ¥154 ($21) |
+| **Beijing �?Shanghai** | 1,318 km | 4.5 hours | ¥553 ($75) |
+| **Beijing �?Guangzhou** | 2,300 km | 8 hours | ¥862 ($118) |
+| **Shanghai �?Hangzhou** | 169 km | 45 min | ¥73 ($10) |
+| **Chengdu �?Chongqing** | 320 km | 1.5 hours | ¥154 ($21) |
 
 ### How to Book Tickets:
 
@@ -107,11 +106,11 @@ China's high-speed rail network is the **world's largest and most advanced**.
 
 ### Station Tips:
 
-- **Arrive 30 minutes early** — security checks take time
-- **Passport required** — for ticket purchase and boarding
-- **English signs** — available at major stations
-- **Free WiFi** — available at most stations
-- **Food courts** — available at all major stations
+- **Arrive 30 minutes early** �?security checks take time
+- **Passport required** �?for ticket purchase and boarding
+- **English signs** �?available at major stations
+- **Free WiFi** �?available at most stations
+- **Food courts** �?available at all major stations
 
 ---
 
@@ -129,7 +128,9 @@ Taxis are **widely available** in all major cities.
 
 ### Didi (Recommended):
 
-Didi is China's Uber — **easier to use than hailing a taxi**.
+![Didi Ride Hailing](/images/general/transport-didi.webp)
+
+Didi is China's Uber �?**easier to use than hailing a taxi**.
 
 1. Open **Didi** app
 2. Enter destination (in Chinese or English)
@@ -139,11 +140,11 @@ Didi is China's Uber — **easier to use than hailing a taxi**.
 
 ### Taxi Tips:
 
-- **Always use the meter** — or agree on price before getting in
-- **Have your destination written in Chinese** — show to driver
-- **Keep small bills** — drivers may not have change for large notes
-- **Most taxis don't accept cards** — cash or mobile payment only
-- **Tipping not expected** — but appreciated
+- **Always use the meter** �?or agree on price before getting in
+- **Have your destination written in Chinese** �?show to driver
+- **Keep small bills** �?drivers may not have change for large notes
+- **Most taxis don't accept cards** �?cash or mobile payment only
+- **Tipping not expected** �?but appreciated
 
 ---
 
@@ -156,19 +157,21 @@ Didi is China's Uber — **easier to use than hailing a taxi**.
 | **Air China** | ⭐⭐⭐⭐ | National carrier, reliable |
 | **China Southern** | ⭐⭐⭐⭐ | Largest airline |
 | **China Eastern** | ⭐⭐⭐⭐ | Good service |
-| **Hainan Airlines** | ⭐⭐⭐⭐⭐ | Best service |
+| **Hainan Airlines** | ⭐⭐⭐⭐�?| Best service |
 
 ### Booking Tips:
 
-- **Use Trip.com** — accepts international cards
-- **Book 2-3 weeks ahead** — for best prices
-- **Domestic flights** — no visa needed (same country)
-- **Airport check-in** — arrive 2 hours early
-- **Passport required** — for all domestic flights
+- **Use Trip.com** �?accepts international cards
+- **Book 2-3 weeks ahead** �?for best prices
+- **Domestic flights** �?no visa needed (same country)
+- **Airport check-in** �?arrive 2 hours early
+- **Passport required** �?for all domestic flights
 
 ---
 
 ## 🚲 Bike Sharing
+
+![Bike Sharing](/images/general/transport-bike.webp)
 
 Bike sharing is **everywhere** in Chinese cities.
 
@@ -199,28 +202,28 @@ Buses are the **most affordable** way to get around.
 
 ### How to Use:
 
-1. **Wait at bus stop** — check route number
-2. **Board bus** — tap card or scan QR at front door
-3. **Find a seat** — or stand and hold on
-4. **Exit bus** — tap card or scan QR at back door
+1. **Wait at bus stop** �?check route number
+2. **Board bus** �?tap card or scan QR at front door
+3. **Find a seat** �?or stand and hold on
+4. **Exit bus** �?tap card or scan QR at back door
 
 ### Payment:
 
-- **Transport card** — same as metro card
-- **WeChat/Alipay QR** — scan at front door
-- **Cash** — exact change only (usually ¥1-3)
+- **Transport card** �?same as metro card
+- **WeChat/Alipay QR** �?scan at front door
+- **Cash** �?exact change only (usually ¥1-3)
 
 ---
 
 ## 💡 Pro Tips
 
-1. **Get a transport card** — saves time and works on metro + bus
-2. **Use Didi for taxis** — more reliable than street hailing
-3. **Book train tickets early** — popular routes sell out
-4. **Learn your station name in Chinese** — for taxi drivers
-5. **Download offline maps** — in case internet fails
-6. **Carry a portable charger** — mobile payment + maps = heavy usage
-7. **Keep your passport with you** — needed for train tickets and some metro stations
+1. **Get a transport card** �?saves time and works on metro + bus
+2. **Use Didi for taxis** �?more reliable than street hailing
+3. **Book train tickets early** �?popular routes sell out
+4. **Learn your station name in Chinese** �?for taxi drivers
+5. **Download offline maps** �?in case internet fails
+6. **Carry a portable charger** �?mobile payment + maps = heavy usage
+7. **Keep your passport with you** �?needed for train tickets and some metro stations
 
 ---
 

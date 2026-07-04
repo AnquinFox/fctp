@@ -1,17 +1,14 @@
 ---
-title: Internet & VPN Guide for Foreigners in China (2026)
-pageSlug: foreigners/internet-vpn
-city: foreigners
-country: china
+cover: /images/general/internet-wifi.webp
 tags:
   - survival-kit
   - internet
   - vpn
   - esim
-draft: false
-cover: /images/foreigners/internet-wifi.webp
 ---
-![WiFi Connection](/images/foreigners/internet-wifi.webp)
+# 🌐 Internet & VPN Guide for Foreigners in China (2026)
+
+![WiFi Connection](/images/general/internet-wifi.webp)
 
 ## The Great Firewall of China
 
@@ -32,11 +29,13 @@ China has the world's most sophisticated internet censorship system, known as th
 | **AI** | ChatGPT, Claude, Gemini (web versions) |
 | **Cloud** | Google Drive, Dropbox (sometimes), iCloud (limited) |
 
-> ⚠️ **Chinese alternatives exist for everything** — see the apps guide for details.
+> ⚠️ **Chinese alternatives exist for everything** �?see the apps guide for details.
 
 ---
 
 ## 📲 eSIM: Your Best Friend (Recommended)
+
+![eSIM Setup](/images/general/internet-esim.webp)
 
 An eSIM gives you **uninterrupted internet access** from the moment you land, with **built-in access to blocked services** (including Google).
 
@@ -62,7 +61,7 @@ An eSIM gives you **uninterrupted internet access** from the moment you land, wi
 |--------|------|-----------|
 | **Setup** | Done before arrival | Need to visit store |
 | **Phone number** | Uses home number | Gets Chinese number |
-| **Google access** | ✅ Yes | ❌ No |
+| **Google access** | �?Yes | �?No |
 | **Speed** | Good (uses local networks) | Good |
 | **Convenience** | Instant activation | Queue at store |
 
@@ -70,7 +69,7 @@ An eSIM gives you **uninterrupted internet access** from the moment you land, wi
 
 ---
 
-## 🛡️ VPN (Virtual Private Network)
+## 🛡�?VPN (Virtual Private Network)
 
 A VPN encrypts your internet traffic and routes it through a server outside China, bypassing the Great Firewall.
 
@@ -78,11 +77,11 @@ A VPN encrypts your internet traffic and routes it through a server outside Chin
 
 | VPN | Speed | Reliability | Price | China Servers |
 |-----|-------|-------------|-------|---------------|
-| **ExpressVPN** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | $6-13/mo | ✅ Optimized |
-| **NordVPN** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ | $3-12/mo | ✅ Obfuscated |
-| **Surfshark** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | $2-13/mo | ✅ Camouflage |
-| **Astrill** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐⭐ | $10-20/mo | ✅ Stealth |
-| **VyprVPN** | ⭐⭐⭐⭐ | ⭐⭐⭐ | $5-10/mo | ✅ Chameleon |
+| **ExpressVPN** | ⭐⭐⭐⭐�?| ⭐⭐⭐⭐�?| $6-13/mo | �?Optimized |
+| **NordVPN** | ⭐⭐⭐⭐�?| ⭐⭐⭐⭐ | $3-12/mo | �?Obfuscated |
+| **Surfshark** | ⭐⭐⭐⭐ | ⭐⭐⭐⭐ | $2-13/mo | �?Camouflage |
+| **Astrill** | ⭐⭐⭐⭐�?| ⭐⭐⭐⭐�?| $10-20/mo | �?Stealth |
+| **VyprVPN** | ⭐⭐⭐⭐ | ⭐⭐�?| $5-10/mo | �?Chameleon |
 
 ### VPN Setup (Do This BEFORE You Leave):
 
@@ -109,6 +108,8 @@ A VPN encrypts your internet traffic and routes it through a server outside Chin
 
 ## 🔄 Chinese App Alternatives (No VPN Needed)
 
+![Chinese App Alternatives](/images/general/internet-apps.webp)
+
 For daily life in China, Chinese apps work **better** than blocked foreign ones:
 
 | Blocked App | Chinese Alternative | Why It's Better |
@@ -116,12 +117,12 @@ For daily life in China, Chinese apps work **better** than blocked foreign ones:
 | **Google Maps** | Amap (高德地图) | Real-time traffic, metro lines |
 | **Google Search** | Baidu (百度) | Better Chinese results |
 | **WhatsApp** | WeChat (微信) | Everyone in China uses it |
-| **Instagram** | Xiaohongshu (小红书) | Chinese Instagram + reviews |
+| **Instagram** | Xiaohongshu (小红�? | Chinese Instagram + reviews |
 | **Twitter/X** | Weibo (微博) | Chinese Twitter |
 | **YouTube** | Bilibili (哔哩哔哩) | Chinese YouTube |
 | **Uber** | Didi (滴滴) | Better coverage in China |
 | **Google Translate** | Baidu Translate (百度翻译) | Offline Chinese support |
-| **Spotify** | NetEase Music (网易云音乐) | Better Chinese music library |
+| **Spotify** | NetEase Music (网易云音�? | Better Chinese music library |
 
 > 💡 See the [Essential Apps Guide](./essential-apps.md) for detailed app recommendations.
 
@@ -150,22 +151,22 @@ For daily life in China, Chinese apps work **better** than blocked foreign ones:
 
 | Option | Cost | Speed | Google Access | Setup |
 |--------|------|-------|---------------|-------|
-| **eSIM** | $5-30 | ⭐⭐⭐⭐ | ✅ Yes | Before arrival |
-| **Local SIM** | ¥50-200 | ⭐⭐⭐⭐⭐ | ❌ No (need VPN) | At airport/store |
-| **Hotel WiFi** | Free | ⭐⭐⭐ | ❌ No (need VPN) | On arrival |
+| **eSIM** | $5-30 | ⭐⭐⭐⭐ | �?Yes | Before arrival |
+| **Local SIM** | ¥50-200 | ⭐⭐⭐⭐�?| �?No (need VPN) | At airport/store |
+| **Hotel WiFi** | Free | ⭐⭐�?| �?No (need VPN) | On arrival |
 | **Portable WiFi** | ¥20-50/day | ⭐⭐⭐⭐ | Depends on provider | At airport |
 
 ---
 
 ## 💡 Pro Tips
 
-1. **Get an eSIM before departure** — it's the easiest way to have internet on arrival
-2. **Download a VPN before you leave** — you can't download one in China
-3. **Keep your home SIM active** — for receiving verification codes from home services
-4. **Use Chinese apps for daily life** — they're designed for China and work better
-5. **Save important info offline** — maps, translations, addresses (in case internet fails)
-6. **Carry a portable charger** — mobile payment + maps = heavy phone usage
-7. **Test your VPN regularly** — connections can drop without warning
+1. **Get an eSIM before departure** �?it's the easiest way to have internet on arrival
+2. **Download a VPN before you leave** �?you can't download one in China
+3. **Keep your home SIM active** �?for receiving verification codes from home services
+4. **Use Chinese apps for daily life** �?they're designed for China and work better
+5. **Save important info offline** �?maps, translations, addresses (in case internet fails)
+6. **Carry a portable charger** �?mobile payment + maps = heavy phone usage
+7. **Test your VPN regularly** �?connections can drop without warning
 
 ---
 
