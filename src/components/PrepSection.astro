@@ -1,80 +1,118 @@
 ---
-// PrepSection.astro — Minimalist "Before You Land" section
-const prepItems = [
-  {
-    num: '01',
-    icon: '💳',
-    title: 'Set Up Payments',
-    desc: 'Alipay + WeChat Pay. Link your foreign card before departure. Takes 10 minutes, saves hours of frustration.',
-    link: '/survival-kit/#payments',
-  },
-  {
-    num: '02',
-    icon: '📱',
-    title: 'Install Essential Apps',
-    desc: 'Amap for navigation, Didi for taxis, Trip.com for bookings. Google Maps doesn\'t work here.',
-    link: '/survival-kit/#apps',
-  },
-  {
-    num: '03',
-    icon: '🌐',
-    title: 'Sort Your Internet',
-    desc: 'eSIM is the easiest option. VPN if you need WhatsApp/Instagram. Don\'t wait until you land.',
-    link: '/survival-kit/#internet',
-  },
-  {
-    num: '04',
-    icon: '🗺️',
-    title: 'Download Offline Maps',
-    desc: 'Chinese map apps are great — but only when you have internet. Download city packs ahead.',
-    link: '/survival-kit/#navigation',
-  },
-  {
-    num: '05',
-    icon: '🎫',
-    title: 'Book Key Attractions',
-    desc: 'Forbidden City sells out 7 days ahead. Train tickets open 15 days out. Plan early.',
-    link: '/survival-kit/#bookings',
-  },
-  {
-    num: '06',
-    icon: '🚫',
-    title: 'Learn Common Scams',
-    desc: 'Tea ceremony invitations, fake taxis, art student exhibitions. 5 minutes of reading saves hundreds of dollars.',
-    link: '/survival-kit/#scams',
-  },
-];
+// PrepSection.astro — Dynamic "Before You Land" section
+// Renders foreigners survival-kit guides from content collection
+
+export interface Props {
+  guides: any[];
+}
+
+const { guides } = Astro.props;
+
+// Topic icon map
+const topicIcons: Record<string, string> = {
+  visa: '🛂',
+  entry: '🛂',
+  passport: '🛂',
+  payment: '💳',
+  alipay: '💳',
+  wechat: '💳',
+  internet: '🌐',
+  vpn: '🌐',
+  esim: '🌐',
+  apps: '📱',
+  essential: '📱',
+  transport: '🚇',
+  metro: '🚇',
+  taxi: '🚇',
+  health: '🏥',
+  emergency: '🏥',
+  hospital: '🏥',
+  culture: '🎭',
+  food: '🎭',
+  etiquette: '🎭',
+  overview: '📋',
+};
+
+function getIcon(guide: any): string {
+  const tags = guide.data.tags || [];
+  for (const tag of tags) {
+    if (topicIcons[tag]) return topicIcons[tag];
+  }
+  return '📌';
+}
+
+// Extract first meaningful paragraph from body
+function extractExcerpt(body: string, maxLen = 120): string {
+  const lines = body.split('\n');
+  for (const line of lines) {
+    const trimmed = line.trim();
+    // Skip headings, empty lines, images, tables, list items
+    if (!trimmed) continue;
+    if (trimmed.startsWith('#')) continue;
+    if (trimmed.startsWith('![')) continue;
+    if (trimmed.startsWith('|')) continue;
+    if (trimmed.startsWith('>')) continue;
+    if (trimmed.startsWith('-')) continue;
+    if (trimmed.startsWith('*')) continue;
+    // Got a real paragraph
+    const clean = trimmed.replace(/\[([^\]]+)\]\([^)]+\)/g, '$1').replace(/\*\*/g, '');
+    if (clean.length > maxLen) return clean.slice(0, maxLen).trimEnd() + '…';
+    return clean;
+  }
+  return '';
+}
+
+// Exclude the index/overview page from cards
+const displayGuides = guides.filter((g: any) => g.data.pageSlug !== 'foreigners-index');
 ---
 
 <section class="prep-section">
   <div class="prep-header">
     <p class="prep-eyebrow">BEFORE YOU LAND</p>
-    <h2 class="prep-title">Six things. Thirty minutes.<br />The difference between a smooth trip and a rough one.</h2>
+    <h2 class="prep-title">疑难杂症 · Survival Kit</h2>
     <p class="prep-subtitle">
-      Most China travel problems happen because you waited until arrival.
-      Handle these now. Thank yourself later.
+      Everything a foreigner needs to know before arriving in China.
+      From visas to payments to cultural survival — we've got you covered.
     </p>
   </div>
 
   <div class="prep-grid">
-    {prepItems.map(item => (
-      <a href={item.link} class="prep-card">
-        <span class="prep-num">{item.num}</span>
-        <div class="prep-card-body">
-          <h3 class="prep-card-title">
-            <span class="prep-card-icon">{item.icon}</span>
-            {item.title}
-          </h3>
-          <p class="prep-card-desc">{item.desc}</p>
-        </div>
-        <span class="prep-arrow">→</span>
-      </a>
-    ))}
+    {displayGuides.map((guide: any, i: number) => {
+      const { title, pageSlug, cover, tags } = guide.data;
+      const excerpt = extractExcerpt(guide.body);
+      const icon = getIcon(guide);
+      const num = String(i + 1).padStart(2, '0');
+      return (
+        <a href={`/guides/${pageSlug}/`} class="prep-card">
+          <span class="prep-num">{num}</span>
+          <div class="prep-card-img-wrap">
+            {cover ? (
+              <img src={cover} alt={title} class="prep-card-img" loading="lazy" />
+            ) : (
+              <div class="prep-card-img-placeholder">{icon}</div>
+            )}
+          </div>
+          <div class="prep-card-body">
+            <h3 class="prep-card-title">
+              <span class="prep-card-icon">{icon}</span>
+              {title}
+            </h3>
+            {excerpt && <p class="prep-card-desc">{excerpt}</p>}
+            <div class="prep-card-tags">
+              {tags.filter((t: string) => t !== 'survival-kit').map((tag: string) => (
+                <span class="prep-tag">{tag}</span>
+              ))}
+            </div>
+          </div>
+          <span class="prep-arrow">→</span>
+        </a>
+      );
+    })}
   </div>
 
   <div class="prep-cta">
-    <a href="/survival-kit/" class="prep-cta-btn">📋 Full Survival Kit</a>
-    <span class="prep-cta-time">⏱️ 30 min read</span>
+    <a href="/guides/foreigners/foreigners-index/" class="prep-cta-btn">📋 Full Survival Kit</a>
+    <span class="prep-cta-time">⏱️ 7 guides</span>
   </div>
 </section>
 
@@ -149,31 +187,76 @@ const prepItems = [
     letter-spacing: 0.05em;
     min-width: 28px;
     padding-top: 2px;
+    flex-shrink: 0;
+  }
+
+  .prep-card-img-wrap {
+    width: 64px;
+    height: 64px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #f0f0f0;
+  }
+
+  .prep-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .prep-card-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    background: #f5f5f5;
   }
 
   .prep-card-body {
     flex: 1;
+    min-width: 0;
   }
 
   .prep-card-title {
-    font-size: 1.05rem;
+    font-size: 1rem;
     font-weight: 700;
     color: #111;
     margin-bottom: 0.4rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    line-height: 1.3;
   }
 
   .prep-card-icon {
     font-size: 1.1rem;
+    flex-shrink: 0;
   }
 
   .prep-card-desc {
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: #666;
     line-height: 1.55;
-    margin: 0;
+    margin: 0 0 0.6rem;
+  }
+
+  .prep-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .prep-tag {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: #888;
+    background: #f0f0f0;
+    padding: 0.2em 0.6em;
+    border-radius: 4px;
+    letter-spacing: 0.03em;
   }
 
   .prep-arrow {
@@ -181,6 +264,7 @@ const prepItems = [
     font-size: 1.1rem;
     transition: color 0.2s, transform 0.2s;
     padding-top: 2px;
+    flex-shrink: 0;
   }
 
   .prep-card:hover .prep-arrow {
@@ -228,6 +312,10 @@ const prepItems = [
     }
     .prep-card {
       padding: 1.5rem 1.25rem;
+    }
+    .prep-card-img-wrap {
+      width: 48px;
+      height: 48px;
     }
   }
 </style>

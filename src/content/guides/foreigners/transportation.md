@@ -1,11 +1,13 @@
 ---
 title: Transportation Guide for Foreigners in China (2026)
-pageSlug: transportation
+pageSlug: foreigners/transportation
 city: foreigners
 country: china
 tags:
-  - foreigners
-  - practical
+  - survival-kit
+  - transport
+  - metro
+  - taxi
 draft: false
 cover: /images/foreigners/transport-metro.webp
 ---

@@ -1,11 +1,13 @@
 ---
 title: Internet & VPN Guide for Foreigners in China (2026)
-pageSlug: internet-vpn
+pageSlug: foreigners/internet-vpn
 city: foreigners
 country: china
 tags:
-  - foreigners
-  - practical
+  - survival-kit
+  - internet
+  - vpn
+  - esim
 draft: false
 cover: /images/foreigners/internet-wifi.webp
 ---

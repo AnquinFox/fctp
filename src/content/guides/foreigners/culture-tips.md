@@ -1,11 +1,13 @@
 ---
 title: Culture & Daily Life Guide for Foreigners in China (2026)
-pageSlug: culture-tips
+pageSlug: foreigners/culture-tips
 city: foreigners
 country: china
 tags:
-  - foreigners
-  - practical
+  - survival-kit
+  - culture
+  - food
+  - etiquette
 draft: false
 cover: /images/foreigners/culture-food.webp
 ---

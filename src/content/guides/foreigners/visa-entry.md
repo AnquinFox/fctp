@@ -1,11 +1,13 @@
 ---
 title: "\U0001F1E8\U0001F1F3 Visa & Entry Guide for Foreigners Coming to China (2026)"
-pageSlug: visa-entry
+pageSlug: foreigners/visa-entry
 city: foreigners
 country: china
 tags:
-  - foreigners
-  - practical
+  - survival-kit
+  - visa
+  - entry
+  - passport
 draft: false
 cover: /images/foreigners/visa-airport.webp
 ---

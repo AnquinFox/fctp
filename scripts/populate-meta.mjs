@@ -52,6 +52,23 @@ const cityDisplayNames = {
   'guangzhou': 'Guangzhou',
 };
 
+// Topic tag mappings for foreigners guides (slug → tags)
+const foreignersTopicTags = {
+  'visa-entry': ['visa', 'entry', 'passport'],
+  'payment-setup': ['payment', 'alipay', 'wechat'],
+  'internet-vpn': ['internet', 'vpn', 'esim'],
+  'essential-apps': ['apps', 'essential'],
+  'transportation': ['transport', 'metro', 'taxi'],
+  'health-emergency': ['health', 'emergency', 'hospital'],
+  'culture-tips': ['culture', 'food', 'etiquette'],
+};
+
+function extractForeignersTags(fileName) {
+  const slug = fileName.replace('.md', '');
+  if (slug === 'index') return ['overview', 'survival-kit'];
+  return ['survival-kit', ...(foreignersTopicTags[slug] || [])];
+}
+
 let totalUpdated = 0;
 let totalCovers = 0;
 
@@ -70,6 +87,12 @@ for (const city of cityDirs) {
 
     let changed = false;
 
+    // Ensure correct pageSlug for foreigners guides
+    if (city === 'foreigners' && doc.data.pageSlug && !doc.data.pageSlug.startsWith('foreigners/')) {
+      doc.data.pageSlug = `foreigners/${doc.data.pageSlug}`;
+      changed = true;
+    }
+
     // Extract cover image from first image in body
     if (!doc.data.cover || doc.data.cover === '') {
       const cover = extractFirstImage(doc.content);
@@ -81,9 +104,15 @@ for (const city of cityDirs) {
       }
     }
 
-    // Add tags if empty
-    if (!doc.data.tags || doc.data.tags.length === 0) {
-      const tags = extractLocationTags(doc.data.title || '', doc.content, city);
+    // Add tags if empty (or force-regenerate for foreigners)
+    const isForeigners = city === 'foreigners';
+    if (!doc.data.tags || doc.data.tags.length === 0 || isForeigners) {
+      let tags;
+      if (isForeigners) {
+        tags = extractForeignersTags(file);
+      } else {
+        tags = extractLocationTags(doc.data.title || '', doc.content, city);
+      }
       doc.data.tags = tags;
       changed = true;
       console.log(`  🏷 tags: [${tags.join(', ')}]`);

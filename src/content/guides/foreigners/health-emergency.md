@@ -1,11 +1,13 @@
 ---
 title: Health & Emergency Guide for Foreigners in China (2026)
-pageSlug: health-emergency
+pageSlug: foreigners/health-emergency
 city: foreigners
 country: china
 tags:
-  - foreigners
-  - practical
+  - survival-kit
+  - health
+  - emergency
+  - hospital
 draft: false
 cover: /images/foreigners/health-hospital.webp
 ---

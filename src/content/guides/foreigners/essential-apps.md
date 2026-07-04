@@ -1,11 +1,12 @@
 ---
 title: Essential Apps Guide for Foreigners in China (2026)
-pageSlug: essential-apps
+pageSlug: foreigners/essential-apps
 city: foreigners
 country: china
 tags:
-  - foreigners
-  - practical
+  - survival-kit
+  - apps
+  - essential
 draft: false
 cover: /images/foreigners/apps-phone.webp
 ---

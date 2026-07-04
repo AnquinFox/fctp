@@ -1,8 +1,9 @@
 ---
 tags:
-  - foreigners
+  - overview
+  - survival-kit
 title: Foreigners Coming to China — Complete Guide Series
-pageSlug: foreigners-index
+pageSlug: foreigners/foreigners-index
 city: foreigners
 country: china
 draft: false

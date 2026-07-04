@@ -1,11 +1,13 @@
 ---
 title: Payment Setup Guide for Foreigners in China (2026)
-pageSlug: payment-setup
+pageSlug: foreigners/payment-setup
 city: foreigners
 country: china
 tags:
-  - foreigners
-  - practical
+  - survival-kit
+  - payment
+  - alipay
+  - wechat
 draft: false
 cover: /images/foreigners/payment-qr.webp
 ---

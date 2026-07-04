@@ -6,6 +6,7 @@ import TraditionalSection from '../components/TraditionalSection.astro';
 import FuturisticSection from '../components/FuturisticSection.astro';
 
 const guides = await getCollection('guides', ({ data }) => !data.draft);
+const foreignerGuides = guides.filter(g => g.data.city === 'foreigners');
 const availableCities = [...new Set(guides.map(g => g.data.city))];
 ---
 
@@ -42,7 +43,7 @@ const availableCities = [...new Set(guides.map(g => g.data.city))];
   <!-- SECTION 1: Prep (Minimalist)                 -->
   <!-- ============================================ -->
   <div id="prep">
-    <PrepSection />
+    <PrepSection guides={foreignerGuides} />
   </div>
 
   <!-- ============================================ -->
