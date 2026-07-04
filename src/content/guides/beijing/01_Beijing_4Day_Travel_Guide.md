@@ -1,9 +1,14 @@
 ---
-title: "4 Days in Beijing 鈥?Time Slices Under the Imperial Walls"
-pageSlug: "beijing-4-day-travel-guide"
-city: "beijing"
-duration: "4 days"
-tags: ['first-timers', 'culture', 'great-wall', 'forbidden-city']
+title: 4 Days in Beijing 鈥?Time Slices Under the Imperial Walls
+pageSlug: beijing-4-day-travel-guide
+city: beijing
+duration: 4 days
+tags:
+  - first-timers
+  - culture
+  - great-wall
+  - forbidden-city
+cover: /images/beijing/gugong_panorama_gw.webp
 ---
 
 > 馃搮 2026 Edition | 馃搷 First-timers / Culture lovers | 鈴憋笍 4 days

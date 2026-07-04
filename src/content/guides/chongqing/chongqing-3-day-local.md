@@ -1,10 +1,13 @@
 ---
-pageSlug: "chongqing-3-day-local"
-title: "重庆3日游 | 跟着本地人走,别去那些坑"
-city: "chongqing"
-country: "china"
-tags: []
+pageSlug: chongqing-3-day-local
+title: '重庆3日游 | 跟着本地人走,别去那些坑'
+city: chongqing
+country: china
+tags:
+  - chongqing
+  - chengdu
 draft: false
+cover: /images/chongqing/hotpot_food_local.webp
 ---
 
 # 重庆3日游 | 跟着本地人走,别去那些坑

@@ -1,10 +1,12 @@
 ---
-pageSlug: "beijing-4-day-imperial"
-title: "北京4日游 · 皇城根下的时间切面"
-city: "beijing"
-country: "china"
-tags: []
+pageSlug: beijing-4-day-imperial
+title: 北京4日游 · 皇城根下的时间切面
+city: beijing
+country: china
+tags:
+  - beijing
 draft: false
+cover: /images/beijing/gugong_panorama_gw.webp
 ---
 
 # 北京4日游 · 皇城根下的时间切面

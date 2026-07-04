@@ -1,9 +1,12 @@
 ---
-title: "Shanghai's Top 15 Attractions 鈥?2026 Editor's Choice"
-pageSlug: "shanghai-top-15-attractions"
-city: "shanghai"
-
-tags: ['attractions', 'rankings', 'sightseeing']
+title: Shanghai's Top 15 Attractions 鈥?2026 Editor's Choice
+pageSlug: shanghai-top-15-attractions
+city: shanghai
+tags:
+  - attractions
+  - rankings
+  - sightseeing
+cover: /images/shanghai/gowithmarkhazyl/bund_panorama_daytime_gw.webp
 ---
 
 > 馃憫 Curated by a veteran Shanghai travel enthusiast | 馃搳 10M+ reads | 馃啎 2026 Latest Rankings

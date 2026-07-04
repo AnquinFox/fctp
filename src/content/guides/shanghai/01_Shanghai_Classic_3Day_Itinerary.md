@@ -1,9 +1,14 @@
 ---
-title: "Shanghai Classic 3-Day Itinerary 鈥?From the Bund to Disney, the Perfect Route"
-pageSlug: "shanghai-classic-3-day-itinerary"
-city: "shanghai"
-duration: "3 days"
-tags: ['itinerary', 'first-timers', 'bund', 'disney']
+title: 'Shanghai Classic 3-Day Itinerary 鈥?From the Bund to Disney, the Perfect Route'
+pageSlug: shanghai-classic-3-day-itinerary
+city: shanghai
+duration: 3 days
+tags:
+  - itinerary
+  - first-timers
+  - bund
+  - disney
+cover: /images/shanghai/gowithmarkhazyl/zhujiajiao_gw.webp
 ---
 
 > 馃搮 2025-2026 Updated | 馃搷 Best for first-time visitors | 鈴憋笍 3-day highlights tour

@@ -2,46 +2,317 @@
 import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 
-const guides = await getCollection('guides', ({ data }) => !data.draft);
-const cities = [...new Set(guides.map(g => g.data.city))].sort();
+const allGuides = await getCollection('guides', ({ data }) => !data.draft);
+
+// Extract all unique tags from all guides
+const allTags = [...new Set(allGuides.flatMap(g => g.data.tags))].sort();
+
+// City display names for tag labels
+const cityDisplayNames: Record<string, string> = {
+  beijing: 'Beijing · 北京',
+  shanghai: 'Shanghai · 上海',
+  chongqing: 'Chongqing · 重庆',
+  chengdu: 'Chengdu · 成都',
+  xian: "Xi'an · 西安",
+  hangzhou: 'Hangzhou · 杭州',
+  shenzhen: 'Shenzhen · 深圳',
+  guangzhou: 'Guangzhou · 广州',
+};
 ---
 
-<BaseLayout title="Travel Guides — WonderQuest" description="Browse all our China travel guides by city.">
-  <section style="padding:3rem 1.5rem 2rem">
-    <div class="container">
-      <h1 style="font-size:2.2rem;margin-bottom:0.5rem">Travel Guides</h1>
-      <p style="color:#666;font-size:1.1rem">Honest advice from locals and experienced travelers.</p>
+<BaseLayout title="Travel Guides — WonderQuest" description="Browse all our China travel guides by city tag.">
+  <section class="guides-page">
+    <div class="guides-header">
+      <h1 class="guides-title">Travel Guides</h1>
+      <p class="guides-desc">Honest advice from locals and experienced travelers. Click a tag to filter.</p>
     </div>
-  </section>
 
-  <section class="container" style="padding-bottom:3rem">
-    {
-      cities.map(city => {
-        const cityGuides = guides.filter(g => g.data.city === city);
-        return (
-          <div style="margin-bottom:2.5rem">
-            <h2 style="font-size:1.6rem;margin-bottom:1rem;text-transform:capitalize">{city}</h2>
-            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.25rem">
-              {cityGuides.map(g => (
-                <a href={`/guides/${g.data.pageSlug}`} style="display:block;padding:1.5rem;background:#fff;border-radius:10px;box-shadow:0 2px 8px rgba(0,0,0,0.07);transition:transform 0.2s">
-                  <h3 style="font-size:1.2rem;margin-bottom:0.35rem">{g.data.title}</h3>
-                  {g.data.duration && <span style="font-size:0.85rem;color:#999">⏱ {g.data.duration}</span>}
-                  {g.data.tags.length > 0 && (
-                    <div style="margin-top:0.75rem;display:flex;flex-wrap:wrap;gap:0.4rem">
-                      {g.data.tags.map(t => <span style="font-size:0.75rem;background:#f0f0f0;color:#555;padding:0.2rem 0.6rem;border-radius:12px">{t}</span>)}
-                    </div>
-                  )}
-                </a>
-              ))}
-            </div>
+    <!-- Tag Filter Chips -->
+    <div class="tag-bar" id="tag-bar">
+      <button class="tag-chip active" data-tag="">All</button>
+      {allTags.map(tag => (
+        <button class="tag-chip" data-tag={tag}>
+          {cityDisplayNames[tag] || tag}
+        </button>
+      ))}
+    </div>
+
+    <!-- Card Grid -->
+    <div class="guides-grid" id="guides-grid">
+      {allGuides.map(g => (
+        <a
+          href={`/guides/${g.data.pageSlug}`}
+          class="guide-card"
+          data-tags={g.data.tags.join(',')}
+        >
+          <div class="guide-card-img">
+            {g.data.cover ? (
+              <img src={g.data.cover} alt={g.data.title} loading="lazy" />
+            ) : (
+              <div class="guide-card-img-placeholder">
+                <span>🏯</span>
+              </div>
+            )}
           </div>
-        );
-      })
-    }
-    {guides.length === 0 && <p style="text-align:center;color:#999;padding:2rem">No guides yet. Check back soon!</p>}
+          <div class="guide-card-body">
+            <h2 class="guide-card-title">{g.data.title}</h2>
+            <div class="guide-card-meta">
+              {g.data.duration && <span class="guide-card-duration">⏱ {g.data.duration}</span>}
+            </div>
+            {g.data.tags && g.data.tags.length > 0 && (
+              <div class="guide-card-tags">
+                {g.data.tags.map(t => <span class="guide-card-tag">{cityDisplayNames[t] || t}</span>)}
+              </div>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+
+    {allGuides.length === 0 && (
+      <p class="guides-empty">No guides yet. Check back soon!</p>
+    )}
   </section>
 </BaseLayout>
 
+<!-- Client-side tag filtering -->
+<script>
+  (function() {
+    const chips = document.querySelectorAll('.tag-chip') as NodeListOf<HTMLElement>;
+    const cards = document.querySelectorAll('.guide-card') as NodeListOf<HTMLElement>;
+
+    const params = new URLSearchParams(window.location.search);
+    const activeTag = params.get('tag') || '';
+
+    function filterByTag(tag: string) {
+      chips.forEach(c => c.classList.remove('active'));
+      if (tag) {
+        const activeChip = document.querySelector('.tag-chip[data-tag="' + tag + '"]');
+        if (activeChip) activeChip.classList.add('active');
+      } else {
+        const allChip = document.querySelector('.tag-chip[data-tag=""]');
+        if (allChip) allChip.classList.add('active');
+      }
+
+      cards.forEach((card: HTMLElement) => {
+        if (!tag) {
+          card.style.display = '';
+          return;
+        }
+        const tagStr = card.dataset.tags || '';
+        const tags = tagStr ? tagStr.split(',') : [];
+        card.style.display = tags.includes(tag) ? '' : 'none';
+      });
+
+      const url = new URL(window.location.href);
+      if (tag) {
+        url.searchParams.set('tag', tag);
+      } else {
+        url.searchParams.delete('tag');
+      }
+      window.history.replaceState({}, '', url.toString());
+    }
+
+    chips.forEach((chip: HTMLElement) => {
+      chip.addEventListener('click', () => {
+        filterByTag(chip.dataset.tag || '');
+      });
+    });
+
+    filterByTag(activeTag);
+  })();
+</script>
+
 <style>
-  a:hover { text-decoration: none !important; transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.1) !important; }
+  .guides-page {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .guides-header {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .guides-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.02em;
+  }
+
+  .guides-desc {
+    font-size: 1.05rem;
+    color: #888;
+  }
+
+  /* === Tag Filter Bar === */
+  .tag-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .tag-chip {
+    background: #f5f0eb;
+    border: 1.5px solid transparent;
+    color: #8b7355;
+    padding: 0.5rem 1.1rem;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+  }
+
+  .tag-chip:hover {
+    background: #e8d5c0;
+    border-color: #c4a882;
+  }
+
+  .tag-chip.active {
+    background: #8b5a2b;
+    color: #fff;
+    border-color: #8b5a2b;
+  }
+
+  /* === Card Grid === */
+  .guides-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .guide-card {
+    background: #fff;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .guide-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.12);
+    text-decoration: none;
+  }
+
+  .guide-card[style*="display: none"] {
+    display: none;
+  }
+
+  .guide-card-img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    background: #f0f0f0;
+    position: relative;
+  }
+
+  .guide-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .guide-card:hover .guide-card-img img {
+    transform: scale(1.04);
+  }
+
+  .guide-card-img-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f5f0eb 0%, #e8e0d5 100%);
+    font-size: 3rem;
+  }
+
+  .guide-card-body {
+    padding: 1rem 1.1rem 1.1rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  .guide-card-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    line-height: 1.4;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    margin: 0;
+  }
+
+  .guide-card-meta {
+    display: flex;
+    align-items: center;
+  }
+
+  .guide-card-duration {
+    font-size: 0.82rem;
+    color: #999;
+  }
+
+  .guide-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    margin-top: auto;
+    padding-top: 0.35rem;
+  }
+
+  .guide-card-tag {
+    font-size: 0.7rem;
+    background: #f5f0eb;
+    color: #8b7355;
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+    font-weight: 500;
+  }
+
+  .guides-empty {
+    text-align: center;
+    color: #999;
+    padding: 3rem;
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 640px) {
+    .guides-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.75rem;
+    }
+    .guide-card-body {
+      padding: 0.7rem 0.8rem 0.8rem;
+    }
+    .guide-card-title {
+      font-size: 0.9rem;
+    }
+    .guides-title {
+      font-size: 1.6rem;
+    }
+    .tag-bar {
+      gap: 0.35rem;
+    }
+    .tag-chip {
+      padding: 0.4rem 0.8rem;
+      font-size: 0.78rem;
+    }
+  }
 </style>

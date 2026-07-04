@@ -1,10 +1,12 @@
 ---
-pageSlug: "shanghai-3-day-casual"
-title: "上海3日游 | 一个过来人的碎碎念"
-city: "shanghai"
-country: "china"
-tags: []
+pageSlug: shanghai-3-day-casual
+title: 上海3日游 | 一个过来人的碎碎念
+city: shanghai
+country: china
+tags:
+  - shanghai
 draft: false
+cover: /images/shanghai/gowithmarkhazyl/shanghai_tower_gw.webp
 ---
 
 # 上海3日游 | 一个过来人的碎碎念

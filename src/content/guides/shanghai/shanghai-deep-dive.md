@@ -1,10 +1,12 @@
 ---
-pageSlug: "shanghai-deep-dive"
-title: "?? 上海深度全攻略 — 景点详解与实拍美图"
-city: "shanghai"
-country: "china"
-tags: []
+pageSlug: shanghai-deep-dive
+title: '?? 上海深度全攻略 — 景点详解与实拍美图'
+city: shanghai
+country: china
+tags:
+  - shanghai
 draft: false
+cover: /images/shanghai/gowithmarkhazyl/yuyuan_bridge_night_gw.webp
 ---
 
 # ?? 上海深度全攻略 — 景点详解与实拍美图

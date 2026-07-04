@@ -1,9 +1,14 @@
 ---
-title: "Chongqing 3-Day Guide 鈥?Walk Like a Local, Skip the Traps"
-pageSlug: "chongqing-3-day-travel-guide"
-city: "chongqing"
-duration: "3 days"
-tags: ['local-tips', 'food', 'first-timers', 'mountain-city']
+title: 'Chongqing 3-Day Guide 鈥?Walk Like a Local, Skip the Traps'
+pageSlug: chongqing-3-day-travel-guide
+city: chongqing
+duration: 3 days
+tags:
+  - local-tips
+  - food
+  - first-timers
+  - mountain-city
+cover: /images/chongqing/hotpot_food_local.webp
 ---
 
 > 馃搮 2026 Edition | 馃搷 First-timers / Trap-avoiders | 鈴憋笍 3 days

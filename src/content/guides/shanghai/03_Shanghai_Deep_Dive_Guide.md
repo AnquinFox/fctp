@@ -1,9 +1,13 @@
 ---
-title: "Shanghai Deep Dive Guide 鈥?Detailed Attractions & Photos"
-pageSlug: "shanghai-deep-dive-guide"
-city: "shanghai"
-
-tags: ['comprehensive', 'attractions', 'transport', 'food']
+title: Shanghai Deep Dive Guide 鈥?Detailed Attractions & Photos
+pageSlug: shanghai-deep-dive-guide
+city: shanghai
+tags:
+  - comprehensive
+  - attractions
+  - transport
+  - food
+cover: /images/shanghai/gowithmarkhazyl/yuyuan_bridge_night_gw.webp
 ---
 
 > 馃摳 High-res photos | 馃摑 In-depth coverage of every attraction | 馃椇锔?Transport/tickets included | 馃攧 2026 Edition

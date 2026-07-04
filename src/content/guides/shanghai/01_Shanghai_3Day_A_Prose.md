@@ -1,9 +1,15 @@
 ---
-title: "3 Days in Shanghai 鈥?Honest Ramblings from Someone Who's Been There"
-pageSlug: "shanghai-3-day-honest-ramblings"
-city: "shanghai"
-duration: "3 days"
-tags: ['personal', 'first-timers', 'opinionated', 'bund', 'disney']
+title: 3 Days in Shanghai 鈥?Honest Ramblings from Someone Who's Been There
+pageSlug: shanghai-3-day-honest-ramblings
+city: shanghai
+duration: 3 days
+tags:
+  - personal
+  - first-timers
+  - opinionated
+  - bund
+  - disney
+cover: /images/shanghai/gowithmarkhazyl/shanghai_tower_gw.webp
 ---
 
 > 馃搮 2026 Edition | 馃搷 First-timers / Independent travelers | 鈴憋笍 3 days

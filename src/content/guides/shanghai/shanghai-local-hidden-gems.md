@@ -1,10 +1,12 @@
 ---
-pageSlug: "shanghai-local-hidden-gems"
-title: "上海三天两夜｜本地朋友私藏路线??不走回头路！"
-city: "shanghai"
-country: "china"
-tags: []
+pageSlug: shanghai-local-hidden-gems
+title: 上海三天两夜｜本地朋友私藏路线??不走回头路！
+city: shanghai
+country: china
+tags:
+  - shanghai
 draft: false
+cover: /images/shanghai/gowithmarkhazyl/shanghai_tower_gw.webp
 ---
 
 # 上海三天两夜｜本地朋友私藏路线??不走回头路！

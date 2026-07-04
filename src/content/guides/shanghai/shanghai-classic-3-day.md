@@ -1,10 +1,12 @@
 ---
-pageSlug: "shanghai-classic-3-day"
-title: "??? 上海经典3日游攻略 — 外滩到迪士尼的完美路线"
-city: "shanghai"
-country: "china"
-tags: []
+pageSlug: shanghai-classic-3-day
+title: '??? 上海经典3日游攻略 — 外滩到迪士尼的完美路线'
+city: shanghai
+country: china
+tags:
+  - shanghai
 draft: false
+cover: /images/shanghai/gowithmarkhazyl/zhujiajiao_gw.webp
 ---
 
 # ??? 上海经典3日游攻略 — 外滩到迪士尼的完美路线

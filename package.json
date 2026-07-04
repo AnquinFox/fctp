@@ -14,5 +14,8 @@
     "astro": "^5.7.0",
     "iconv-lite": "^0.7.3",
     "typescript": "^5.7.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
   }
 }

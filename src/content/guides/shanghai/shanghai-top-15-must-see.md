@@ -1,10 +1,12 @@
 ---
-pageSlug: "shanghai-top-15-must-see"
-title: "?? 上海必游景点 TOP15 — 2026 帮主严选排名"
-city: "shanghai"
-country: "china"
-tags: []
+pageSlug: shanghai-top-15-must-see
+title: '?? 上海必游景点 TOP15 — 2026 帮主严选排名'
+city: shanghai
+country: china
+tags:
+  - shanghai
 draft: false
+cover: /images/shanghai/gowithmarkhazyl/bund_panorama_daytime_gw.webp
 ---
 
 # ?? 上海必游景点 TOP15 — 2026 帮主严选排名

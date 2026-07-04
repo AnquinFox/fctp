@@ -1,9 +1,14 @@
 ---
-title: "Shanghai 3 Days 2 Nights 鈥?Insider Route from a Local Friend"
-pageSlug: "shanghai-3d2n-insider-route"
-city: "shanghai"
-duration: "3 days 2 nights"
-tags: ['local-tips', 'photo-spots', 'food', 'insider']
+title: Shanghai 3 Days 2 Nights 鈥?Insider Route from a Local Friend
+pageSlug: shanghai-3d2n-insider-route
+city: shanghai
+duration: 3 days 2 nights
+tags:
+  - local-tips
+  - photo-spots
+  - food
+  - insider
+cover: /images/shanghai/gowithmarkhazyl/shanghai_tower_gw.webp
 ---
 
 > 馃搮 2026 Edition | 馃搷 First-timers / Photo hunters | 鈴憋笍 3 days 2 nights
