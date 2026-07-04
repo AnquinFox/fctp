@@ -1,0 +1,219 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+export async function getStaticPaths() {
+  const guides = await getCollection('guides', ({ data }) => !data.draft);
+  const cities = [...new Set(guides.map(g => g.data.city))];
+  return cities.map(city => ({ params: { city } }));
+}
+
+const { city } = Astro.params;
+const allGuides = await getCollection('guides', ({ data }) => !data.draft && data.city === city);
+
+const cityNames: Record<string, string> = {
+  beijing: 'Beijing · 北京',
+  shanghai: 'Shanghai · 上海',
+  chongqing: 'Chongqing · 重庆',
+  chengdu: 'Chengdu · 成都',
+  xian: "Xi'an · 西安",
+  hangzhou: 'Hangzhou · 杭州',
+  shenzhen: 'Shenzhen · 深圳',
+  guangzhou: 'Guangzhou · 广州',
+};
+
+const displayName = cityNames[city] || city;
+const description = `Browse all our ${displayName} travel guides — honest tips from locals and experienced travelers.`;
+---
+
+<BaseLayout
+  title={`${displayName} Travel Guides`}
+  description={description}
+>
+  <div class="city-page">
+    <div class="city-header">
+      <a href="/guides/" class="city-back">&larr; All Cities</a>
+      <h1 class="city-title">{displayName}</h1>
+      <p class="city-count">{allGuides.length} guide{allGuides.length !== 1 ? 's' : ''} available</p>
+    </div>
+
+    <div class="city-guides">
+      {allGuides.length === 0 && (
+        <div class="city-empty">
+          <p>No guides yet for {displayName}.</p>
+          <a href="/guides/" class="city-empty-link">Browse other cities &rarr;</a>
+        </div>
+      )}
+      {allGuides.map(g => (
+        <a href={`/guides/${g.data.pageSlug}`} class="city-card">
+          {g.data.cover && (
+            <div class="city-card-img">
+              <img src={g.data.cover} alt={g.data.title} loading="lazy" />
+            </div>
+          )}
+          <div class="city-card-body">
+            <h2 class="city-card-title">{g.data.title}</h2>
+            <div class="city-card-meta">
+              {g.data.duration && <span class="city-card-duration">⏱ {g.data.duration}</span>}
+              {g.data.tags && g.data.tags.length > 0 && (
+                <div class="city-card-tags">
+                  {g.data.tags.map(t => <span class="city-card-tag">{t}</span>)}
+                </div>
+              )}
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .city-page {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 4rem;
+  }
+
+  .city-header {
+    margin-bottom: 2.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 2px solid #f0f0f0;
+  }
+
+  .city-back {
+    display: inline-block;
+    font-size: 0.9rem;
+    color: #888;
+    margin-bottom: 1rem;
+    transition: color 0.2s;
+  }
+
+  .city-back:hover {
+    color: #333;
+    text-decoration: none;
+  }
+
+  .city-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #111;
+    margin-bottom: 0.35rem;
+    letter-spacing: -0.02em;
+  }
+
+  .city-count {
+    font-size: 1rem;
+    color: #888;
+  }
+
+  .city-guides {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .city-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    background: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .city-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
+    text-decoration: none;
+  }
+
+  .city-card-img {
+    flex-shrink: 0;
+    width: 160px;
+    height: 100px;
+    border-radius: 8px;
+    overflow: hidden;
+    background: #f5f5f5;
+  }
+
+  .city-card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+  }
+
+  .city-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .city-card-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 0.5rem;
+    line-height: 1.35;
+  }
+
+  .city-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .city-card-duration {
+    font-size: 0.85rem;
+    color: #999;
+  }
+
+  .city-card-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+  }
+
+  .city-card-tag {
+    font-size: 0.72rem;
+    background: #f0f0f0;
+    color: #666;
+    padding: 0.2rem 0.55rem;
+    border-radius: 10px;
+  }
+
+  .city-empty {
+    text-align: center;
+    padding: 3rem 1rem;
+    color: #999;
+  }
+
+  .city-empty p {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+  }
+
+  .city-empty-link {
+    color: #e63946;
+    font-weight: 600;
+  }
+
+  @media (max-width: 600px) {
+    .city-card {
+      flex-direction: column;
+    }
+    .city-card-img {
+      width: 100%;
+      height: 160px;
+    }
+    .city-title {
+      font-size: 1.6rem;
+    }
+  }
+</style>

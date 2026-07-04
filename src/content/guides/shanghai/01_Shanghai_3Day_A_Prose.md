@@ -1,13 +1,13 @@
 ---
-title: "3 Days in Shanghai �?Honest Ramblings from Someone Who's Been There"
+title: "3 Days in Shanghai 鈥?Honest Ramblings from Someone Who's Been There"
 pageSlug: "shanghai-3-day-honest-ramblings"
 city: "shanghai"
 duration: "3 days"
 tags: ['personal', 'first-timers', 'opinionated', 'bund', 'disney']
 ---
 
-> 📅 2026 Edition | 📍 First-timers / Independent travelers | ⏱️ 3 days
-> Here's the thing about Shanghai �?over-planning actually makes you more anxious. Too many places to go, never enough time. So this isn't a "Top 10 Must-Sees" guide. It's just my rhythm. How I'd spend three comfortable days.
+> 馃搮 2026 Edition | 馃搷 First-timers / Independent travelers | 鈴憋笍 3 days
+> Here's the thing about Shanghai 鈥?over-planning actually makes you more anxious. Too many places to go, never enough time. So this isn't a "Top 10 Must-Sees" guide. It's just my rhythm. How I'd spend three comfortable days.
 
 ---
 
@@ -17,26 +17,26 @@ Don't rush to the Bund in the morning. The Bund is too hot during the day and to
 
 Wukang Road is in Xuhui District. Start at the iconic Wukang Building and walk north.
 
-![Wukang Road �?old villas under plane trees](/images/shanghai/gowithmarkhazyl/shanghai_tower_gw.webp)
-*Wukang Road �?old villas under plane trees. Shanghai's bohemian soul lives in these lanes*
+![Wukang Road 鈥?old villas under plane trees](/images/shanghai/gowithmarkhazyl/shanghai_tower_gw.webp)
+*Wukang Road 鈥?old villas under plane trees. Shanghai's bohemian soul lives in these lanes*
 
-It's not a long road. Stop and start, and you'll cover it in about an hour. Plane trees line both sides, and old villas stand behind them. Any café you duck into along the way is decent. I personally like to sit for a bit at % Arabica about halfway down �?there's a second-floor balcony that overlooks the whole tree-lined street.
+It's not a long road. Stop and start, and you'll cover it in about an hour. Plane trees line both sides, and old villas stand behind them. Any caf茅 you duck into along the way is decent. I personally like to sit for a bit at % Arabica about halfway down 鈥?there's a second-floor balcony that overlooks the whole tree-lined street.
 
-Ba Jin's former residence is on Wukang Road too. Free entry. It's quiet and worth a wander. Most guides don't mention it �?probably because it's not "Instagrammable" enough.
+Ba Jin's former residence is on Wukang Road too. Free entry. It's quiet and worth a wander. Most guides don't mention it 鈥?probably because it's not "Instagrammable" enough.
 
-**Lunch** near Wukang Road, around the Anfu Road area. Lots of choices �?Japanese, Western, local Shanghainese. I won't name a specific place; depends on your mood.
+**Lunch** near Wukang Road, around the Anfu Road area. Lots of choices 鈥?Japanese, Western, local Shanghainese. I won't name a specific place; depends on your mood.
 
-**Afternoon**: Head to Xintiandi. It's about a 10-minute taxi ride from Wukang Road. The shikumen (stone-gate) buildings here are genuinely worth seeing �?not for the shopping, but for the architecture itself. A fusion of Chinese and Western styles that's uniquely Shanghai.
+**Afternoon**: Head to Xintiandi. It's about a 10-minute taxi ride from Wukang Road. The shikumen (stone-gate) buildings here are genuinely worth seeing 鈥?not for the shopping, but for the architecture itself. A fusion of Chinese and Western styles that's uniquely Shanghai.
 
 ![Xintiandi shikumen buildings](/images/shanghai/gowithmarkhazyl/xintiandi_shikumen_gw.webp)
-*Xintiandi's shikumen architecture �?a living specimen of a century of Shanghai life*
+*Xintiandi's shikumen architecture 鈥?a living specimen of a century of Shanghai life*
 
-Wander through, then find a café for afternoon tea.
+Wander through, then find a caf茅 for afternoon tea.
 
-**Evening**: Take Metro Line 10 to Yuyuan Station. But honestly, I wouldn't bother squeezing through Chenghuang Temple (City God Temple). Locals don't eat there. If you want nighttime views, walk to the Bund �?it's about ten minutes from Yuyuan Station. And when you get there, you'll see that the online photos didn't lie �?the lights of Lujiazui reflected on the Huangpu River really are beautiful.
+**Evening**: Take Metro Line 10 to Yuyuan Station. But honestly, I wouldn't bother squeezing through Chenghuang Temple (City God Temple). Locals don't eat there. If you want nighttime views, walk to the Bund 鈥?it's about ten minutes from Yuyuan Station. And when you get there, you'll see that the online photos didn't lie 鈥?the lights of Lujiazui reflected on the Huangpu River really are beautiful.
 
 ![The Bund at night](/images/shanghai/gowithmarkhazyl/bund_panorama_night_gw.webp)
-*The Bund at night �?Lujiazui's lights reflected on the Huangpu River. Shanghai's most captivating scene*
+*The Bund at night 鈥?Lujiazui's lights reflected on the Huangpu River. Shanghai's most captivating scene*
 
 But here's a pro tip: don't try to get a taxi from the Bund. The traffic will make you question your life choices. Take Metro Line 2 back to your hotel. Much easier.
 
@@ -47,9 +47,9 @@ But here's a pro tip: don't try to get a taxi from the Bund. The traffic will ma
 For Disneyland, I have one piece of advice: **go either super early, or don't go at all.**
 
 ![Shanghai Disney Castle](/images/shanghai/gowithmarkhazyl/disney_castle_night_gw.webp)
-*Shanghai Disney Castle �?the fireworks show is the one thing that makes the long queues totally worth it*
+*Shanghai Disney Castle 鈥?the fireworks show is the one thing that makes the long queues totally worth it*
 
-Get to the gate before 7 AM. When the park opens, sprint to the popular rides. Hit "Soaring Over the Horizon" or "TRON Lightcycle Power Run" first �?these have the longest queues, and going early saves you about an hour.
+Get to the gate before 7 AM. When the park opens, sprint to the popular rides. Hit "Soaring Over the Horizon" or "TRON Lightcycle Power Run" first 鈥?these have the longest queues, and going early saves you about an hour.
 
 **Lunch** inside the park. Limited options but edible. Don't expect a culinary experience. Bringing your own snacks and water will save you a lot of money.
 
@@ -57,38 +57,38 @@ Get to the gate before 7 AM. When the park opens, sprint to the popular rides. H
 
 **Evening**: Watch the fireworks show. Claim a spot about half an hour early, dead center in front of the castle. The fireworks are the best part of the whole Disney experience. After all those queues, this one show makes you feel like it was all worth it.
 
-Getting back to the city: Disney has a direct Metro Line 11 to downtown. Last train is around 10:30 PM. If you miss it after the fireworks, a taxi to the city center costs about ¥100-150.
+Getting back to the city: Disney has a direct Metro Line 11 to downtown. Last train is around 10:30 PM. If you miss it after the fireworks, a taxi to the city center costs about 楼100-150.
 
 ---
 
-## Day 3 The Bund to Lujiazui �?Two Sides of Shanghai in One Day
+## Day 3 The Bund to Lujiazui 鈥?Two Sides of Shanghai in One Day
 
 Today is the "classic Shanghai" day.
 
-**Morning**: Start at Yu Garden. Not the Chenghuang Temple food stalls �?the actual garden. It's a Ming Dynasty private garden, small but exquisite. The Nine-Turn Bridge and the Mid-Lake Pavilion are a beautiful pairing. Cheap ticket, half-hour visit.
+**Morning**: Start at Yu Garden. Not the Chenghuang Temple food stalls 鈥?the actual garden. It's a Ming Dynasty private garden, small but exquisite. The Nine-Turn Bridge and the Mid-Lake Pavilion are a beautiful pairing. Cheap ticket, half-hour visit.
 
 ![Yu Garden Nine-Turn Bridge](/images/shanghai/gowithmarkhazyl/yuyuan_bridge_night_gw.webp)
-*Yu Garden's Nine-Turn Bridge �?the concentrated beauty of a Ming Dynasty private garden*
+*Yu Garden's Nine-Turn Bridge 鈥?the concentrated beauty of a Ming Dynasty private garden*
 
-Then walk from Yu Garden to the Bund. Head north along Zhongshan Dong Yi Road. On your left is the "Exposition of World Architecture" �?the HSBC Building, Customs House, Peace Hotel. Every one of them has a story. If you're into architecture, step inside some of them �?a few lobbies are open to the public for free.
+Then walk from Yu Garden to the Bund. Head north along Zhongshan Dong Yi Road. On your left is the "Exposition of World Architecture" 鈥?the HSBC Building, Customs House, Peace Hotel. Every one of them has a story. If you're into architecture, step inside some of them 鈥?a few lobbies are open to the public for free.
 
-When you reach the northern end of the Bund, take the ferry to the opposite bank at Lujiazui. A ¥2 ferry ride that's a hundred times better than the sightseeing tunnel. Standing on the boat watching the Bund skyline �?that's the best angle for photos.
+When you reach the northern end of the Bund, take the ferry to the opposite bank at Lujiazui. A 楼2 ferry ride that's a hundred times better than the sightseeing tunnel. Standing on the boat watching the Bund skyline 鈥?that's the best angle for photos.
 
 ![The Bund's world architecture cluster](/images/shanghai/gowithmarkhazyl/bund_collage_night_gw.webp)
-*The Bund's "Exposition of World Architecture" �?from the river, every building is a page of history*
+*The Bund's "Exposition of World Architecture" 鈥?from the river, every building is a page of history*
 
 Once you're at Lujiazui, head to the Shanghai Tower observation deck. 632 meters, China's tallest building. The view of Shanghai from above is genuinely breathtaking.
 
 ![Lujiazui skyline](/images/shanghai/gowithmarkhazyl/lujiazui_gw.webp)
-*Lujiazui skyline �?Shanghai Tower's glass curtain wall reflects the ambition of this whole city*
+*Lujiazui skyline 鈥?Shanghai Tower's glass curtain wall reflects the ambition of this whole city*
 
-Ticket is about ¥180, cheaper if bought online.
+Ticket is about 楼180, cheaper if bought online.
 
-**Lunch** at Lujiazui �?IFC Mall has plenty of options.
+**Lunch** at Lujiazui 鈥?IFC Mall has plenty of options.
 
-**Afternoon**: Walk down Nanjing Road pedestrian street. Yes, that street every tourist in the country visits. And look, saying "locals never go there" is a bit absolute �?people do pass through and buy stuff. But making a special trip just for it? Not necessary. Pedestrian streets in every Chinese city look pretty much the same.
+**Afternoon**: Walk down Nanjing Road pedestrian street. Yes, that street every tourist in the country visits. And look, saying "locals never go there" is a bit absolute 鈥?people do pass through and buy stuff. But making a special trip just for it? Not necessary. Pedestrian streets in every Chinese city look pretty much the same.
 
-**Evening**: Find a high spot to watch the sunset. The hotel lobby lounges in Lujiazui are a solid choice �?buy a drink, sit for the whole afternoon, watch boats go up and down the Huangpu River. Shanghai at its most enchanting is right there in that light.
+**Evening**: Find a high spot to watch the sunset. The hotel lobby lounges in Lujiazui are a solid choice 鈥?buy a drink, sit for the whole afternoon, watch boats go up and down the Huangpu River. Shanghai at its most enchanting is right there in that light.
 
 ---
 
@@ -96,12 +96,12 @@ Ticket is about ¥180, cheaper if bought online.
 
 **Don't buy anything at tourist attractions.** Not saying it's all fake, but the markup is ridiculous.
 
-**Shanghai's metro is way more convenient than taxis.** Download the "Metro Dashifu" (Metro大都�? app to scan QR codes through the gates. No need to queue for tickets.
+**Shanghai's metro is way more convenient than taxis.** Download the "Metro Dashifu" (Metro澶ч兘浼? app to scan QR codes through the gates. No need to queue for tickets.
 
-**Don't limit yourself to Instagram-famous restaurants.** Shanghai has plenty of excellent hole-in-the-wall joints. Follow locals' tastes �?search "本帮�? (Shanghainese cuisine) on Dianping and sort by distance. More reliable than any recommendation list.
+**Don't limit yourself to Instagram-famous restaurants.** Shanghai has plenty of excellent hole-in-the-wall joints. Follow locals' tastes 鈥?search "鏈府鑿? (Shanghainese cuisine) on Dianping and sort by distance. More reliable than any recommendation list.
 
 **Weather**: Spring and autumn are the most comfortable. Summer is melt-into-a-puddle hot, winter is bone-chilling damp cold. If you can only come in summer, prepare to change clothes twice a day.
 
 **Accommodation**: Pick somewhere along Metro Lines 2 or 10. These two lines cover most of the attractions and have good interchange connections.
 
-If you want to wake up to the Bund every morning, check out the [Hyatt on the Bund (上海外滩茂悦大酒�?](https://www.trip.com/t/ge0boem5NV2) �?it sits right at the northern end of the Bund where the Huangpu River meets Suzhou Creek, with floor-to-ceiling views of both the Bund and Lujiazui. Even if you don't stay there, their rooftop bar Vue Bar is worth a visit for sunset cocktails.
+If you want to wake up to the Bund every morning, check out the [Hyatt on the Bund (涓婃捣澶栨哗鑼傛偊澶ч厭搴?](https://www.trip.com/t/ge0boem5NV2) 鈥?it sits right at the northern end of the Bund where the Huangpu River meets Suzhou Creek, with floor-to-ceiling views of both the Bund and Lujiazui. Even if you don't stay there, their rooftop bar Vue Bar is worth a visit for sunset cocktails.

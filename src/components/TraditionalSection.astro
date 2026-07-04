@@ -1,5 +1,7 @@
 ---
 // TraditionalSection.astro — Parchment / Ancient China aesthetic
+const { availableCities = [] } = Astro.props as { availableCities?: string[] };
+
 const traditionalDestinations = [
   {
     name: 'Beijing',
@@ -57,26 +59,35 @@ const traditionalDestinations = [
     </div>
 
     <div class="trad-grid">
-      {traditionalDestinations.map(dest => (
-        <div class="trad-card">
-          <div class="trad-card-border">
-            <div class="trad-card-corner tl"></div>
-            <div class="trad-card-corner tr"></div>
-            <div class="trad-card-corner bl"></div>
-            <div class="trad-card-corner br"></div>
-          </div>
-          <div class="trad-card-content">
-            <div class="trad-card-icon">{dest.image}</div>
-            <h3 class="trad-card-name">{dest.name}</h3>
-            <p class="trad-card-tagline">{dest.tagline}</p>
-            <ul class="trad-card-spots">
-              {dest.spots.map(spot => (
-                <li>{spot}</li>
-              ))}
-            </ul>
-          </div>
-        </div>
-      ))}
+      {traditionalDestinations.map(dest => {
+        const cityKey = dest.name.toLowerCase().replace(/['\s]/g, '');
+        const normalizedKey = cityKey === 'xian' ? 'xian' : cityKey;
+        const hasContent = availableCities.includes(normalizedKey);
+        const CardTag = hasContent ? 'a' : 'div';
+        const cardProps = hasContent ? { href: `/guides/${normalizedKey}/`, class: 'trad-card trad-card-link' } : { class: 'trad-card' };
+        return (
+          <CardTag {...cardProps}>
+            <div class="trad-card-border">
+              <div class="trad-card-corner tl"></div>
+              <div class="trad-card-corner tr"></div>
+              <div class="trad-card-corner bl"></div>
+              <div class="trad-card-corner br"></div>
+            </div>
+            <div class="trad-card-content">
+              <div class="trad-card-icon">{dest.image}</div>
+              <h3 class="trad-card-name">{dest.name}</h3>
+              <p class="trad-card-tagline">{dest.tagline}</p>
+              <ul class="trad-card-spots">
+                {dest.spots.map(spot => (
+                  <li>{spot}</li>
+                ))}
+              </ul>
+              {!hasContent && <span class="trad-card-soon">Coming Soon</span>}
+              {hasContent && <span class="trad-card-explore">Explore &rarr;</span>}
+            </div>
+          </CardTag>
+        );
+      })}
     </div>
 
     <div class="trad-footer-note">
@@ -223,6 +234,37 @@ const traditionalDestinations = [
   .trad-card:hover {
     transform: translateY(-3px);
     box-shadow: 0 8px 24px rgba(139, 90, 43, 0.15);
+  }
+
+  .trad-card-link {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .trad-card-link:hover {
+    text-decoration: none;
+    box-shadow: 0 8px 24px rgba(139, 90, 43, 0.25),
+                0 0 0 1.5px #8b5a2b;
+  }
+
+  .trad-card-soon {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    color: #b8a080;
+    text-transform: uppercase;
+  }
+
+  .trad-card-explore {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #8b1a1a;
+    letter-spacing: 0.05em;
   }
 
   /* Corner decorations */

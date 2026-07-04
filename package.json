@@ -12,6 +12,7 @@
     "@astrojs/check": "^0.9.4",
     "@astrojs/sitemap": "^3.7.3",
     "astro": "^5.7.0",
+    "iconv-lite": "^0.7.3",
     "typescript": "^5.7.0"
   }
 }

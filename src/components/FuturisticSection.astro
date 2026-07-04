@@ -1,5 +1,7 @@
 ---
 // FuturisticSection.astro — Sci-fi game UI / Cyberpunk China aesthetic
+const { availableCities = [] } = Astro.props as { availableCities?: string[] };
+
 const futuristicCities = [
   {
     name: 'Shanghai',
@@ -83,34 +85,42 @@ const stats = [
 
     <!-- City Nodes -->
     <div class="future-cities">
-      {futuristicCities.map(city => (
-        <div class="future-city-card" style={`--city-accent: ${city.accent}`}>
-          <div class="future-city-scanline"></div>
-          <div class="future-city-header">
-            <div class="future-city-status">
-              <span class="future-city-dot"></span>
-              {city.status}
+      {futuristicCities.map(city => {
+        const cityKey = city.name.toLowerCase().replace(/['\s]/g, '');
+        const hasContent = availableCities.includes(cityKey);
+        const CardTag = hasContent ? 'a' : 'div';
+        const cardProps = hasContent
+          ? { href: `/guides/${cityKey}/`, class: 'future-city-card future-city-card-link', style: `--city-accent: ${city.accent}` }
+          : { class: 'future-city-card', style: `--city-accent: ${city.accent}` };
+        return (
+          <CardTag {...cardProps}>
+            <div class="future-city-scanline"></div>
+            <div class="future-city-header">
+              <div class="future-city-status">
+                <span class={`future-city-dot ${hasContent ? 'active' : ''}`}></span>
+                {hasContent ? 'ONLINE' : 'OFFLINE'}
+              </div>
+              <div class="future-city-coords">{city.coords}</div>
             </div>
-            <div class="future-city-coords">{city.coords}</div>
-          </div>
-          <h3 class="future-city-name">{city.name}</h3>
-          <div class="future-city-codename">{city.codename}</div>
-          <div class="future-city-data">
-            <div class="future-city-stat-row">
-              <span class="future-city-stat-label">POP</span>
-              <span class="future-city-stat-val">{city.population}</span>
+            <h3 class="future-city-name">{city.name}</h3>
+            <div class="future-city-codename">{city.codename}</div>
+            <div class="future-city-data">
+              <div class="future-city-stat-row">
+                <span class="future-city-stat-label">POP</span>
+                <span class="future-city-stat-val">{city.population}</span>
+              </div>
+              <div class="future-city-stat-row">
+                <span class="future-city-stat-label">SIG</span>
+                <span class="future-city-stat-val">{city.knownFor}</span>
+              </div>
             </div>
-            <div class="future-city-stat-row">
-              <span class="future-city-stat-label">SIG</span>
-              <span class="future-city-stat-val">{city.knownFor}</span>
+            <div class="future-city-footer">
+              <span class="future-city-action">{hasContent ? 'ACCESS NODE →' : 'COMING ONLINE...'}</span>
             </div>
-          </div>
-          <div class="future-city-footer">
-            <span class="future-city-action">ACCESS NODE →</span>
-          </div>
-          <div class="future-city-glow" style={`background: radial-gradient(ellipse at center, ${city.accent}10 0%, transparent 70%)`}></div>
-        </div>
-      ))}
+            <div class="future-city-glow" style={`background: radial-gradient(ellipse at center, ${city.accent}10 0%, transparent 70%)`}></div>
+          </CardTag>
+        );
+      })}
     </div>
 
     <div class="future-terminal">
@@ -417,6 +427,21 @@ const stats = [
     font-size: 0.7rem;
     color: var(--city-accent);
     letter-spacing: 0.1em;
+  }
+
+  .future-city-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+
+  .future-city-card-link:hover {
+    text-decoration: none;
+  }
+
+  .future-city-dot:not(.active) {
+    background: #555;
+    box-shadow: none;
   }
 
   .future-city-glow {

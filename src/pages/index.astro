@@ -1,8 +1,12 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import PrepSection from '../components/PrepSection.astro';
 import TraditionalSection from '../components/TraditionalSection.astro';
 import FuturisticSection from '../components/FuturisticSection.astro';
+
+const guides = await getCollection('guides', ({ data }) => !data.draft);
+const availableCities = [...new Set(guides.map(g => g.data.city))];
 ---
 
 <BaseLayout
@@ -55,7 +59,7 @@ import FuturisticSection from '../components/FuturisticSection.astro';
   <!-- SECTION 2: Futuristic China                  -->
   <!-- ============================================ -->
   <div id="futuristic">
-    <FuturisticSection />
+    <FuturisticSection availableCities={availableCities} />
   </div>
 
   <!-- ============================================ -->
@@ -72,7 +76,7 @@ import FuturisticSection from '../components/FuturisticSection.astro';
   <!-- SECTION 3: Traditional China                 -->
   <!-- ============================================ -->
   <div id="traditional">
-    <TraditionalSection />
+    <TraditionalSection availableCities={availableCities} />
   </div>
 
   <!-- ============================================ -->
