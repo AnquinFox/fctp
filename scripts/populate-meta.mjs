@@ -93,6 +93,31 @@ for (const city of cityDirs) {
       changed = true;
     }
 
+    // For foreigners guides: ensure title + pageSlug + city (schema required fields)
+    const isForeigners = city === 'foreigners';
+    if (isForeigners) {
+      if (!doc.data.title) {
+        // Extract title from first # heading
+        const titleMatch = doc.content.match(/^#\s+(.+)/m);
+        if (titleMatch) {
+          doc.data.title = titleMatch[1];
+          changed = true;
+          console.log(`  📝 title: ${doc.data.title.slice(0, 60)}...`);
+        }
+      }
+      if (!doc.data.pageSlug) {
+        const slug = file.replace('.md', '');
+        doc.data.pageSlug = slug === 'index' ? 'foreigners' : `foreigners/${slug}`;
+        changed = true;
+        console.log(`  🔗 pageSlug: ${doc.data.pageSlug}`);
+      }
+      if (!doc.data.city) {
+        doc.data.city = 'foreigners';
+        changed = true;
+        console.log(`  🏙 city: foreigners`);
+      }
+    }
+
     // Extract cover image from first image in body
     if (!doc.data.cover || doc.data.cover === '') {
       const cover = extractFirstImage(doc.content);
@@ -105,7 +130,6 @@ for (const city of cityDirs) {
     }
 
     // Add tags if empty (or force-regenerate for foreigners)
-    const isForeigners = city === 'foreigners';
     if (!doc.data.tags || doc.data.tags.length === 0 || isForeigners) {
       let tags;
       if (isForeigners) {

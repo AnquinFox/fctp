@@ -8,8 +8,6 @@ tags:
 title: "\U0001F3E5 Health & Emergency Guide for Foreigners in China (2026)"
 pageSlug: foreigners/health-emergency
 city: foreigners
-country: china
-draft: false
 ---
 # 🏥 Health & Emergency Guide for Foreigners in China (2026)
 
@@ -42,8 +40,8 @@ China is generally very safe for travelers. Here's what you need to know about h
 | Type | Quality | Cost | Best For |
 |------|---------|------|----------|
 | **Public hospitals** | ⭐⭐⭐⭐ | Affordable | General medical care |
-| **Private hospitals** | ⭐⭐⭐⭐�?| Expensive | English-speaking staff |
-| **International clinics** | ⭐⭐⭐⭐�?| Very expensive | Western-standard care |
+| **Private hospitals** | ⭐⭐⭐⭐⭐ | Expensive | English-speaking staff |
+| **International clinics** | ⭐⭐⭐⭐⭐ | Very expensive | Western-standard care |
 
 ### Major International Hospitals:
 
@@ -56,11 +54,11 @@ China is generally very safe for travelers. Here's what you need to know about h
 
 ### Hospital Visit Tips:
 
-- **Bring your passport** �?required for registration
-- **Bring cash** �?some hospitals don't accept foreign cards
-- **Translation app** �?for communicating symptoms
-- **Travel insurance card** �?for reimbursement claims
-- **Wait times** �?public hospitals can be very busy (1-3 hours)
+- **Bring your passport** — required for registration
+- **Bring cash** — some hospitals don't accept foreign cards
+- **Translation app** — for communicating symptoms
+- **Travel insurance card** — for reimbursement claims
+- **Wait times** — public hospitals can be very busy (1-3 hours)
 
 ---
 
@@ -73,22 +71,22 @@ China is generally very safe for travelers. Here's what you need to know about h
 | Medicine | Chinese Name | Use |
 |----------|-------------|-----|
 | **Paracetamol** | 扑热息痛 | Pain/fever |
-| **Ibuprofen** | 布洛�?| Pain/inflammation |
+| **Ibuprofen** | 布洛芬 | Pain/inflammation |
 | **Antihistamines** | 抗过敏药 | Allergies |
-| **Cold medicine** | 感冒�?| Cold symptoms |
-| **Diarrhea medicine** | 止泻�?| Stomach issues |
+| **Cold medicine** | 感冒药 | Cold symptoms |
+| **Diarrhea medicine** | 止泻药 | Stomach issues |
 
 ### Pharmacy Tips:
 
-- ** pharmacies** �?look for green cross signs
-- **Chinese pharmacies** �?may not have Western brands
-- **Bring your own** �?pack essential medicines from home
-- **Prescription meds** �?bring a doctor's note in English
-- **Traditional Chinese Medicine** �?interesting but research first
+- ** pharmacies** — look for green cross signs
+- **Chinese pharmacies** — may not have Western brands
+- **Bring your own** — pack essential medicines from home
+- **Prescription meds** — bring a doctor's note in English
+- **Traditional Chinese Medicine** — interesting but research first
 
 ---
 
-## 🛡�?Travel Insurance
+## 🛡️ Travel Insurance
 
 ### Why You Need It:
 
@@ -108,15 +106,15 @@ China is generally very safe for travelers. Here's what you need to know about h
 
 ### What to Look For:
 
-- [ ] **Medical coverage** �?at least $100,000
-- [ ] **Emergency evacuation** �?at least $200,000
-- [ ] **Trip cancellation** �?for unexpected events
-- [ ] **Lost baggage** �?for luggage issues
-- [ ] **24/7 hotline** �?for emergency assistance
+- [ ] **Medical coverage** — at least $100,000
+- [ ] **Emergency evacuation** — at least $200,000
+- [ ] **Trip cancellation** — for unexpected events
+- [ ] **Lost baggage** — for luggage issues
+- [ ] **24/7 hotline** — for emergency assistance
 
 ---
 
-## 🍽�?Food Safety
+## 🍽️ Food Safety
 
 ### General Rules:
 
@@ -164,10 +162,10 @@ China is generally very safe for travelers. Here's what you need to know about h
 
 ### Night Safety:
 
-- **Well-lit streets** �?stick to main roads at night
-- **Public transport** �?metro runs until ~11pm, buses later
-- **Hotel area** �?stay near your accommodation
-- **Phone charged** �?keep battery for emergencies
+- **Well-lit streets** — stick to main roads at night
+- **Public transport** — metro runs until ~11pm, buses later
+- **Hotel area** — stay near your accommodation
+- **Phone charged** — keep battery for emergencies
 
 ---
 
@@ -183,13 +181,13 @@ China is generally very safe for travelers. Here's what you need to know about h
 
 ## 💡 Pro Tips
 
-1. **Buy travel insurance before departure** �?it's too late once you arrive
-2. **Keep emergency numbers saved** �?in phone and written down
-3. **Carry a medical card** �?with blood type, allergies, emergency contact
-4. **Bring essential medicines** �?from your home country
-5. **Learn basic medical Chinese** �?for emergencies
-6. **Stay hydrated** �?drink bottled water only
-7. **Rest when sick** �?Chinese hospitals can be overwhelming
+1. **Buy travel insurance before departure** — it's too late once you arrive
+2. **Keep emergency numbers saved** — in phone and written down
+3. **Carry a medical card** — with blood type, allergies, emergency contact
+4. **Bring essential medicines** — from your home country
+5. **Learn basic medical Chinese** — for emergencies
+6. **Stay hydrated** — drink bottled water only
+7. **Rest when sick** — Chinese hospitals can be overwhelming
 
 ---
 

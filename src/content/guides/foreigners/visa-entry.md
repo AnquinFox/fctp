@@ -5,13 +5,11 @@ tags:
   - visa
   - entry
   - passport
-title: "\U0001F1E8\U0001F1F3 Visa & Entry Guide for Foreigners Coming to China (2026)"
+title: ✈️ Visa & Entry Guide for Foreigners Coming to China (2026)
 pageSlug: foreigners/visa-entry
 city: foreigners
-country: china
-draft: false
 ---
-# 🇨🇳 Visa & Entry Guide for Foreigners Coming to China (2026)
+# ✈️ Visa & Entry Guide for Foreigners Coming to China (2026)
 
 ![Airport Immigration](/images/general/visa-airport.webp)
 
@@ -21,7 +19,7 @@ China has **greatly expanded** visa-free policies. Whether you need a visa depen
 
 ---
 
-## �?Visa-Free Entry (50+ Countries)
+## ✅ Visa-Free Entry (50+ Countries)
 
 Citizens of **50+ countries** can enter mainland China **without any visa** for tourism, family visits, or sightseeing for **up to 30 days**.
 
@@ -37,7 +35,7 @@ Citizens of **50+ countries** can enter mainland China **without any visa** for 
 
 ---
 
-## �?240-Hour Visa-Free Transit (New in 2026!)
+## 🔔 240-Hour Visa-Free Transit (New in 2026!)
 
 Citizens of **55 countries** can transit through China **visa-free for up to 240 hours (10 days)** at **60+ designated ports**.
 
@@ -57,11 +55,11 @@ Citizens of **55 countries** can transit through China **visa-free for up to 240
 | **Entry ports** | 60+ designated ports (Beijing, Shanghai, Guangzhou, Chengdu, etc.) |
 | **Transit area** | Usually province-level region + adjacent areas |
 
-> 💡 This is a great option for **stopover tourism** �?explore China during a layover!
+> 💡 This is a great option for **stopover tourism** — explore China during a layover!
 
 ---
 
-## 🛂 Visa Application (If Needed)
+## 📝 Visa Application (If Needed)
 
 ![Passport and Visa](/images/general/visa-passport.webp)
 
@@ -92,7 +90,7 @@ Citizens of **55 countries** can transit through China **visa-free for up to 240
 
 ---
 
-## 📋 Arrival Procedures
+## 🛬 Arrival Procedures
 
 ### At the Airport:
 
@@ -113,7 +111,7 @@ Citizens of **55 countries** can transit through China **visa-free for up to 240
 
 ---
 
-## 🏥 Important Contacts
+## 📞 Important Contacts
 
 | Service | Number |
 |---------|--------|
@@ -133,4 +131,4 @@ Citizens of **55 countries** can transit through China **visa-free for up to 240
 
 ---
 
-> 📖 **Next**: [Payment Setup Guide](./payment-setup.md) �?Learn how to pay for everything in China
+> 📖 **Next**: [Payment Setup Guide](./payment-setup.md) — Learn how to pay for everything in China

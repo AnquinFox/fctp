@@ -7,8 +7,6 @@ tags:
 title: "\U0001F4F1 Essential Apps Guide for Foreigners in China (2026)"
 pageSlug: foreigners/essential-apps
 city: foreigners
-country: china
-draft: false
 ---
 # 📱 Essential Apps Guide for Foreigners in China (2026)
 
@@ -20,12 +18,12 @@ China runs on apps. Here's everything you need to download **before arriving**.
 
 ---
 
-## 🥇 Must-Have Apps (Download Before Flight)
+## ⭐ Must-Have Apps (Download Before Flight)
 
 | App | Purpose | Why It's Essential |
 |-----|---------|-------------------|
 | **WeChat (微信)** | Communication + Payment | Everyone in China uses it. Period. |
-| **Alipay (支付�?** | Payment + Services | Backup payment + mini-programs |
+| **Alipay (支付宝)** | Payment + Services | Backup payment + mini-programs |
 | **Amap (高德地图)** | Navigation | Best maps app in China |
 | **Didi (滴滴)** | Ride-hailing | China's Uber, but better |
 | **Baidu Translate (百度翻译)** | Translation | Offline Chinese translation |
@@ -37,14 +35,14 @@ China runs on apps. Here's everything you need to download **before arriving**.
 | App | Purpose | Notes |
 |-----|---------|-------|
 | **WeChat (微信)** | Mobile payment | Link your foreign card |
-| **Alipay (支付�?** | Mobile payment | Link your foreign card |
+| **Alipay (支付宝)** | Mobile payment | Link your foreign card |
 | **Trip.com (携程)** | Hotel/flight booking | Accepts international cards |
 
 > 💡 See the [Payment Setup Guide](./payment-setup.md) for detailed setup instructions.
 
 ---
 
-## 🗺�?Navigation & Transport
+## 🧭 Navigation & Transport
 
 ![Navigation Apps](/images/general/apps-navigation.webp)
 
@@ -59,11 +57,11 @@ China runs on apps. Here's everything you need to download **before arriving**.
 
 | Feature | Amap | Baidu Maps |
 |---------|------|------------|
-| **Accuracy** | ⭐⭐⭐⭐�?| ⭐⭐⭐⭐ |
-| **English** | �?Limited | �?Limited |
-| **Metro lines** | �?Excellent | �?Good |
-| **Traffic data** | ⭐⭐⭐⭐�?| ⭐⭐⭐⭐ |
-| **Offline maps** | �?Available | �?Available |
+| **Accuracy** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **English** | ✅ Limited | ✅ Limited |
+| **Metro lines** | ✅ Excellent | ✅ Good |
+| **Traffic data** | ⭐⭐⭐⭐⭐ | ⭐⭐⭐⭐ |
+| **Offline maps** | ✅ Available | ✅ Available |
 | **Best for** | Driving + walking | Overall navigation |
 
 > 💡 **Pro tip**: Download offline maps before your trip. Internet can be spotty in rural areas.
@@ -77,7 +75,7 @@ China runs on apps. Here's everything you need to download **before arriving**.
 | App | Purpose | Notes |
 |-----|---------|-------|
 | **Meituan (美团)** | Food delivery + deals | China's DoorDash/UberEats |
-| **Ele.me (饿了�?** | Food delivery | Alternative to Meituan |
+| **Ele.me (饿了么)** | Food delivery | Alternative to Meituan |
 | **Dianping (大众点评)** | Restaurant reviews | China's Yelp |
 | **KFC/McDonald's apps** | Fast food ordering | Surprisingly good in China |
 
@@ -91,7 +89,7 @@ China runs on apps. Here's everything you need to download **before arriving**.
 
 ---
 
-## 🗣�?Translation & Communication
+## 🗣️ Translation & Communication
 
 | App | Purpose | Notes |
 |-----|---------|-------|
@@ -102,20 +100,20 @@ China runs on apps. Here's everything you need to download **before arriving**.
 
 ### Translation Tips:
 
-- **WeChat translation**: Long-press any Chinese text �?Translate
-- **Camera translation**: Point your camera at Chinese text �?instant translation
+- **WeChat translation**: Long-press any Chinese text → Translate
+- **Camera translation**: Point your camera at Chinese text → instant translation
 - **Voice translation**: Use the microphone icon for spoken translation
 - **Offline mode**: Download Chinese language pack in Baidu Translate
 
 ---
 
-## 🎫 Shopping & Services
+## 🛍️ Shopping & Services
 
 | App | Purpose | Notes |
 |-----|---------|-------|
 | **Taobao (淘宝)** | Shopping | China's Amazon/eBay |
-| **Pinduoduo (拼多�?** | Shopping | Budget-friendly deals |
-| **Xiaohongshu (小红�?** | Lifestyle/social | Chinese Instagram + reviews |
+| **Pinduoduo (拼多多)** | Shopping | Budget-friendly deals |
+| **Xiaohongshu (小红书)** | Lifestyle/social | Chinese Instagram + reviews |
 
 ---
 
@@ -123,23 +121,23 @@ China runs on apps. Here's everything you need to download **before arriving**.
 
 ### Before Flying (Must Download):
 
-1. [ ] **WeChat** (微信) �?#1 priority
-2. [ ] **Alipay** (支付�? �?#2 priority
-3. [ ] **Amap** (高德地图) �?Navigation
-4. [ ] **Baidu Translate** (百度翻译) �?Translation
-5. [ ] **VPN app** �?For accessing blocked services
+1. [ ] **WeChat** (微信) — #1 priority
+2. [ ] **Alipay** (支付宝) — #2 priority
+3. [ ] **Amap** (高德地图) — Navigation
+4. [ ] **Baidu Translate** (百度翻译) — Translation
+5. [ ] **VPN app** — For accessing blocked services
 
 ### After Arrival (Download When Needed):
 
-6. [ ] **Didi** (滴滴) �?Ride-hailing
-7. [ ] **Meituan** (美团) �?Food delivery
-8. [ ] **Dianping** (大众点评) �?Restaurant reviews
-9. [ ] **Trip.com** �?Hotel/flight booking
-10. [ ] **12306** �?Train tickets
+6. [ ] **Didi** (滴滴) — Ride-hailing
+7. [ ] **Meituan** (美团) — Food delivery
+8. [ ] **Dianping** (大众点评) — Restaurant reviews
+9. [ ] **Trip.com** — Hotel/flight booking
+10. [ ] **12306** — Train tickets
 
 ---
 
-## 🔧 App Setup Tips
+## ⚙️ App Setup Tips
 
 ### WeChat Setup:
 
@@ -169,9 +167,9 @@ China runs on apps. Here's everything you need to download **before arriving**.
 
 ---
 
-## 🌟 Mini-Programs (WeChat/Alipay)
+## 🎯 Mini-Programs (WeChat/Alipay)
 
-Mini-programs are apps within apps �?no download needed!
+Mini-programs are apps within apps — no download needed!
 
 ### Useful Mini-Programs:
 
@@ -183,19 +181,19 @@ Mini-programs are apps within apps �?no download needed!
 | **Metro** | Subway tickets | WeChat/Alipay |
 | **Hotel booking** | Hotels | WeChat/Alipay |
 
-> 💡 Search for these directly in WeChat or Alipay �?no need to download separate apps!
+> 💡 Search for these directly in WeChat or Alipay — no need to download separate apps!
 
 ---
 
 ## 💡 Pro Tips
 
-1. **Download WeChat first** �?it's the Swiss Army knife of China
-2. **Learn Chinese app names** �?search by Chinese characters, not English
-3. **Use mini-programs** �?save phone storage by using WeChat/Alipay mini-programs
-4. **Keep apps updated** �?Chinese apps update frequently
-5. **Enable notifications** �?important for payment confirmations
-6. **Save screenshots** �?of important info in case apps can't load
-7. **Learn basic Chinese characters** �?many apps don't have full English support
+1. **Download WeChat first** — it's the Swiss Army knife of China
+2. **Learn Chinese app names** — search by Chinese characters, not English
+3. **Use mini-programs** — save phone storage by using WeChat/Alipay mini-programs
+4. **Keep apps updated** — Chinese apps update frequently
+5. **Enable notifications** — important for payment confirmations
+6. **Save screenshots** — of important info in case apps can't load
+7. **Learn basic Chinese characters** — many apps don't have full English support
 
 ---
 
