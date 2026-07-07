@@ -81,7 +81,11 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
   <button class="prep-toggle-bar" id="prepToggleBar" aria-expanded="true" aria-controls="prepBody">
     <div class="prep-toggle-bar-inner">
       <div class="prep-toggle-left">
-        <span class="prep-toggle-icon" id="prepToggleIcon">▼</span>
+        <span class="prep-toggle-icon" id="prepToggleIcon">
+          <svg width="18" height="10" viewBox="0 0 18 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1 1L9 9L17 1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </span>
         <span class="prep-toggle-label">疑难杂症 · Survival Kit</span>
         <span class="prep-toggle-count">{displayGuides.length} guides</span>
       </div>
@@ -192,10 +196,13 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
   }
 
   .prep-toggle-icon {
-    font-size: 0.7rem;
     color: #00f0ff;
     transition: transform 0.35s;
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
   }
 
   .prep-toggle-bar[aria-expanded="false"] .prep-toggle-icon {
@@ -242,8 +249,8 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
     border: 1px solid #e5e5e5;
     border-top: none;
     border-radius: 0 0 12px 12px;
-    padding: 60px 2rem 80px;
-    margin-bottom: 60px;
+    padding: 36px 2rem 44px;
+    margin-bottom: 40px;
   }
 
   .prep-body.collapsed {
@@ -258,7 +265,7 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
   /* ===== HEADER ===== */
   .prep-header {
     text-align: center;
-    margin-bottom: 56px;
+    margin-bottom: 28px;
   }
 
   .prep-eyebrow {
@@ -280,11 +287,11 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
   }
 
   .prep-subtitle {
-    font-size: 1.05rem;
-    color: #666;
+    font-size: 0.95rem;
+    color: #888;
     max-width: 500px;
     margin: 0 auto;
-    line-height: 1.6;
+    line-height: 1.5;
   }
 
   /* ===== CARD GRID ===== */
@@ -423,7 +430,7 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
 
   /* ===== CTA ===== */
   .prep-cta {
-    margin-top: 48px;
+    margin-top: 28px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -499,12 +506,12 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
 
       if (isExpanded) {
         prepBody.classList.remove('collapsed');
-        if (toggleIcon) toggleIcon.textContent = '▼';
+        if (toggleIcon) toggleIcon.innerHTML = '<svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 1L9 9L17 1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
         if (toggleHint) toggleHint.textContent = 'click to collapse ↑';
         if (toggleLabel) toggleLabel.textContent = '疑难杂症 · Survival Kit';
       } else {
         prepBody.classList.add('collapsed');
-        if (toggleIcon) toggleIcon.textContent = '▶';
+        if (toggleIcon) toggleIcon.innerHTML = '<svg width="18" height="10" viewBox="0 0 18 10" fill="none"><path d="M1 1L9 9L17 1" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
         if (toggleHint) toggleHint.textContent = 'click to expand ↓';
         if (toggleLabel) toggleLabel.textContent = '疑难杂症 · Survival Kit (收起)';
       }
