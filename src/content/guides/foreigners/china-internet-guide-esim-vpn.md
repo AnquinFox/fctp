@@ -1,17 +1,10 @@
 ---
-title: "How to Stay Connected in China: eSIM & VPN Guide (2026)"
-pageSlug: general/china-internet-guide-esim-vpn
-city: general
+title: 'How to Stay Connected in China: eSIM & VPN Guide (2026)'
+pageSlug: foreigners/china-internet-guide-esim-vpn
+city: foreigners
 cover: /images/general/general_guides/china_expressvpn_logo_app_interface_vpn.webp
 tags:
-  - general
-  - internet
-  - vpn
-  - esim
-  - beijing
-  - shanghai
-  - shenzhen
-  - guangzhou
+  - survival-kit
 ---
 # How to Stay Connected in China: eSIM & VPN Guide (2026)
 
