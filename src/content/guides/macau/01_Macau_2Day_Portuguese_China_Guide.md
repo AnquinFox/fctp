@@ -1,7 +1,7 @@
 ---
-title: "Macau: Where Portugal Meets China -- A 2-Day Journey"
-pageSlug: "01-macau-2day-portuguese-china-guide"
-city: "macau"
+title: 'Macau: Where Portugal Meets China -- A 2-Day Journey'
+pageSlug: macau-2day-portuguese-china-guide
+city: macau
 cover: /images/macau/macau_ruins_st_paul_facade_historic_colonial_001.webp
 tags:
   - macau

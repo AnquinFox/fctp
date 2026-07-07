@@ -1,7 +1,7 @@
 ---
-title: "Hong Kong: The Ultimate 2026 Travel Guide"
-pageSlug: "01-hong-kong-2026-travel-guide"
-city: "hongkong"
+title: 'Hong Kong: The Ultimate 2026 Travel Guide'
+pageSlug: hong-kong-2026-travel-guide
+city: hongkong
 cover: /images/hongkong/hongkong_peak_tram_mountain_view_city_001.webp
 tags:
   - hongkong

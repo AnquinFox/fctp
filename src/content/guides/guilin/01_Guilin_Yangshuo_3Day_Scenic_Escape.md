@@ -1,7 +1,7 @@
 ---
-title: "Guilin & Yangshuo: A 3-Day Escape Into China's Most Beautiful Landscape"
-pageSlug: "01-guilin-yangshuo-3day-scenic-escape"
-city: "guilin"
+title: 'Guilin & Yangshuo: A 3-Day Escape Into China''s Most Beautiful Landscape'
+pageSlug: guilin-yangshuo-3day-scenic-escape
+city: guilin
 cover: /images/guilin/guilin_li_river_karst_mountains_misty_001.webp
 tags:
   - guilin

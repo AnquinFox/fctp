@@ -1,7 +1,7 @@
 ---
-title: "Zhangjiajie National Park 3-Day Itinerary | 'Avatar Mountains in Real Life'"
-pageSlug: "01-zhangjiajie-3day-avatar-mountains-guide"
-city: "zhangjiajie"
+title: Zhangjiajie National Park 3-Day Itinerary | 'Avatar Mountains in Real Life'
+pageSlug: zhangjiajie-3day-avatar-mountains-guide
+city: zhangjiajie
 cover: /images/zhangjiajie/zhangjiajie_scenery_pillar_peak_forest_clouds_002.webp
 tags:
   - zhangjiajie

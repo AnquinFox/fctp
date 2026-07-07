@@ -1,7 +1,7 @@
 ---
-title: "Chengdu: A Local's Guide to the Land of Pandas & Hotpot"
-pageSlug: "02-chengdu-3day-local-insider-guide"
-city: "chengdu"
+title: 'Chengdu: A Local''s Guide to the Land of Pandas & Hotpot'
+pageSlug: chengdu-3day-local-insider-guide
+city: chengdu
 cover: >-
   /images/chengdu/local_generated/chengdu_panda_base_bamboo_forest_cute_animal_001.webp
 tags:

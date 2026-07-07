@@ -1,7 +1,7 @@
 ---
-title: "Yunnan: Dali, Lijiang & Shangri-La -- A Journey Through China's Southwest"
-pageSlug: "01-yunnan-dali-lijiang-shangrila-journey"
-city: "yunnan"
+title: 'Yunnan: Dali, Lijiang & Shangri-La -- A Journey Through China''s Southwest'
+pageSlug: yunnan-dali-lijiang-shangrila-journey
+city: yunnan
 cover: /images/yunnan/yunnan_lijiang_old_town_night_lights_canal_009.webp
 tags:
   - yunnan

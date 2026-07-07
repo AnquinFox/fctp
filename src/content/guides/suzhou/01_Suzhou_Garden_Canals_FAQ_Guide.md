@@ -1,7 +1,7 @@
 ---
-title: "Suzhou -- Classical Gardens & Canals FAQ Guide"
-pageSlug: "01-suzhou-garden-canals-faq-guide"
-city: "suzhou"
+title: Suzhou -- Classical Gardens & Canals FAQ Guide
+pageSlug: suzhou-garden-canals-faq-guide
+city: suzhou
 cover: /images/suzhou/suzhou_zhuozheng_garden_pond_pavilion_classical_001.webp
 tags:
   - suzhou

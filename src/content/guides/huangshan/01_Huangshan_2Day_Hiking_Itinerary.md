@@ -1,7 +1,7 @@
 ---
-title: "Huangshan (Yellow Mountain): A 2-Day Hiking Itinerary"
-pageSlug: "01-huangshan-2day-hiking-itinerary"
-city: "huangshan"
+title: 'Huangshan (Yellow Mountain): A 2-Day Hiking Itinerary'
+pageSlug: huangshan-2day-hiking-itinerary
+city: huangshan
 cover: /images/huangshan/huangshan_sea_of_clouds_mountain_sunrise_002.webp
 tags:
   - huangshan

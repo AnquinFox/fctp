@@ -1,7 +1,7 @@
 ---
-title: "Jiuzhaigou National Park -- A Complete FAQ Guide"
-pageSlug: "01-jiuzhaigou-nature-reserve-faq-guide"
-city: "jiuzhaigou"
+title: Jiuzhaigou National Park -- A Complete FAQ Guide
+pageSlug: jiuzhaigou-nature-reserve-faq-guide
+city: jiuzhaigou
 cover: /images/jiuzhaigou/jiuzhaigou_bipeng_gou_valley_snow_mountain_005.webp
 tags:
   - jiuzhaigou

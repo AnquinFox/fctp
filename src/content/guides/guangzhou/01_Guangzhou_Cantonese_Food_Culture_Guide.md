@@ -1,7 +1,7 @@
 ---
-title: "Guangzhou: The Cantonese Food & Culture Capital"
-pageSlug: "01-guangzhou-cantonese-food-culture-guide"
-city: "guangzhou"
+title: 'Guangzhou: The Cantonese Food & Culture Capital'
+pageSlug: guangzhou-cantonese-food-culture-guide
+city: guangzhou
 cover: /images/guangzhou/guangzhou_bao_mo_garden_pavilion_pond_lotus_008.webp
 tags:
   - guangzhou
