@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-07-03 23:30 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-07-07 18:00 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -43,16 +43,23 @@ fctp/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
 │       ├── config.ts                  ← Content Collection 配置
-│       └── guides/                    ← 所有攻略 Markdown
-│           ├── shanghai/              ← 上海 (5中+5英=10篇)
-│           ├── beijing/               ← 北京 (1中+1英=2篇)
-│           ├── chongqing/             ← 重庆 (1中+1英=2篇)
-│           └── xian/                  ← 西安 (待创建)
+│       └── guides/                    ← 所有攻略 Markdown (共25篇)
+│           ├── shanghai/              ← 上海 (10篇)
+│           ├── beijing/               ← 北京 (2篇)
+│           ├── chongqing/             ← 重庆 (2篇)
+│           ├── chengdu/               ← 成都 (1篇)
+│           ├── hangzhou/              ← 杭州 (1篇)
+│           ├── foreigners/            ← 来华实用信息 (7篇)
+│           ├── xian/                  ← 西安 (1篇)
+│           └── general/               ← 通用内容
 └── public/
     └── images/                        ← 攻略用图片 (含旧图 + Fire 同步过来的新图)
         ├── shanghai/
         ├── beijing/
         ├── chongqing/
+        ├── chengdu/
+        ├── hangzhou/
+        ├── foreigners/
         ├── xian/
         └── general/
 ```
@@ -89,8 +96,9 @@ Vercel 自动构建 → wonderquest.xyz 上线
 2. Fire 把图片放到 `wonder-quest/images/{city}/`
 3. **你**把 MD 拖进 `fctp/src/content/guides/{city}/`
 4. **你**把图片复制到 `fctp/public/images/{city}/`
-5. `git add -A` → `git commit -m "feat: add {city} guide"` → `git push origin master`
-6. Vercel 自动构建，1-2 分钟后线上可见
+5. ⚠️ **必跑** `node scripts/populate-meta.mjs` — 自动生成所有攻略的封面和标签元数据（如果内容创作者不写 frontmatter，跳过这步线上就没有封面和标签）
+6. `git add -A` → `git commit -m "feat: add {city} guide"` → `git push origin master`
+7. Vercel 自动构建，1-2 分钟后线上可见
 
 ### 图片引用规范
 
