@@ -1,13 +1,13 @@
 ---
+title: "\U0001F310 Internet & VPN Guide for Foreigners in China (2026)"
+pageSlug: foreigners/internet-vpn
+city: foreigners
 cover: /images/general/internet-wifi.webp
 tags:
   - survival-kit
   - internet
   - vpn
   - esim
-title: "\U0001F310 Internet & VPN Guide for Foreigners in China (2026)"
-pageSlug: foreigners/internet-vpn
-city: foreigners
 ---
 # 🌐 Internet & VPN Guide for Foreigners in China (2026)
 

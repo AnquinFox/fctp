@@ -1,13 +1,13 @@
 ---
+title: ✈️ Visa & Entry Guide for Foreigners Coming to China (2026)
+pageSlug: foreigners/visa-entry
+city: foreigners
 cover: /images/general/visa-airport.webp
 tags:
   - survival-kit
   - visa
   - entry
   - passport
-title: ✈️ Visa & Entry Guide for Foreigners Coming to China (2026)
-pageSlug: foreigners/visa-entry
-city: foreigners
 ---
 # ✈️ Visa & Entry Guide for Foreigners Coming to China (2026)
 
@@ -19,17 +19,20 @@ China has **greatly expanded** visa-free policies. Whether you need a visa depen
 
 ---
 
-## ✅ Visa-Free Entry (50+ Countries)
+## ✅ Visa-Free Entry (50 Countries)
 
-Citizens of **50+ countries** can enter mainland China **without any visa** for tourism, family visits, or sightseeing for **up to 30 days**.
+Citizens of **50 countries** can enter mainland China **without a visa** for tourism, family visits, business, or transit for **up to 30 days**.
 
-### Eligible Countries (Key Ones):
+> ⚠️ **Important**: The United States is **NOT** on the visa-free list. US citizens still need a visa (or use the 240-hour transit policy). Always verify your nationality before traveling.
+
+### Eligible Countries (Effective February 17, 2026):
 
 | Region | Countries |
 |--------|-----------|
-| **Europe (35+)** | France, Germany, Italy, Spain, Netherlands, Switzerland, Sweden, Austria, Belgium, Denmark, Norway, Finland, Iceland, Ireland, Greece, Poland, Portugal, Hungary, Czech Republic, UK, and more |
-| **Asia-Pacific (7)** | Japan, South Korea, Singapore, Australia, New Zealand, Brunei, Malaysia |
-| **Americas (3)** | United States, Canada, Brazil |
+| **Europe (35)** | Andorra, Austria, Belgium, Bulgaria, Croatia, Cyprus, Denmark, Estonia, Finland, France, Germany, Greece, Hungary, Iceland, Ireland, Italy, Latvia, Liechtenstein, Luxembourg, Malta, Monaco, Montenegro, Netherlands, North Macedonia, Norway, Poland, Portugal, Romania, Russia, Slovakia, Slovenia, Spain, Sweden, Switzerland, United Kingdom |
+| **Asia (7)** | Bahrain, Brunei, Japan, Kuwait, Oman, South Korea, Saudi Arabia |
+| **Oceania (2)** | Australia, New Zealand |
+| **Americas (6)** | Argentina, Brazil, Canada, Chile, Peru, Uruguay |
 
 > ⚠️ **Always check the latest list** on the National Immigration Administration (NIA) website before travel: [https://www.nia.gov.cn](https://www.nia.gov.cn)
 

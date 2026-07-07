@@ -1,13 +1,13 @@
 ---
+title: "\U0001F3E5 Health & Emergency Guide for Foreigners in China (2026)"
+pageSlug: foreigners/health-emergency
+city: foreigners
 cover: /images/general/health-hospital.webp
 tags:
   - survival-kit
   - health
   - emergency
   - hospital
-title: "\U0001F3E5 Health & Emergency Guide for Foreigners in China (2026)"
-pageSlug: foreigners/health-emergency
-city: foreigners
 ---
 # 🏥 Health & Emergency Guide for Foreigners in China (2026)
 
@@ -78,7 +78,7 @@ China is generally very safe for travelers. Here's what you need to know about h
 
 ### Pharmacy Tips:
 
-- ** pharmacies** — look for green cross signs
+- **Find pharmacies** — look for green cross signs
 - **Chinese pharmacies** — may not have Western brands
 - **Bring your own** — pack essential medicines from home
 - **Prescription meds** — bring a doctor's note in English

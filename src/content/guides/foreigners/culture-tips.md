@@ -1,13 +1,13 @@
 ---
+title: "\U0001F3AD Culture & Daily Life Guide for Foreigners in China (2026)"
+pageSlug: foreigners/culture-tips
+city: foreigners
 cover: /images/general/culture-food.webp
 tags:
   - survival-kit
   - culture
   - food
   - etiquette
-title: "\U0001F3AD Culture & Daily Life Guide for Foreigners in China (2026)"
-pageSlug: foreigners/culture-tips
-city: foreigners
 ---
 # 🎭 Culture & Daily Life Guide for Foreigners in China (2026)
 
@@ -187,11 +187,11 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 
 | Tip | Details |
 |-----|---------|
-| **Check quality** — inspect before buying |
-| **Compare prices** — shop around first |
-| **Keep receipts** — for returns or disputes |
-| **Use Alipay/WeChat** — for better prices |
-| **Learn numbers** — essential for bargaining |
+| **Check quality** | Inspect before buying |
+| **Compare prices** | Shop around first |
+| **Keep receipts** | For returns or disputes |
+| **Use Alipay/WeChat** | For better prices |
+| **Learn numbers** | Essential for bargaining |
 
 ---
 
@@ -243,10 +243,10 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 
 | Tip | Details |
 |-----|---------|
-| **Cash is king** — but mobile payment is better |
-| **Small bills** — for street vendors |
-| **ATMs** — available everywhere |
-| **Tipping** — not expected, not customary |
+| **Cash is king** | But mobile payment is better |
+| **Small bills** | For street vendors |
+| **ATMs** | Available everywhere |
+| **Tipping** | Not expected, not customary |
 
 ---
 

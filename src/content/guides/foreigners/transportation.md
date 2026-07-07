@@ -1,13 +1,13 @@
 ---
+title: "\U0001F687 Transportation Guide for Foreigners in China (2026)"
+pageSlug: foreigners/transportation
+city: foreigners
 cover: /images/general/transport-metro.webp
 tags:
   - survival-kit
   - transport
   - metro
   - taxi
-title: "\U0001F687 Transportation Guide for Foreigners in China (2026)"
-pageSlug: foreigners/transportation
-city: foreigners
 ---
 # 🚇 Transportation Guide for Foreigners in China (2026)
 
@@ -83,14 +83,14 @@ China's high-speed rail network is the **world's largest and most advanced**.
 3. Search for your route
 4. Select train and seat class
 5. Pay with **Alipay or WeChat Pay**
-6. Show **QR code or passport** at station
+6. **At the station**: scan your **passport** at the gate — no paper ticket needed
 
 #### Option 2: Trip.com
 
 1. Open **Trip.com** app
 2. Search for train routes
 3. Book with **international credit card**
-4. Collect ticket at station with passport
+4. **No paper ticket needed** — just show your **passport** at the station gate
 
 #### Option 3: Station Ticket Window
 

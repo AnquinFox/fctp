@@ -1,13 +1,13 @@
 ---
+title: "\U0001F4B3 Payment Setup Guide for Foreigners in China (2026)"
+pageSlug: foreigners/payment-setup
+city: foreigners
 cover: /images/general/payment-qr.webp
 tags:
   - survival-kit
   - payment
   - alipay
   - wechat
-title: "\U0001F4B3 Payment Setup Guide for Foreigners in China (2026)"
-pageSlug: foreigners/payment-setup
-city: foreigners
 ---
 # 💳 Payment Setup Guide for Foreigners in China (2026)
 
@@ -44,15 +44,20 @@ WeChat Pay is China's most popular payment app, used by **over 1.3 billion peopl
 | Small shops & vendors | Very few things! |
 | Online shopping (Taobao) | |
 
-### Limits & Fees:
+### Limits & Fees (2026 Policy):
 
 | Item | Details |
 |------|---------|
-| **Single transaction** | ¥4,000 RMB (~$550 USD) |
-| **Daily limit** | ¥10,000 RMB (~$1,380 USD) |
-| **Monthly limit** | ¥20,000 RMB (~$2,760 USD) |
-| **Foreign card fee** | ~3% per transaction |
-| **Supported cards** | Visa, Mastercard, JCB, Discover, Diners Club |
+| **Single transaction (Alipay)** | $5,000 USD |
+| **Single transaction (WeChat Pay)** | $5,000 USD *or* ¥6,000 RMB, whichever is lower |
+| **WeChat Pay monthly limit** | ¥50,000 RMB |
+| **WeChat Pay annual limit** | ¥60,000 RMB / $50,000 USD |
+| **Alipay annual limit** | $50,000 USD |
+| **Foreign card fee** | 3% (waived for transactions ≤ ¥200) |
+| **Fee waiver for new users** | ¥1,000/day fee-free for first 90 days after binding |
+| **Supported cards** | Visa, Mastercard, JCB, Discover, Diners Club, Amex |
+
+> 💡 **Fee tip**: Transactions of ¥200 or less have **0% foreign card fee**. For the first 90 days after binding your card, you get ¥1,000 per day with no fees at all.
 
 ---
 
@@ -81,7 +86,7 @@ Alipay (支付宝) is equally powerful, especially for **online shopping** and *
 | **Bill splitting** | ✅ Easy | ✅ Available |
 | **Online shopping** | WeChat Store | Taobao/Tmall (better) |
 | **Transport** | Metro/bus | Metro/bus |
-| **Daily spending** | ¥10,000 | ¥10,000 |
+| **Spending limit (annual)** | $50,000 USD / ¥60,000 RMB | $50,000 USD |
 | **Best for** | Social + daily payments | Shopping + utility bills |
 
 > 💡 **Pro tip**: Install **both** apps. Some merchants prefer one over the other.

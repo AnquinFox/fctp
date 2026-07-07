@@ -1,12 +1,12 @@
 ---
+title: "\U0001F4F1 Essential Apps Guide for Foreigners in China (2026)"
+pageSlug: foreigners/essential-apps
+city: foreigners
 cover: /images/general/apps-phone.webp
 tags:
   - survival-kit
   - apps
   - essential
-title: "\U0001F4F1 Essential Apps Guide for Foreigners in China (2026)"
-pageSlug: foreigners/essential-apps
-city: foreigners
 ---
 # 📱 Essential Apps Guide for Foreigners in China (2026)
 
@@ -177,7 +177,7 @@ Mini-programs are apps within apps — no download needed!
 |-------------|---------|-------|
 | **Didi** | Ride-hailing | WeChat |
 | **Meituan** | Food delivery | WeChat |
-| **Mobike** | Bike sharing | WeChat/Alipay |
+| **Meituan Bike (美团单车)** | Bike sharing | WeChat/Alipay |
 | **Metro** | Subway tickets | WeChat/Alipay |
 | **Hotel booking** | Hotels | WeChat/Alipay |
 

@@ -1,11 +1,11 @@
 ---
+title: "\U0001F1E8\U0001F1F3 Foreigners Coming to China — Complete Guide Series (2026)"
+pageSlug: foreigners
+city: foreigners
 cover: /images/general/cover-china.webp
 tags:
   - overview
   - survival-kit
-title: "\U0001F1E8\U0001F1F3 Foreigners Coming to China — Complete Guide Series (2026)"
-pageSlug: foreigners
-city: foreigners
 ---
 # 🇨🇳 Foreigners Coming to China — Complete Guide Series (2026)
 
