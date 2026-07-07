@@ -40,19 +40,19 @@ const availableCities = [...new Set(guides.map(g => g.data.city))];
   </section>
 
   <!-- ============================================ -->
-  <!-- SECTION 1: Prep (Minimalist)                 -->
+  <!-- SECTION 1: Prep — Collapsible Survival Kit   -->
   <!-- ============================================ -->
   <div id="prep">
-    <PrepSection guides={foreignerGuides} />
+    <PrepSection guides={foreignerGuides} firstGuideSlug="foreigners/internet-vpn" />
   </div>
 
   <!-- ============================================ -->
-  <!-- Transition: Minimalist → Futuristic          -->
+  <!-- Transition: Survival Kit → Futuristic        -->
   <!-- ============================================ -->
   <div class="transition future-transition">
     <div class="transition-text">
       <span class="transition-num">Ⅰ</span>
-      <p>Fast forward to tomorrow</p>
+      <p>Sights set on tomorrow</p>
     </div>
   </div>
 
