@@ -17,6 +17,19 @@ tags:
 
 China has the world's most sophisticated internet censorship system, known as the **Great Firewall (GFW)**. Many popular websites and apps are **blocked** in China.
 
+### ⚠️ 2026 VPN Crackdown — Plan Ahead
+
+Since early 2026, China has significantly tightened VPN enforcement. The GFW now uses **deep packet inspection (DPI) + AI-based traffic analysis** to detect and block VPN connections in real time. What worked last year may not work tomorrow.
+
+**Key changes in 2026:**
+
+- **LetsVPN shut down** (March 2026) — was the #1 recommendation for China travelers
+- **Protocol-level blocking** — older protocols (PPTP, L2TP, basic OpenVPN) are dead
+- **Server IP blacklisting** — even major providers get their IPs rotated into blocklists weekly
+- **Time-based throttling** — VPNs work in the morning, die by afternoon during敏感 periods
+
+> 🛡️ **Rule #1: Always carry at least TWO VPNs.** One as primary, one as backup. Three is better. They cost less than the frustration of being cut off.
+
 ---
 
 ## 🚫 Blocked Services (You'll Need a VPN)
@@ -44,12 +57,13 @@ An eSIM gives you **uninterrupted internet access** from the moment you land, wi
 
 ### Recommended eSIM Providers:
 
-| Provider | Data | Price | Validity | Google Access | Link |
-|----------|------|-------|----------|---------------|------|
-| **Airalo** | 1-20GB | $5-30 | 7-30 days | ✅ Yes | [🔗 Get Airalo](https://www.airalo.com/) |
-| **Holafly** | Unlimited | $19-64 | 5-30 days | ✅ Yes | [holafly.com](https://www.holafly.com/) |
-| **Nomad** | 1-10GB | $8-25 | 7-30 days | ✅ Yes | [getnomad.app](https://www.getnomad.app/) |
-| **Saily** | 1-20GB | $5-30 | 7-30 days | ✅ Yes | [🔗 Get Saily](https://saily.com/) |
+> 🔗 = We have an affiliate link supporting this guide. No extra cost to you.
+
+| Provider | Data | Price | Validity | QR Code | Link |
+|----------|------|-------|----------|---------|------|
+| **Airalo** | 1-20GB | $5-30 | 7-30 days | <img src="/images/general/airalo-qr.webp" width="80" alt="Airalo QR" /> | [🔗 Get Airalo](https://www.airalo.com/) |
+| **Saily** | 1-20GB | $5-30 | 7-30 days | <img src="/images/general/saily-qr.webp" width="80" alt="Saily QR" /> | [🔗 Get Saily](https://saily.com/) |
+| **Drimsim** | Global eSIM | Varies | Flexible | <img src="/images/general/DrimsimQR.webp" width="80" alt="Drimsim QR" /> | [🔗 Get Drimsim](https://drimsim.app/) |
 
 ### How to Set Up eSIM:
 
