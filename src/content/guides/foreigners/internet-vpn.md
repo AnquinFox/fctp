@@ -96,12 +96,12 @@ A VPN encrypts your internet traffic and routes it through a server outside Chin
 
 | VPN | Monthly | Annual (per mo) | Works in China | Link |
 |-----|---------|-----------------|----------------|------|
+| **ProtonVPN** | Free / $4.99 | $4.99 | ✅ Yes | [🔗 ProtonVPN](https://protonvpn.com/) |
+| **365VPN** | $4.14 (1st mo) | $4.21/mo | ✅ China specialist | [🔗 365VPN](https://www.vpn365.me/) |
 | **AstrillVPN** | $15-20 | $10-12.50 | ✅ Most reliable | [astrill.com](https://www.astrill.com/) |
 | **ExpressVPN** | $12.95 | $6.67 | ✅ Good | [🔗 ExpressVPN](https://www.expressvpn.com/) |
 | **NordVPN** | $12.99 | $4.99 | ✅ Good | [nordvpn.com](https://www.nordvpn.com/) |
 | **Surfshark** | — | $2.49 | ⚠️ Inconsistent | [surfshark.com](https://surfshark.com/) |
-| **365VPN** | — | — | ✅ China specialist | [🔗 365VPN](https://www.vpn365.me/) |
-| **ProtonVPN** | Free/Paid | $4.99-9.99 | ⚠️ Limited | [🔗 ProtonVPN](https://protonvpn.com/) |
 
 ### VPN Setup (Do This BEFORE You Leave):
 
