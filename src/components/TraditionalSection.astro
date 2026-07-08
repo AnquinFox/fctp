@@ -8,6 +8,7 @@ const scenicSpots = [
     era: 'Ming-Qing · 600 years',
     detail: '980 buildings, 8,886 rooms — the largest palace complex on Earth.',
     accent: '#8b1a1a',
+    cover: '/images/forbidden_city/forbidden_city_aerial_view_palace_complex_001.webp',
   },
   {
     name: 'Great Wall',
@@ -16,6 +17,7 @@ const scenicSpots = [
     era: 'Warring States–Ming · 2,300 years',
     detail: 'Over 21,000 km snaking across mountains, deserts, and grasslands.',
     accent: '#5c3d1a',
+    cover: '/images/great_wall/great_wall_snaking_mountains_aerial_view_001.webp',
   },
   {
     name: 'Terracotta Warriors',
@@ -24,6 +26,7 @@ const scenicSpots = [
     era: 'Qin Dynasty · 2,200 years',
     detail: 'Every face unique. Buried for 2 millennia with China\'s first emperor.',
     accent: '#a0522d',
+    cover: '/images/terracotta_warriors/terracotta_warriors_pit_one_thousands_soldiers_001.webp',
   },
   {
     name: 'Mogao Caves',
@@ -32,6 +35,7 @@ const scenicSpots = [
     era: 'Silk Road · 1,600 years',
     detail: '492 caves, 45,000 m² of murals — a gallery carved into a desert cliff.',
     accent: '#2d5a3d',
+    cover: '/images/mogao_caves/mogao_caves_cliffside_grottoes_nine_story_001.webp',
   },
   {
     name: 'Potala Palace',
@@ -40,6 +44,7 @@ const scenicSpots = [
     era: 'Tibetan Buddhism · 1,300 years',
     detail: 'Perched at 3,700 m in Lhasa — the highest ancient palace on Earth.',
     accent: '#6b3a5b',
+    cover: '/images/potala_palace/potala_red_white_palace_mountain_001.webp',
   },
   {
     name: 'Yellow Mountain',
@@ -48,6 +53,7 @@ const scenicSpots = [
     era: 'Natural Wonder · 100 million years',
     detail: 'Granite pillars piercing a sea of clouds — the soul of Chinese landscape painting.',
     accent: '#3a5a3a',
+    cover: '/images/huangshan/huangshan_sea_of_clouds_mountain_sunrise_002.webp',
   },
 ];
 ---
@@ -76,6 +82,9 @@ const scenicSpots = [
             <div class="trad-card-corner tr"></div>
             <div class="trad-card-corner bl"></div>
             <div class="trad-card-corner br"></div>
+          </div>
+          <div class="trad-card-img-wrap">
+            <img src={spot.cover} alt={spot.name} class="trad-card-img" loading="lazy" />
           </div>
           <div class="trad-card-content">
             <div class="trad-card-header-row">
@@ -224,7 +233,7 @@ const scenicSpots = [
     );
     border: 1.5px solid #c4a35a;
     border-radius: 2px;
-    padding: 2rem 1.75rem;
+    padding: 0 1.75rem 2rem 1.75rem;
     text-decoration: none;
     color: inherit;
     cursor: pointer;
@@ -235,6 +244,28 @@ const scenicSpots = [
     transform: translateY(-4px);
     box-shadow: 0 10px 32px rgba(139, 90, 43, 0.18);
     border-color: var(--spot-accent, #8b5a2b);
+  }
+
+  /* Card image */
+  .trad-card-img-wrap {
+    margin: 0 -1.75rem 1.25rem -1.75rem;
+    height: 180px;
+    overflow: hidden;
+    border-radius: 2px 2px 0 0;
+    border-bottom: 2px solid #c4a35a;
+  }
+
+  .trad-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: sepia(30%) saturate(80%) brightness(0.9);
+    transition: filter 0.3s, transform 0.4s;
+  }
+
+  .trad-card:hover .trad-card-img {
+    filter: sepia(15%) saturate(100%) brightness(1);
+    transform: scale(1.05);
   }
 
   /* Corner decorations */

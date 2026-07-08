@@ -11,6 +11,7 @@ const futuristicCities = [
     status: 'ACTIVE',
     coords: '31.2304°N 121.4737°E',
     accent: '#00f0ff',
+    cover: '/images/shanghai/shanghai_bund_night_002.webp',
   },
   {
     name: 'Shenzhen',
@@ -20,6 +21,7 @@ const futuristicCities = [
     status: 'ACTIVE',
     coords: '22.5431°N 114.0579°E',
     accent: '#00ff88',
+    cover: '/images/shenzhen/shenzhen_bay_skyline_modern_city_waterfront_001.webp',
   },
   {
     name: 'Chongqing',
@@ -29,6 +31,7 @@ const futuristicCities = [
     status: 'ACTIVE',
     coords: '29.4316°N 106.9123°E',
     accent: '#ff6b6b',
+    cover: '/images/chongqing/chongqing_dazu_001.webp',
   },
   {
     name: 'Guangzhou',
@@ -38,6 +41,27 @@ const futuristicCities = [
     status: 'ACTIVE',
     coords: '23.1291°N 113.2644°E',
     accent: '#ffd700',
+    cover: '/images/guangzhou/guangzhou_baiyun_mountain_park_cable_car_004.webp',
+  },
+  {
+    name: 'Chengdu',
+    codename: 'PANDA PROTOCOL',
+    population: '21M',
+    knownFor: 'Giant Pandas, Sichuan Hotpot, Jinli Ancient Street',
+    status: 'ACTIVE',
+    coords: '30.5728°N 104.0668°E',
+    accent: '#ff8844',
+    cover: '/images/chengdu/chengdu_city_street_night_lights_005.webp',
+  },
+  {
+    name: 'Hangzhou',
+    codename: 'SILK NETWORK',
+    population: '12M',
+    knownFor: 'West Lake, Alibaba HQ, Longjing Tea Plantations',
+    status: 'ACTIVE',
+    coords: '30.2741°N 120.1551°E',
+    accent: '#88dd88',
+    cover: '/images/hangzhou/hangzhou_jiuxi_stream_002.webp',
   },
 ];
 
@@ -62,7 +86,7 @@ const stats = [
     <div class="future-header">
       <div class="future-header-line">
         <span class="future-blip"></span>
-        <p class="future-eyebrow">SYS.CHINA_FUTURE // NODES ACTIVE: 4</p>
+        <p class="future-eyebrow">SYS.CHINA_FUTURE // NODES ACTIVE: 6</p>
       </div>
       <h2 class="future-title">China of<br />Tomorrow</h2>
       <p class="future-desc">
@@ -95,6 +119,14 @@ const stats = [
         return (
           <CardTag {...cardProps}>
             <div class="future-city-scanline"></div>
+            <div class="future-city-img-wrap">
+              <img
+                src={city.cover}
+                alt={city.name}
+                class="future-city-img"
+                loading="lazy" />
+              <div class="future-city-img-overlay" style={`background: linear-gradient(to bottom, transparent 30%, ${city.accent}30 100%)`}></div>
+            </div>
             <div class="future-city-header">
               <div class="future-city-status">
                 <span class={`future-city-dot ${hasContent ? 'active' : ''}`}></span>
@@ -126,7 +158,7 @@ const stats = [
     <div class="future-terminal">
       <p class="future-terminal-text">
         <span class="future-terminal-prompt">></span>
-        More city nodes coming online. Next: <span class="future-terminal-highlight">Hangzhou</span>, <span class="future-terminal-highlight">Chengdu</span>, <span class="future-terminal-highlight">Nanjing</span>...
+        More city nodes coming online. Next: <span class="future-terminal-highlight">Nanjing</span>, <span class="future-terminal-highlight">Xi'an</span>, <span class="future-terminal-highlight">Qingdao</span>...
         <span class="future-terminal-cursor">█</span>
       </p>
     </div>
@@ -350,6 +382,36 @@ const stats = [
     justify-content: space-between;
     align-items: center;
     margin-bottom: 1rem;
+  }
+
+  .future-city-img-wrap {
+    position: relative;
+    margin: -1.5rem -1.5rem 1rem -1.5rem;
+    height: 140px;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
+  }
+
+  .future-city-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(40%) brightness(0.7);
+    transition: filter 0.3s, transform 0.4s;
+  }
+
+  .future-city-card:hover .future-city-img {
+    filter: grayscale(20%) brightness(0.9);
+    transform: scale(1.05);
+  }
+
+  .future-city-img-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    border-radius: 4px 4px 0 0;
+    mix-blend-mode: multiply;
+    transition: opacity 0.3s;
   }
 
   .future-city-status {
