@@ -1,43 +1,53 @@
 ---
-// TraditionalSection.astro — Parchment / Ancient China aesthetic
-const { availableCities = [] } = Astro.props as { availableCities?: string[] };
-
-const traditionalDestinations = [
+// TraditionalSection.astro — "5000 Years of China" — Scenic Spots
+const scenicSpots = [
   {
-    name: 'Beijing',
-    tagline: 'The Imperial Capital',
-    spots: ['Forbidden City', 'Great Wall', 'Temple of Heaven', 'Hutongs'],
-    image: '🏯',
+    name: 'Forbidden City',
+    slug: 'forbidden_city',
+    tagline: 'Dragon Throne of 24 Emperors',
+    era: 'Ming-Qing · 600 years',
+    detail: '980 buildings, 8,886 rooms — the largest palace complex on Earth.',
+    accent: '#8b1a1a',
   },
   {
-    name: "Xi'an",
-    tagline: 'Silk Road Gateway',
-    spots: ['Terracotta Warriors', 'Ancient City Wall', 'Muslim Quarter', 'Big Wild Goose Pagoda'],
-    image: '🏛️',
+    name: 'Great Wall',
+    slug: 'great_wall',
+    tagline: '10,000 Li in Stone and Flesh',
+    era: 'Warring States–Ming · 2,300 years',
+    detail: 'Over 21,000 km snaking across mountains, deserts, and grasslands.',
+    accent: '#5c3d1a',
   },
   {
-    name: 'Hangzhou',
-    tagline: 'Heaven on Earth',
-    spots: ['West Lake', 'Lingyin Temple', 'Longjing Tea Fields', 'Grand Canal'],
-    image: '🏞️',
+    name: 'Terracotta Warriors',
+    slug: 'terracotta_warriors',
+    tagline: '8,000 Soldiers Guarding Eternity',
+    era: 'Qin Dynasty · 2,200 years',
+    detail: 'Every face unique. Buried for 2 millennia with China\'s first emperor.',
+    accent: '#a0522d',
   },
   {
-    name: 'Chengdu',
-    tagline: 'Land of Abundance',
-    spots: ['Giant Pandas', 'Jinli Ancient Street', 'Wuhou Shrine', 'Sichuan Opera'],
-    image: '🐼',
+    name: 'Mogao Caves',
+    slug: 'mogao_caves',
+    tagline: '1,000 Years of Buddhist Art',
+    era: 'Silk Road · 1,600 years',
+    detail: '492 caves, 45,000 m² of murals — a gallery carved into a desert cliff.',
+    accent: '#2d5a3d',
   },
   {
-    name: 'Guilin',
-    tagline: 'Karst Wonderland',
-    spots: ['Li River Cruise', 'Yangshuo Countryside', 'Reed Flute Cave', 'Longji Terraces'],
-    image: '⛰️',
+    name: 'Potala Palace',
+    slug: 'potala_palace',
+    tagline: 'Sanctuary at the Roof of the World',
+    era: 'Tibetan Buddhism · 1,300 years',
+    detail: 'Perched at 3,700 m in Lhasa — the highest ancient palace on Earth.',
+    accent: '#6b3a5b',
   },
   {
-    name: 'Lhasa',
-    tagline: 'Roof of the World',
-    spots: ['Potala Palace', 'Jokhang Temple', 'Barkhor Street', 'Namtso Lake'],
-    image: '🛕',
+    name: 'Yellow Mountain',
+    slug: 'huangshan',
+    tagline: 'The Peak That Inspired a Thousand Scrolls',
+    era: 'Natural Wonder · 100 million years',
+    detail: 'Granite pillars piercing a sea of clouds — the soul of Chinese landscape painting.',
+    accent: '#3a5a3a',
   },
 ];
 ---
@@ -48,52 +58,42 @@ const traditionalDestinations = [
 
   <div class="trad-inner">
     <div class="trad-header">
-      <div class="trad-seal">傳</div>
+      <div class="trad-seal">史</div>
       <p class="trad-eyebrow">FIVE THOUSAND YEARS OF CIVILIZATION</p>
       <h2 class="trad-title">China of<br />Five Thousand Years</h2>
       <p class="trad-desc">
-        Step into a land where emperors ruled from forbidden palaces, poets wrote under
-        willow trees, and the Silk Road carried silk, tea, and ideas across continents.
-        This China still lives — in stone, in ink, in the morning mist over ancient lakes.
+        Walk through palace gates that once only emperors could enter.
+        Stand before armies frozen in clay for two thousand years.
+        These monuments are not museum exhibits — they are time machines.
       </p>
     </div>
 
     <div class="trad-grid">
-      {traditionalDestinations.map(dest => {
-        const cityKey = dest.name.toLowerCase().replace(/['\s]/g, '');
-        const normalizedKey = cityKey === 'xian' ? 'xian' : cityKey;
-        const hasContent = availableCities.includes(normalizedKey);
-        const CardTag = hasContent ? 'a' : 'div';
-        const cardProps = hasContent ? { href: `/guides/${normalizedKey}/`, class: 'trad-card trad-card-link' } : { class: 'trad-card' };
-        return (
-          <CardTag {...cardProps}>
-            <div class="trad-card-border">
-              <div class="trad-card-corner tl"></div>
-              <div class="trad-card-corner tr"></div>
-              <div class="trad-card-corner bl"></div>
-              <div class="trad-card-corner br"></div>
+      {scenicSpots.map(spot => (
+        <a href={`/guides/${spot.slug}/`} class="trad-card" style={`--spot-accent: ${spot.accent}`}>
+          <div class="trad-card-border">
+            <div class="trad-card-corner tl"></div>
+            <div class="trad-card-corner tr"></div>
+            <div class="trad-card-corner bl"></div>
+            <div class="trad-card-corner br"></div>
+          </div>
+          <div class="trad-card-content">
+            <div class="trad-card-header-row">
+              <h3 class="trad-card-name">{spot.name}</h3>
+              <span class="trad-card-era">{spot.era}</span>
             </div>
-            <div class="trad-card-content">
-              <div class="trad-card-icon">{dest.image}</div>
-              <h3 class="trad-card-name">{dest.name}</h3>
-              <p class="trad-card-tagline">{dest.tagline}</p>
-              <ul class="trad-card-spots">
-                {dest.spots.map(spot => (
-                  <li>{spot}</li>
-                ))}
-              </ul>
-              {!hasContent && <span class="trad-card-soon">Coming Soon</span>}
-              {hasContent && <span class="trad-card-explore">Explore &rarr;</span>}
-            </div>
-          </CardTag>
-        );
-      })}
+            <p class="trad-card-tagline">{spot.tagline}</p>
+            <p class="trad-card-detail">{spot.detail}</p>
+            <span class="trad-card-explore">Enter the past &rarr;</span>
+          </div>
+        </a>
+      ))}
     </div>
 
     <div class="trad-footer-note">
       <span class="trad-divider">✦</span>
-      <p>Each destination includes full guides: where to stay, eat, and what to avoid.</p>
-      <a href="/guides/" class="trad-explore-link">Explore All Ancient Destinations →</a>
+      <p>Each monument has a dedicated guide: history, best times to visit, ticket tips, and what not to miss.</p>
+      <a href="/guides/" class="trad-explore-link">Explore All Destinations →</a>
     </div>
   </div>
 
@@ -104,7 +104,6 @@ const traditionalDestinations = [
   .traditional-section {
     position: relative;
     background:
-      /* Parchment base */
       linear-gradient(175deg,
         #f5e6c8 0%,
         #eed9b4 15%,
@@ -114,7 +113,6 @@ const traditionalDestinations = [
         #ebd2a5 85%,
         #f4e2c2 100%
       ),
-      /* Subtle fiber texture */
       repeating-linear-gradient(
         2deg,
         transparent,
@@ -126,7 +124,6 @@ const traditionalDestinations = [
     overflow: hidden;
   }
 
-  /* Aged paper edge effect */
   .traditional-section::before {
     content: '';
     position: absolute;
@@ -215,7 +212,7 @@ const traditionalDestinations = [
 
   .trad-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
   }
 
@@ -228,43 +225,16 @@ const traditionalDestinations = [
     border: 1.5px solid #c4a35a;
     border-radius: 2px;
     padding: 2rem 1.75rem;
-    transition: transform 0.2s, box-shadow 0.2s;
-  }
-
-  .trad-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 24px rgba(139, 90, 43, 0.15);
-  }
-
-  .trad-card-link {
     text-decoration: none;
     color: inherit;
     cursor: pointer;
+    transition: transform 0.25s, box-shadow 0.25s, border-color 0.25s;
   }
 
-  .trad-card-link:hover {
-    text-decoration: none;
-    box-shadow: 0 8px 24px rgba(139, 90, 43, 0.25),
-                0 0 0 1.5px #8b5a2b;
-  }
-
-  .trad-card-soon {
-    display: inline-block;
-    margin-top: 0.75rem;
-    font-size: 0.7rem;
-    font-weight: 600;
-    letter-spacing: 0.1em;
-    color: #b8a080;
-    text-transform: uppercase;
-  }
-
-  .trad-card-explore {
-    display: inline-block;
-    margin-top: 0.75rem;
-    font-size: 0.75rem;
-    font-weight: 700;
-    color: #8b1a1a;
-    letter-spacing: 0.05em;
+  .trad-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 32px rgba(139, 90, 43, 0.18);
+    border-color: var(--spot-accent, #8b5a2b);
   }
 
   /* Corner decorations */
@@ -280,55 +250,77 @@ const traditionalDestinations = [
     height: 16px;
     border-color: #8b5a2b;
     border-style: solid;
+    transition: border-color 0.25s;
   }
   .trad-card-corner.tl { top: -1px; left: -1px; border-width: 2px 0 0 2px; }
   .trad-card-corner.tr { top: -1px; right: -1px; border-width: 2px 2px 0 0; }
   .trad-card-corner.bl { bottom: -1px; left: -1px; border-width: 0 0 2px 2px; }
   .trad-card-corner.br { bottom: -1px; right: -1px; border-width: 0 2px 2px 0; }
 
+  .trad-card:hover .trad-card-corner {
+    border-color: var(--spot-accent, #8b5a2b);
+  }
+
   .trad-card-content {
     position: relative;
   }
 
-  .trad-card-icon {
-    font-size: 2.5rem;
-    margin-bottom: 0.75rem;
+  .trad-card-header-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.5rem;
+    gap: 0.5rem;
   }
 
   .trad-card-name {
     font-family: "Noto Serif SC", "Georgia", serif;
-    font-size: 1.4rem;
+    font-size: 1.35rem;
     font-weight: 700;
     color: #3d2b1a;
-    margin-bottom: 0.25rem;
+    margin: 0;
+  }
+
+  .trad-card-era {
+    font-size: 0.65rem;
+    font-weight: 600;
+    color: var(--spot-accent, #8b5a2b);
+    background: rgba(196, 163, 90, 0.25);
+    padding: 0.2em 0.6em;
+    border-radius: 3px;
+    white-space: nowrap;
+    letter-spacing: 0.03em;
   }
 
   .trad-card-tagline {
     font-family: "Georgia", serif;
-    font-size: 0.9rem;
+    font-size: 0.92rem;
     color: #8b5a2b;
     font-style: italic;
-    margin-bottom: 1rem;
-    padding-bottom: 0.75rem;
+    margin-bottom: 0.6rem;
+    padding-bottom: 0.65rem;
     border-bottom: 1px dotted #c4a35a;
   }
 
-  .trad-card-spots {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
+  .trad-card-detail {
+    font-size: 0.82rem;
+    color: #6b4d2f;
+    line-height: 1.55;
+    margin-bottom: 1rem;
   }
 
-  .trad-card-spots li {
-    font-size: 0.8rem;
-    color: #6b4d2f;
-    background: rgba(196, 163, 90, 0.2);
-    padding: 0.25rem 0.65rem;
-    border-radius: 3px;
-    font-family: "Georgia", serif;
+  .trad-card-explore {
+    display: inline-block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: #8b1a1a;
+    letter-spacing: 0.05em;
+    transition: color 0.2s, transform 0.2s;
+  }
+
+  .trad-card:hover .trad-card-explore {
+    color: var(--spot-accent, #5c1111);
+    transform: translateX(3px);
   }
 
   .trad-footer-note {
@@ -373,6 +365,10 @@ const traditionalDestinations = [
     }
     .trad-grid {
       grid-template-columns: 1fr;
+    }
+    .trad-card-header-row {
+      flex-direction: column;
+      align-items: flex-start;
     }
   }
 </style>

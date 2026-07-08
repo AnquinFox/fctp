@@ -73,7 +73,7 @@ function extractExcerpt(body: string, maxLen = 100): string {
 }
 
 // Exclude the index/overview page from cards
-const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'foreigners-index');
+const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'foreigners/foreigners');
 ---
 
 <section class="prep-section">
@@ -139,7 +139,7 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
     </div>
 
     <div class="prep-cta">
-      <a href="/guides/foreigners/foreigners-index/" class="prep-cta-btn">📋 Full Survival Kit</a>
+      <a href="/guides/foreigners/foreigners/" class="prep-cta-btn">📋 Full Survival Kit</a>
       <span class="prep-cta-time">⏱️ {displayGuides.length} guides</span>
     </div>
   </div>
