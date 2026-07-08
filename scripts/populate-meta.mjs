@@ -18,7 +18,7 @@ function extractFirstImage(body) {
 function extractLocationTags(title, body, primaryCity) {
   const tags = new Set([primaryCity]);
   
-  // city name mappings for detection
+  // city name mappings for detection (expanded for scenic-spot cross-tagging)
   const cityPatterns = {
     'beijing': /北京|beijing/gi,
     'shanghai': /上海|shanghai/gi,
@@ -28,6 +28,37 @@ function extractLocationTags(title, body, primaryCity) {
     'hangzhou': /杭州|hangzhou/gi,
     'shenzhen': /深圳|shenzhen/gi,
     'guangzhou': /广州|guangzhou/gi,
+    'nanjing': /南京|nanjing/gi,
+    'qingdao': /青岛|qingdao/gi,
+    'harbin': /哈尔滨|harbin/gi,
+    'guiyang': /贵阳|guiyang/gi,
+    'lhasa': /拉萨|lhasa|tibet/gi,
+    'wuhan': /武汉|wuhan/gi,
+    'chengde': /承德|chengde/gi,
+    'dali': /大理|dali/gi,
+    'lijiang': /丽江|lijiang/gi,
+    'yangshuo': /阳朔|yangshuo/gi,
+    'leshan': /乐山|leshan/gi,
+    'shangri-la': /香格里拉|shangri[\s]?la/gi,
+    'hohhot': /呼和浩特|hohhot/gi,
+    'zhangye': /张掖|zhangye/gi,
+    'datong': /大同|datong/gi,
+    'kaifeng': /开封|kaifeng/gi,
+    'sanya': /三亚|sanya/gi,
+    'dalian': /大连|dalian/gi,
+    'lanzhou': /兰州|lanzhou/gi,
+    'suzhou': /苏州|suzhou/gi,
+    'xiamen': /厦门|xiamen/gi,
+    'changsha': /长沙|changsha/gi,
+    'guilin': /桂林|guilin/gi,
+    'kunming': /昆明|kunming/gi,
+    'luoyang': /洛阳|luoyang/gi,
+    'macau': /澳门|macau/gi,
+    'hongkong': /香港|hong[\s]?kong/gi,
+    'dunhuang': /敦煌|dunhuang/gi,
+    'huangshan': /黄山|huangshan/gi,
+    'jiuzhaigou': /九寨沟|jiuzhaigou/gi,
+    'zhangjiajie': /张家界|zhangjiajie/gi,
   };
 
   for (const [city, pattern] of Object.entries(cityPatterns)) {

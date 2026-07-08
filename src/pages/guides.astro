@@ -9,14 +9,35 @@ const allTags = [...new Set(allGuides.flatMap(g => g.data.tags))].sort();
 
 // City display names for tag labels
 const cityDisplayNames: Record<string, string> = {
-  beijing: 'Beijing · 北京',
-  shanghai: 'Shanghai · 上海',
-  chongqing: 'Chongqing · 重庆',
-  chengdu: 'Chengdu · 成都',
-  xian: "Xi'an · 西安",
-  hangzhou: 'Hangzhou · 杭州',
-  shenzhen: 'Shenzhen · 深圳',
-  guangzhou: 'Guangzhou · 广州',
+  beijing: 'Beijing', shanghai: 'Shanghai', chongqing: 'Chongqing',
+  chengdu: 'Chengdu', xian: "Xi'an", hangzhou: 'Hangzhou',
+  shenzhen: 'Shenzhen', guangzhou: 'Guangzhou', nanjing: 'Nanjing',
+  qingdao: 'Qingdao', harbin: 'Harbin', guiyang: 'Guiyang',
+  lhasa: 'Lhasa', wuhan: 'Wuhan', chengde: 'Chengde', dali: 'Dali',
+  lijiang: 'Lijiang', yangshuo: 'Yangshuo', leshan: 'Leshan',
+  'shangri-la': 'Shangri-La', hohhot: 'Hohhot', zhangye: 'Zhangye',
+  datong: 'Datong', kaifeng: 'Kaifeng', sanya: 'Sanya', dalian: 'Dalian',
+  lanzhou: 'Lanzhou', suzhou: 'Suzhou', xiamen: 'Xiamen', changsha: 'Changsha',
+  guilin: 'Guilin', kunming: 'Kunming', luoyang: 'Luoyang', macau: 'Macau',
+  hongkong: 'Hong Kong', dunhuang: 'Dunhuang', huangshan: 'Huangshan',
+  jiuzhaigou: 'Jiuzhaigou', zhangjiajie: 'Zhangjiajie', yunnan: 'Yunnan',
+  // Scenic Spots
+  changbaishan: 'Changbaishan', dazu_rock_carvings: 'Dazu Rock Carvings',
+  emeishan: 'Mount Emei', forbidden_city: 'Forbidden City',
+  great_wall: 'Great Wall', guilin_lijiang: 'Li River',
+  huangguoshu: 'Huangguoshu Waterfall', longmen_grottoes: 'Longmen Grottoes',
+  mogao_caves: 'Mogao Caves', potala_palace: 'Potala Palace',
+  qinghai_lake: 'Qinghai Lake', qufu: 'Qufu',
+  suzhou_gardens: 'Suzhou Gardens', taishan: 'Mount Tai',
+  terracotta_warriors: 'Terracotta Warriors', wudang_mountain: 'Wudang Mountain',
+  wuyishan: 'Wuyishan',
+  // Foreigners
+  'survival-kit': 'Survival Kit', overview: 'Overview', visa: 'Visa',
+  entry: 'Entry', passport: 'Passport', payment: 'Payment', alipay: 'Alipay',
+  wechat: 'WeChat', internet: 'Internet', vpn: 'VPN', esim: 'eSIM',
+  apps: 'Apps', essential: 'Essential', transport: 'Transport',
+  metro: 'Metro', taxi: 'Taxi', health: 'Health', emergency: 'Emergency',
+  hospital: 'Hospital', culture: 'Culture', food: 'Food', etiquette: 'Etiquette',
 };
 ---
 
