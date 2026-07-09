@@ -95,24 +95,14 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
 
   <!-- Collapsible body -->
   <div class="prep-body" id="prepBody">
-    <div class="prep-header">
-      <p class="prep-eyebrow">BEFORE YOU LAND</p>
-      <h2 class="prep-title">What every foreigner<br />needs before China</h2>
-      <p class="prep-subtitle">
-        From internet access to payments to cultural survival — everything sorted.
-        Read these before you book your flight.
-      </p>
-    </div>
+    <p class="prep-compact-subtitle">From internet access to payments to cultural survival — read before you fly.</p>
 
     <div class="prep-grid">
-      {displayGuides.map((guide: any, i: number) => {
+      {displayGuides.map((guide: any) => {
         const { title, pageSlug, cover, tags } = guide.data;
-        const excerpt = extractExcerpt(guide.body);
         const icon = getIcon(guide);
-        const isFirst = i === 0;
         return (
-          <a href={`/guides/${pageSlug}/`} class={`prep-card${isFirst ? ' prep-card-featured' : ''}`}>
-            {isFirst && <span class="prep-card-badge">🥇 TOP READ</span>}
+          <a href={`/guides/${pageSlug}/`} class="prep-card">
             <div class="prep-card-img-wrap">
               {cover ? (
                 <img src={cover} alt={title} class="prep-card-img" loading="lazy" />
@@ -120,18 +110,7 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
                 <div class="prep-card-img-placeholder">{icon}</div>
               )}
             </div>
-            <div class="prep-card-body">
-              <h3 class="prep-card-title">
-                <span class="prep-card-icon">{icon}</span>
-                {title}
-              </h3>
-              {excerpt && <p class="prep-card-desc">{excerpt}</p>}
-              <div class="prep-card-tags">
-                {tags.filter((t: string) => t !== 'survival-kit').map((tag: string) => (
-                  <span class="prep-tag">{tag}</span>
-                ))}
-              </div>
-            </div>
+            <span class="prep-card-title">{icon} {title}</span>
             <span class="prep-arrow">→</span>
           </a>
         );
@@ -139,8 +118,7 @@ const displayGuides = sortedGuides.filter((g: any) => g.data.pageSlug !== 'forei
     </div>
 
     <div class="prep-cta">
-      <a href="/guides/foreigners/foreigners/" class="prep-cta-btn">📋 Full Survival Kit</a>
-      <span class="prep-cta-time">⏱️ {displayGuides.length} guides</span>
+      <a href="/guides/foreigners/foreigners/" class="prep-cta-btn">📋 Full Survival Kit ({displayGuides.length})</a>
     </div>
   </div>
 </section>
