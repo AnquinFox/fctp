@@ -13,9 +13,16 @@ const guide = guides.find(g => g.data.pageSlug === slug);
 
 if (!guide) return Astro.redirect('/404');
 const { Content } = await guide.render();
-const { title, city, duration, tags, cover, published, updated } = guide.data;
+const { title, city, duration, tags, cover, published, updated, lang, alternateSlug } = guide.data;
 
-const description = `${title} — A detailed ${city} travel guide with honest tips, local insights, and practical advice for foreign visitors.`;
+// Determine alternate URL for hreflang cross-reference
+const alternateUrl = alternateSlug
+  ? new URL(`/guides/${alternateSlug}/`, Astro.site).href
+  : undefined;
+
+const description = lang === 'zh'
+  ? `${title} — ${city}旅行攻略，包含实用建议、本地人推荐和外国游客必备信息。`
+  : `${title} — A detailed ${city} travel guide with honest tips, local insights, and practical advice for foreign visitors.`;
 ---
 
 <BaseLayout
@@ -25,6 +32,7 @@ const description = `${title} — A detailed ${city} travel guide with honest ti
   ogType="article"
   published={published?.toISOString()}
   updated={updated?.toISOString()}
+  alternateUrl={alternateUrl}
 >
   <article style="max-width:800px;margin:0 auto;padding:2rem 1.5rem 4rem">
     <header style="margin-bottom:2.5rem">

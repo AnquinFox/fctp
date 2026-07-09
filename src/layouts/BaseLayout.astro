@@ -8,6 +8,9 @@ export interface Props {
   updated?: string;
   noHeader?: boolean;
   noFooter?: boolean;
+  lang?: string;
+  hreflang?: string;
+  alternateUrl?: string;
 }
 
 const {
@@ -19,7 +22,15 @@ const {
   updated,
   noHeader = false,
   noFooter = false,
+  lang: propLang,
+  hreflang = 'en',
+  alternateUrl,
 } = Astro.props;
+
+// Auto-detect language: if no explicit lang, check title for Chinese characters
+const hasChineseChars = /[\u4e00-\u9fff]/.test(title);
+const lang = propLang || (hasChineseChars ? 'zh' : 'en');
+const pageHreflang = lang === 'zh' ? 'zh-Hans' : 'en';
 
 const canonical = new URL(Astro.url.pathname, Astro.site);
 
@@ -49,13 +60,18 @@ const jsonLd: Record<string, unknown> = {
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={lang}>
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{title} | WonderQuest</title>
     <meta name="description" content={description} />
     <link rel="canonical" href={canonical.href} />
+
+    <!-- hreflang — tells Google which language this page is in -->
+    <link rel="alternate" hreflang={pageHreflang} href={canonical.href} />
+    {alternateUrl && <link rel="alternate" hreflang={pageHreflang === 'en' ? 'zh-Hans' : 'en'} href={alternateUrl} />}
+    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
 
     <!-- Open Graph -->
     <meta property="og:title" content={`${title} | WonderQuest`} />
