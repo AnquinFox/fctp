@@ -1,0 +1,254 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+
+const title = 'First Time in China: Survival Guide for Foreign Travelers (2026)';
+const description = 'Your complete survival guide for visiting China for the first time. Payment apps (Alipay/WeChat), language tips, transport navigation, cultural dos and don\'ts, and everything that surprises first-timers.';
+const ogImage = '/images/general/wonderquest-og.jpg';
+const published = '2026-07-09';
+---
+
+<BaseLayout
+  title={title}
+  description={description}
+  image={ogImage}
+  ogType="article"
+  published={published}
+  lang="en"
+  hreflang="en"
+>
+  <div class="container" style="max-width:800px;margin:0 auto;padding:2rem 1.5rem 4rem">
+    <article class="article-content">
+      <h1>First Time in China: The Survival Guide Nobody Gave You</h1>
+
+      <p><strong>Your first trip to China is going to be incredible.</strong> It's also going to be confusing in ways you don't expect. The food is phenomenal, the sights are breathtaking, and the infrastructure is world-class. But the digital ecosystem is completely different from the West, and that's where most first-timers get stuck.</p>
+
+      <p>This guide covers the stuff guidebooks skip: how to pay for things, how to get around, what to do when you can't read the menu, and the cultural moments that will save you from awkwardness.</p>
+
+      <nav aria-label="Table of Contents">
+        <h2>📋 In This Guide</h2>
+        <ol>
+          <li><a href="#before-you-go">Before You Go: The Non-Negotiables</a></li>
+          <li><a href="#payments">Payments: Alipay, WeChat & Money</a></li>
+          <li><a href="#language">Language: How to Survive Without Mandarin</a></li>
+          <li><a href="#transport">Getting Around: Metro, Didi & Trains</a></li>
+          <li><a href="#culture">Cultural Dos & Don'ts</a></li>
+          <li><a href="#toilets">The Toilet Situation (Yes, We're Going There)</a></li>
+          <li><a href="#emergencies">Emergencies & Health</a></li>
+          <li><a href="#faq">FAQ</a></li>
+        </ol>
+      </nav>
+
+      <h2 id="before-you-go">✅ Before You Go: The Non-Negotiables</h2>
+
+      <p>Do these things <strong>before</strong> you leave home. You cannot do them after landing:</p>
+
+      <ol>
+        <li><strong>Install a VPN or eSIM.</strong> Google, WhatsApp, Gmail, Instagram — all blocked. See our <a href="/seo/china-vpn-esim-guide">VPN & eSIM guide →</a></li>
+        <li><strong>Set up Alipay.</strong> Download the app, verify your passport, link your foreign credit card. This takes 1–3 days. <a href="#payments">Details below →</a></li>
+        <li><strong>Download offline maps.</strong> Maps.me or Organic Maps. Google Maps is inaccurate in China even with a VPN.</li>
+        <li><strong>Save Google Translate offline Chinese pack.</strong> Camera translation is a lifesaver for menus.</li>
+        <li><strong>Print or screenshot</strong> your hotel name and address in Chinese characters.</li>
+        <li><strong>Bring your passport everywhere.</strong> You need it for train tickets, museum entry, and hotel check-in.</li>
+      </ol>
+
+      <h2 id="payments">💳 Payments: The Digital Wallet Revolution</h2>
+
+      <p>China is a cashless society. Not "mostly cashless" — <strong>genuinely cashless</strong>. Street food vendors, vegetable markets, even beggars have QR codes. As a foreigner, you have two options:</p>
+
+      <h3>Alipay (Recommended for Foreigners)</h3>
+      <p>Alipay now supports international credit cards (Visa, Mastercard, Amex). Here's the setup:</p>
+      <ol>
+        <li>Download Alipay from your app store</li>
+        <li>Sign up with your phone number (works with foreign numbers)</li>
+        <li>Go to "Me" → "Bank Cards" → Add your card</li>
+        <li>Verify your identity (passport photo + selfie)</li>
+        <li>Wait 1–3 days for verification</li>
+      </ol>
+
+      <p>Once verified, you can pay by scanning QR codes or showing your payment QR to vendors. It's fast. <strong>Transaction limit:</strong> ¥20,000/year (~$2,800) for unverified accounts. Verified accounts have higher limits.</p>
+
+      <h3>WeChat Pay</h3>
+      <p>Also accepts foreign cards now, but the verification process is more frustrating than Alipay. We recommend Alipay as your primary and WeChat Pay as backup. If you're meeting Chinese friends, they'll likely use WeChat Pay to send you money or split bills.</p>
+
+      <h3>Cash</h3>
+      <p>Still accepted, but increasingly rare. Large chains and hotels always take cash. Small vendors often can't make change. Carry ¥500–1000 (~$70–140) as emergency backup. ATMs at major banks (ICBC, Bank of China) accept foreign cards.</p>
+
+      <div style="background:#fff3cd;border-left:4px solid #ffc107;padding:1rem 1.25rem;margin:1.5rem 0;border-radius:0 8px 8px 0">
+        <strong>⚠️ Common issue:</strong> Some foreign cards get declined on Alipay/WeChat Pay for transactions over ¥200. This is your bank's fraud protection, not Alipay's fault. Call your bank before the trip and tell them you'll be in China. Or carry a second card as backup.
+      </div>
+
+      <h2 id="language">🗣️ Language: How to Survive Without Mandarin</h2>
+
+      <p>In Beijing, Shanghai, and Guangzhou, you'll find English speakers — especially in hotels and tourist areas. Outside major cities? Not so much. But with the right tools, the language barrier is manageable:</p>
+
+      <h3>Essential Phrases</h3>
+      <table>
+        <thead>
+          <tr><th>English</th><th>Chinese</th><th>Pronunciation</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Hello</td><td>你好</td><td>nǐ hǎo</td></tr>
+          <tr><td>Thank you</td><td>谢谢</td><td>xiè xiè</td></tr>
+          <tr><td>How much?</td><td>多少钱?</td><td>duō shǎo qián?</td></tr>
+          <tr><td>Too expensive!</td><td>太贵了!</td><td>tài guì le!</td></tr>
+          <tr><td>I don't understand</td><td>我听不懂</td><td>wǒ tīng bù dǒng</td></tr>
+          <tr><td>Check please</td><td>买单</td><td>mǎi dān</td></tr>
+          <tr><td>Not spicy</td><td>不辣</td><td>bù là</td></tr>
+          <tr><td>Where is the bathroom?</td><td>洗手间在哪?</td><td>xǐ shǒu jiān zài nǎ?</td></tr>
+          <tr><td>No, thank you</td><td>不用，谢谢</td><td>bù yòng, xiè xiè</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Translation Tools That Actually Work</h3>
+      <ul>
+        <li><strong>Google Translate (camera mode):</strong> Point at any menu or sign, see English overlay in real time. Requires VPN.</li>
+        <li><strong>Microsoft Translator:</strong> Works without VPN (mostly). Good backup.</li>
+        <li><strong>Pleco:</strong> The best Chinese-English dictionary app. Draw characters, scan text, voice input. Essential.</li>
+        <li><strong>Baidu Translate:</strong> More accurate for Chinese → English than Google. No VPN needed. Interface is partially in Chinese.</li>
+      </ul>
+
+      <h2 id="transport">🚇 Getting Around</h2>
+
+      <h3>Metro</h3>
+      <p>Every major Chinese city has a clean, modern, absurdly cheap metro system. Fares: ¥2–6 ($0.30–0.85) per ride. All signage is bilingual (Chinese + English). Pay with Alipay's "Transport" mini-app — no need for a physical metro card.</p>
+
+      <h3>Didi (China's Uber)</h3>
+      <p>Download the Didi app (English version available). Or use it directly inside Alipay: "Didi" mini-app → enter destination → pay. Rides cost $3–10 within a city. The in-app chat auto-translates between you and the driver.</p>
+
+      <p><strong>Pro tip:</strong> Didi drivers will call you. They don't speak English. The app shows you a translated message explaining to show your phone to a passerby who can help. Keep your phone handy.</p>
+
+      <h3>Taxis</h3>
+      <p>Still common but declining. Have your destination written in Chinese. Taxis are metered and honest in most cities. In Beijing and Shanghai, taxi drivers rarely speak English. Use Didi instead if possible.</p>
+
+      <h3>High-Speed Trains</h3>
+      <p>Book via Trip.com (English). Arrive 45 minutes early — you need your passport to collect the physical ticket. Security check is similar to airports (bag scan, metal detector). The trains are impeccably clean and punctual.</p>
+
+      <h2 id="culture">🎭 Cultural Dos & Don'ts</h2>
+
+      <h3>Do ✓</h3>
+      <ul>
+        <li>✓ Receive business cards / gifts with <strong>both hands</strong> — shows respect</li>
+        <li>✓ Bring a small gift if invited to someone's home (fruit, tea, or something from your country)</li>
+        <li>✓ Accept tea when offered — it's a ritual, not just a drink</li>
+        <li>✓ Tap the table with two fingers when someone refills your tea — means "thank you"</li>
+        <li>✓ Bargain at markets (but not in malls or restaurants)</li>
+        <li>✓ Let your host order at restaurants — they know what's good</li>
+      </ul>
+
+      <h3>Don't ✗</h3>
+      <ul>
+        <li>✗ Stick chopsticks vertically in rice — looks like funeral incense</li>
+        <li>✗ Point with your index finger — use an open hand instead</li>
+        <li>✗ Expect people to queue in lines — it's... more of a loose concept outside of formal settings</li>
+        <li>✗ Discuss Taiwan, Tibet, Xinjiang, or Tiananmen Square unless you know the person well</li>
+        <li>✗ Be surprised by staring — foreigners are still uncommon in many parts of China. People are curious, not hostile.</li>
+        <li>✗ Tip — it's not expected and can sometimes cause confusion</li>
+        <li>✗ Give clocks or umbrellas as gifts — they're associated with death and separation</li>
+      </ul>
+
+      <h2 id="toilets">🚽 The Toilet Situation</h2>
+
+      <p>Let's address this honestly. Most public toilets in China are squat toilets. Western-style toilets exist in international hotels, upscale malls, and airports. Here's what you need to know:</p>
+
+      <ul>
+        <li><strong>Carry your own toilet paper.</strong> Public toilets rarely provide it. Small tissue packs are sold everywhere (¥2–5). Buy them.</li>
+        <li><strong>Carry hand sanitizer.</strong> Soap is hit or miss.</li>
+        <li><strong>Don't flush toilet paper.</strong> In older buildings, plumbing can't handle it. Use the bin next to the toilet.</li>
+        <li><strong>Malls and Starbucks are your friends.</strong> Clean, Western-style toilets. Memorize their locations near tourist sites.</li>
+        <li><strong>"xǐ shǒu jiān" (洗手间)</strong> means restroom. The characters for women: 女, men: 男.</li>
+      </ul>
+
+      <h2 id="emergencies">🆘 Emergencies & Health</h2>
+
+      <table>
+        <thead>
+          <tr><th>Service</th><th>Number</th><th>Notes</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Police</td><td>110</td><td>English-speaking operators in major cities</td></tr>
+          <tr><td>Ambulance</td><td>120</td><td>Response varies by city</td></tr>
+          <tr><td>Fire</td><td>119</td><td></td></tr>
+          <tr><td>Foreigner assistance</td><td>12308</td><td>Ministry of Foreign Affairs hotline</td></tr>
+        </tbody>
+      </table>
+
+      <h3>Health Tips</h3>
+      <ul>
+        <li>🔹 <strong>Travel insurance is non-negotiable.</strong> International hospitals in China are excellent but expensive. A basic visit can cost ¥2,000+ ($280) without insurance.</li>
+        <li>🔹 <strong>Bring Imodium and Pepto-Bismol.</strong> You will probably eat something your stomach disagrees with. These aren't easily found in Chinese pharmacies.</li>
+        <li>🔹 <strong>Air pollution:</strong> Check AQI (Air Quality Index) daily. Bring N95 masks for bad days (common in Beijing winter). Apps: AirVisual, or check built-in iPhone Weather app.</li>
+        <li>🔹 <strong>Bottled water only.</strong> Tap water is not safe anywhere in China — even locals boil it first. Hotels provide free bottled water (2 bottles/day standard).</li>
+      </ul>
+
+      <h2 id="faq">❓ FAQ</h2>
+
+      <h3>Can I drink the tap water?</h3>
+      <p>No. Tap water is not safe to drink anywhere in China. Hotels provide bottled water, and you can buy it everywhere for ¥2–5 per bottle. Locals boil tap water before drinking.</p>
+
+      <h3>Is the air pollution really that bad?</h3>
+      <p>It depends on the city and season. Beijing winters can be bad (AQI 150–300+). Shanghai and southern cities are generally better. Check the AQI daily. N95 masks help on bad days. Many expats live in China for years without health issues. Don't let air quality stop you from visiting, but be prepared.</p>
+
+      <h3>Do I need vaccinations?</h3>
+      <p>Routine vaccines (MMR, Tdap, flu) should be up to date. Hepatitis A and Typhoid are recommended. Check <a href="https://wwwnc.cdc.gov/travel/destinations/traveler/none/china" rel="nofollow">CDC China travel recommendations →</a> for the latest.</p>
+
+      <h3>Can I use my credit card directly (not through Alipay)?</h3>
+      <p>In international hotels, upscale restaurants, and large malls — yes. In local restaurants, street markets, small shops, and most everyday situations — no. Alipay/WeChat Pay is how China pays. Set it up before you go.</p>
+
+      <h3>What if I get lost?</h3>
+      <p>Find a younger person (under 35) and show them your destination in Chinese. They're more likely to speak some English and will almost always help. Chinese people are genuinely kind to lost foreigners. Alternatively, open Didi and get a ride to your hotel.</p>
+
+      <hr />
+
+      <p><strong>You're going to love China.</strong> The chaos, the food, the sheer scale of everything — it's unlike anywhere else. A little preparation goes a long way. Now go book that flight.</p>
+
+      <p>Also check: <a href="/seo/ultimate-china-travel-guide">Ultimate China Travel Guide →</a> | <a href="/seo/china-vpn-esim-guide">VPN & eSIM Guide →</a> | <a href="/guides/">All city guides →</a></p>
+    </article>
+  </div>
+</BaseLayout>
+
+<script type="application/ld+json" set:html={JSON.stringify({
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'Can I drink the tap water in China?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Tap water is not safe to drink anywhere in China. Hotels provide bottled water, and you can buy it everywhere for ¥2–5 per bottle. Locals boil tap water before drinking.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the air pollution in China really that bad?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'It depends on the city and season. Beijing winters can be bad (AQI 150–300+). Shanghai and southern cities are generally better. Check the AQI daily. N95 masks help on bad days.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need vaccinations for China?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Routine vaccines (MMR, Tdap, flu) should be up to date. Hepatitis A and Typhoid are recommended. Check the CDC China travel recommendations for the latest requirements.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'Can I use my credit card directly in China without Alipay?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'In international hotels, upscale restaurants, and large malls — yes. In local restaurants, street markets, small shops, and most everyday situations — no. Alipay or WeChat Pay is how China pays.'
+      }
+    },
+    {
+      '@type': 'Question',
+      name: 'What if I get lost in China?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Find a younger person (under 35) and show them your destination in Chinese. They are more likely to speak some English and will almost always help. Alternatively, open the Didi app and get a ride to your hotel.'
+      }
+    }
+  ]
+})} />
