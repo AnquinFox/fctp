@@ -34,7 +34,9 @@ fctp/
 │   ├── pages/
 │   │   ├── index.astro                ← 首页：「双面中国」三区块滚动叙事
 │   │   ├── guides.astro               ← 攻略列表页 (双语筛选)
-│   │   └── guides/[...slug].astro     ← 单篇攻略页 (含排版系统)
+│   │   ├── guides/[city].astro        ← 城市分类页
+│   │   ├── guides/[...slug].astro     ← 单篇攻略页 (含排版系统)
+│   │   └── seo/                       ← SEO 落地页 (3页)
 │   ├── components/
 │   │   ├── PrepSection.astro          ← 首页 Section 1: 极简准备区
 │   │   ├── FuturisticSection.astro    ← 首页 Section 2: 科幻UI城市
@@ -43,25 +45,20 @@ fctp/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
 │       ├── config.ts                  ← Content Collection 配置
-│       └── guides/                    ← 所有攻略 Markdown (共25篇)
-│           ├── shanghai/              ← 上海 (10篇)
-│           ├── beijing/               ← 北京 (2篇)
-│           ├── chongqing/             ← 重庆 (2篇)
-│           ├── chengdu/               ← 成都 (1篇)
-│           ├── hangzhou/              ← 杭州 (1篇)
-│           ├── foreigners/            ← 来华实用信息 (7篇)
-│           ├── xian/                  ← 西安 (1篇)
-│           └── general/               ← 通用内容
+│       └── guides/                    ← 所有攻略 Markdown (共89篇, 58个目录)
+│           ├── shanghai/              ← 上海 (10篇) — 最大城市目录
+│           ├── beijing/               ← 北京 (4篇)
+│           ├── chongqing/             ← 重庆 (3篇)
+│           ├── chengdu/               ← 成都 (3篇)
+│           ├── foreigners/            ← 来华实用信息 (8篇)
+│           ├── zhangjiajie/           ← 张家界 (3篇)
+│           ├── ... (完整列表: 58个城市/景区目录)
+│           └── 具体列表见 npm run build 输出
+├── scripts/
+│   ├── populate-meta.mjs              ← 自动提取封面+标签元数据
+│   └── sync-all.mjs                   ← 批量同步 wonder-quest → fctp
 └── public/
-    └── images/                        ← 攻略用图片 (含旧图 + Fire 同步过来的新图)
-        ├── shanghai/
-        ├── beijing/
-        ├── chongqing/
-        ├── chengdu/
-        ├── hangzhou/
-        ├── foreigners/
-        ├── xian/
-        └── general/
+    └── images/                        ← 攻略用图片 (58个城市图片目录)
 ```
 
 ---
@@ -132,16 +129,19 @@ Vercel 自动构建 → wonderquest.xyz 上线
 │  黑白配色，6件事             │  Visa, eSIM, Payment, VPN,
 │                             │  Transport, Language
 ├─────────────────────────────┤
-│  Section 2: Futuristic      │  科幻 UI
-│  城市节点 + 坐标 + 数据      │  Shanghai, Beijing, 
-│  暗色背景 + 霓虹线条         │  Chongqing, Xi'an
+│  Section 2: Futuristic      │  科幻 UI (v2: 6城市)
+│  城市节点 + 坐标 + 数据      │  Shanghai, Beijing,
+│  AI 生成封面图               │  Chongqing, Chengdu,
+│  暗色背景 + 霓虹线条         │  Xi'an, Guangzhou
 ├─────────────────────────────┤
 │  Section 3: Traditional     │  羊皮纸风格
-│  古城角标 + 暖色调           │  对应城市的传统一面
+│  古城/景区角标 + 暖色调       │  对应城市的传统/自然一面
 └─────────────────────────────┘
 ```
 
 **设计决策**：首页不直接列攻略链接。它讲一个故事——"中国有两面：未来和传统"。每个城市节点点击后进入 `/guides` 列表页。
+
+**v2 更新 (2026-07-08)**：FuturisticSection 扩展到6城市，全部使用 AI 生成的城市封面图，Beijing 替换 Shenzhen。
 
 ---
 
@@ -178,10 +178,39 @@ readingTime: "8 min"
 | 平台 | 状态 | 链接位置 |
 |------|------|---------|
 | Trip.com | ✅ 已嵌入 | 上海攻略文末住宿建议段 |
+| NordVPN | ✅ 已嵌入 | internet-vpn 攻略 |
 | Klook | 🔴 待注册 | 待定 |
 
 - Affiliate 链接以自然推荐形式嵌入，不做硬广告
 - 写法原则：给真正的建议，链接是可选的增值
+
+---
+
+## 📈 SEO & 分析
+
+### SEO Landing Pages（3页）
+
+纯静态 SEO 落地页，目标英文搜索流量：
+
+| 页面 | 路径 | 目标关键词 |
+|------|------|-----------|
+| Ultimate China Travel Guide | `/seo/ultimate-china-travel-guide/` | china travel guide, china trip planning |
+| China VPN & eSIM Guide | `/seo/china-vpn-esim-guide/` | china vpn, china esim |
+| First Time in China | `/seo/first-time-in-china/` | first time in china, china survival guide |
+
+- 每页含结构化数据 (JSON-LD Schema)
+- hreflang 自动检测（根据攻略语言标识）
+
+### 分析统计
+
+- **Plausible Analytics**: 隐私友好的网站统计
+- 脚本: `<script defer data-domain="wonderquest.xyz" src="https://plausible.io/js/script.js">`
+- 注入位置: `src/layouts/BaseLayout.astro`
+
+### Sitemap
+
+- `@astrojs/sitemap` 自动生成 `sitemap-index.xml` 到 `dist/`
+- 所有静态路由自动收录
 
 ---
 
@@ -217,7 +246,7 @@ wonder-quest/guides/           OpenclawWorkspace/
 
 | 层 | 技术 | 选型理由 |
 |----|------|---------|
-| 框架 | Astro 5.x | 静态站最佳选择，默认 zero JS，build 输出纯 HTML |
+| 框架 | Astro ^5.7.0 | 静态站最佳选择，默认 zero JS，build 输出纯 HTML |
 | 构建模式 | SSG (Static Site Generation) | 纯内容站不需要 SSR，静态最快、最安全 |
 | 内容管理 | Content Collections (Markdown) | Fire 只需要会写 MD，不需要学任何 CMS |
 | 样式方案 | 纯 CSS (组件级 scoped) | 无框架依赖，简单可控，bundle 极小 |
@@ -225,6 +254,10 @@ wonder-quest/guides/           OpenclawWorkspace/
 | 域名 | Spaceship 注册 + Cloudflare DNS | 独立注册商，不绑定部署平台，方便迁移 |
 | 版本控制 | Git + GitHub | github.com/AnquinFox/fctp |
 | 包管理 | npm | Node 生态标配 |
+| 类型检查 | astro check (TypeScript 5.7) | 构建前类型检查，0 errors 要求 |
+| 站点地图 | @astrojs/sitemap ^3.7.3 | 自动生成 sitemap-index.xml |
+| 编码处理 | iconv-lite ^0.7.3 | 处理 GBK 编码的 MD 文件 |
+| Frontmatter | gray-matter ^4.0.3 | scripts/populate-meta.mjs 依赖 |
 
 ### 本地开发环境 (从头搭建)
 
@@ -535,8 +568,21 @@ npm install
 ```
 
 **当前核心依赖 (见 package.json)：**
-- `astro` — 框架本体
-- 其他由 astro 自动引入
+
+```json
+{
+  "dependencies": {
+    "@astrojs/check": "^0.9.4",
+    "@astrojs/sitemap": "^3.7.3",
+    "astro": "^5.7.0",
+    "iconv-lite": "^0.7.3",
+    "typescript": "^5.7.0"
+  },
+  "devDependencies": {
+    "gray-matter": "^4.0.3"
+  }
+}
+```
 
 ---
 
@@ -550,6 +596,11 @@ npm install
 | 2026-07-01 | MD 文档做任务计划，不做网页 | 计划表追踪进度，不是展示。MD 满足需求 |
 | 2026-07-03 | 图片物理复制而非 Junction | Vercel Linux 不支持 Windows Junction |
 | 2026-07-03 | BaseLayout 加 noHeader/noFooter props | 首页需要独立的全屏体验 |
+| 2026-07-07 | 大规模城市攻略扩展 (20+城市) | 内容密度 = SEO 竞争力 |
+| 2026-07-08 | 景区独立攻略 (20篇景点深度) | 长尾关键词覆盖，与城市攻略互补 |
+| 2026-07-08 | FuturisticSection v2: AI 封面 + 6城市 | 首页视觉升级，6城比4城更有代表性 |
+| 2026-07-09 | SEO 落地页 (3页) + Plausible Analytics | 开始做英文搜索流量获取 |
+| 2026-07-09 | NordVPN affiliate 链接 | 第二个变现渠道，与 VPN 攻略自然契合 |
 
 ---
 
@@ -563,6 +614,8 @@ npm install
 6. **不要在没检查构建的情况下 push** — 先 `npm run build`，0 errors 再 push
 7. **不要动 DNS 配置** — 除非有明确的、讨论过的收益
 8. **不要 commit .env 文件** — API key 泄露后果严重
+9. **不要跳过 populate-meta.mjs** — Fire 不写 frontmatter，跳过导致封面/标签丢失
+10. **不要添加大型依赖** — 保持 bundle 小，构建快。装新包前质疑必要性
 
 ---
 
@@ -580,4 +633,5 @@ npm install
 ---
 
 _此文件由马督工维护。每两天自动审查一次 (定时任务 18:00 CST)。_
+_上一次审查: 2026-07-09 — 攻略数 25→89，新增 SEO + Analytics + 依赖文档。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后检查 wonderquest-roadmap.md 了解当前进度。_
