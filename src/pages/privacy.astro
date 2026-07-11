@@ -1,0 +1,213 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="Privacy Policy"
+  description="WonderQuest privacy policy — what data we collect and how we use it."
+  ogType="website"
+>
+
+<div class="privacy-page">
+  <div class="container">
+    <p class="privacy-date">Last updated: July 11, 2026</p>
+
+    <h1>Privacy Policy</h1>
+
+    <p>
+      At <strong>WonderQuest</strong> (wonderquest.xyz), we take your privacy seriously.
+      This policy explains what information we collect, how we use it, and your rights.
+    </p>
+
+    <h2>1. Information We Collect</h2>
+
+    <h3>1.1 Automatically Collected Data</h3>
+    <p>When you visit WonderQuest, we automatically collect:</p>
+    <ul>
+      <li><strong>Usage Data</strong> — pages visited, time on site, referring URLs, browser type, device type, and country-level location. Collected via Plausible Analytics, a privacy-first analytics service that does not use cookies and does not track individuals.</li>
+      <li><strong>Server Logs</strong> — standard web server logs (IP address, timestamp, requested URL) temporarily processed by Vercel, our hosting provider, for operational purposes.</li>
+    </ul>
+
+    <h3>1.2 Information You Provide</h3>
+    <p>WonderQuest does not have user accounts, comment sections, or contact forms. We do not collect personal information such as your name, email address, or phone number unless you voluntarily reach out to us via email.</p>
+
+    <h2>2. Cookies</h2>
+    <p>WonderQuest itself <strong>does not use cookies</strong>. However, third-party services we integrate with may set cookies:</p>
+    <ul>
+      <li><strong>Plausible Analytics</strong> — does not use cookies. All analytics are cookie-free and anonymized.</li>
+      <li><strong>Affiliate Links</strong> — when you click an affiliate link (e.g., eSIM providers, VPN services), the destination site may set its own cookies. These are governed by the respective third party's privacy policy.</li>
+    </ul>
+
+    <h2>3. How We Use Information</h2>
+    <p>We use the limited data we collect to:</p>
+    <ul>
+      <li>Understand which content is most helpful to our readers</li>
+      <li>Improve site performance and user experience</li>
+      <li>Monitor site traffic and detect technical issues</li>
+    </ul>
+    <p>We <strong>do not</strong> sell, rent, or share your personal data with third parties for their marketing purposes.</p>
+
+    <h2>4. Third-Party Services</h2>
+    <p>WonderQuest relies on the following third-party services to operate:</p>
+
+    <table class="privacy-table">
+      <thead>
+        <tr>
+          <th>Service</th>
+          <th>Purpose</th>
+          <th>Privacy Policy</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vercel</td>
+          <td>Website hosting &amp; content delivery</td>
+          <td><a href="https://vercel.com/legal/privacy-policy" rel="noopener" target="_blank">Vercel Privacy</a></td>
+        </tr>
+        <tr>
+          <td>Plausible Analytics</td>
+          <td>Cookie-free site analytics</td>
+          <td><a href="https://plausible.io/privacy" rel="noopener" target="_blank">Plausible Privacy</a></td>
+        </tr>
+        <tr>
+          <td>Travelpayouts</td>
+          <td>Affiliate travel links</td>
+          <td><a href="https://www.travelpayouts.com/privacy" rel="noopener" target="_blank">Travelpayouts Privacy</a></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>5. Affiliate Disclosure</h2>
+    <p>Some links on WonderQuest are affiliate links (e.g., Airalo eSIM, Saily, VPN services). This means we may earn a small commission at <strong>no extra cost to you</strong> if you make a purchase through these links. We only recommend products and services we believe are genuinely useful for travelers to China. Affiliate relationships do not influence our editorial content.</p>
+
+    <h2>6. Children's Privacy</h2>
+    <p>WonderQuest is not directed at children under the age of 13. We do not knowingly collect personal information from children. If you believe a child has provided us with personal data, please contact us and we will delete it.</p>
+
+    <h2>7. Data Retention</h2>
+    <p>Analytics data (Plausible) is retained indefinitely in aggregate form. Server logs on Vercel are retained for a limited period as determined by Vercel's operational policies.</p>
+
+    <h2>8. Your Rights</h2>
+    <p>Depending on your jurisdiction, you may have the right to:</p>
+    <ul>
+      <li>Access the personal data we hold about you</li>
+      <li>Request correction or deletion of your data</li>
+      <li>Object to or restrict processing of your data</li>
+      <li>Data portability</li>
+      <li>Withdraw consent (where processing is based on consent)</li>
+    </ul>
+    <p>To exercise any of these rights, contact us at the email address below. We will respond within 30 days.</p>
+
+    <h2>9. International Data Transfers</h2>
+    <p>WonderQuest is hosted by Vercel, which may process data on servers located in the United States and other jurisdictions. By using our site, you consent to the transfer of information to countries outside your country of residence, which may have different data protection rules.</p>
+
+    <h2>10. Changes to This Policy</h2>
+    <p>We may update this Privacy Policy from time to time. Changes will be posted on this page with an updated "Last updated" date. We encourage you to review this page periodically.</p>
+
+    <h2>11. Contact Us</h2>
+    <p>If you have questions about this Privacy Policy or wish to exercise your rights, contact us at:</p>
+    <p class="privacy-contact">
+      📧 <strong>privacy@wonderquest.xyz</strong>
+    </p>
+  </div>
+</div>
+
+</BaseLayout>
+
+<style>
+  .privacy-page {
+    padding: 4rem 0;
+  }
+
+  .privacy-page .container {
+    max-width: 760px;
+  }
+
+  .privacy-date {
+    font-size: 0.8rem;
+    color: #888;
+    margin-bottom: 0.5rem;
+  }
+
+  .privacy-page h1 {
+    font-size: 2.2rem;
+    font-weight: 900;
+    margin: 0 0 0.5rem;
+    color: #111;
+    line-height: 1.3;
+  }
+
+  .privacy-page h2 {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin: 2.5rem 0 0.75rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #eee;
+    color: #1a1a2e;
+  }
+
+  .privacy-page h3 {
+    font-size: 1.05rem;
+    font-weight: 600;
+    margin: 1.5rem 0 0.5rem;
+    color: #333;
+  }
+
+  .privacy-page p {
+    margin: 0 0 1rem;
+    line-height: 1.8;
+    color: #444;
+  }
+
+  .privacy-page ul {
+    margin: 0 0 1rem;
+    padding-left: 1.5rem;
+  }
+
+  .privacy-page li {
+    margin-bottom: 0.4rem;
+    line-height: 1.7;
+    color: #444;
+  }
+
+  .privacy-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+    font-size: 0.9rem;
+  }
+
+  .privacy-table th,
+  .privacy-table td {
+    padding: 0.6rem 0.8rem;
+    border: 1px solid #e0e0e0;
+    text-align: left;
+  }
+
+  .privacy-table th {
+    background: #f5f5f5;
+    font-weight: 600;
+    color: #333;
+  }
+
+  .privacy-table td {
+    color: #444;
+  }
+
+  .privacy-table a {
+    color: #e63946;
+  }
+
+  .privacy-contact {
+    font-size: 1.1rem;
+    margin-top: 0.5rem;
+  }
+
+  @media (max-width: 640px) {
+    .privacy-page {
+      padding: 2rem 0;
+    }
+    .privacy-page h1 {
+      font-size: 1.6rem;
+    }
+  }
+</style>
