@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-07-07 18:00 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-07-11 18:00 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -36,6 +36,7 @@ fctp/
 │   │   ├── guides.astro               ← 攻略列表页 (双语筛选)
 │   │   ├── guides/[city].astro        ← 城市分类页
 │   │   ├── guides/[...slug].astro     ← 单篇攻略页 (含排版系统)
+│   │   ├── privacy.astro              ← Privacy Policy 页面 (/privacy)
 │   │   └── seo/                       ← SEO 落地页 (3页)
 │   ├── components/
 │   │   ├── PrepSection.astro          ← 首页 Section 1: 极简准备区
@@ -45,7 +46,7 @@ fctp/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
 │       ├── config.ts                  ← Content Collection 配置
-│       └── guides/                    ← 所有攻略 Markdown (共89篇, 58个目录)
+│       └── guides/                    ← 所有攻略 Markdown (共89篇, 58个目录 → 153页)
 │           ├── shanghai/              ← 上海 (10篇) — 最大城市目录
 │           ├── beijing/               ← 北京 (4篇)
 │           ├── chongqing/             ← 重庆 (3篇)
@@ -291,8 +292,8 @@ npm run build
 # → 必须 0 errors！有 warning 最好也修掉
 # → 同时检查 Content Collection schema 校验
 # → 成功输出示例：
-#   03:23:20 [build] ✓ Complete in 2.14s
-#   03:23:20 [build] 16 pages built
+#   18:02:09 [build] 153 page(s) built in 1.31s
+#   18:02:09 [build] Complete!
 
 # 5. 本地预览生产构建 (验证 build 产物)
 npm run preview
@@ -414,9 +415,10 @@ git push origin master
 **vercel.json 内容 (项目根目录)：**
 ```json
 {
+  "framework": "astro",
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "framework": "astro"
+  "installCommand": "npm install"
 }
 ```
 
@@ -567,7 +569,7 @@ rm -r node_modules package-lock.json
 npm install
 ```
 
-**当前核心依赖 (见 package.json)：**
+**当前核心依赖 (见 package.json，实际安装版本以 npm list 为准)：**
 
 ```json
 {
@@ -583,6 +585,9 @@ npm install
   }
 }
 ```
+
+> 实际安装版本 (npm list 2026-07-11):
+> - `@astrojs/check@0.9.9` | `@astrojs/sitemap@3.7.3` | `astro@5.18.2` | `gray-matter@4.0.3` | `iconv-lite@0.7.3` | `typescript@5.9.3`
 
 ---
 
@@ -601,6 +606,7 @@ npm install
 | 2026-07-08 | FuturisticSection v2: AI 封面 + 6城市 | 首页视觉升级，6城比4城更有代表性 |
 | 2026-07-09 | SEO 落地页 (3页) + Plausible Analytics | 开始做英文搜索流量获取 |
 | 2026-07-09 | NordVPN affiliate 链接 | 第二个变现渠道，与 VPN 攻略自然契合 |
+| 2026-07-11 | Privacy Policy 页面 (/privacy) | 合规要求，Trip.com/Airalo 等 affiliate 项目需要 |
 
 ---
 
@@ -633,5 +639,5 @@ npm install
 ---
 
 _此文件由马督工维护。每两天自动审查一次 (定时任务 18:00 CST)。_
-_上一次审查: 2026-07-09 — 攻略数 25→89，新增 SEO + Analytics + 依赖文档。_
+_上一次审查: 2026-07-11 — 新增 Privacy Policy 页面，更新 vercel.json、依赖版本、构建页数。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后检查 wonderquest-roadmap.md 了解当前进度。_
