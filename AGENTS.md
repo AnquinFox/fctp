@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-07-11 18:00 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-07-16 09:55 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -46,12 +46,12 @@ fctp/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
 │       ├── config.ts                  ← Content Collection 配置
-│       └── guides/                    ← 所有攻略 Markdown (共89篇, 58个目录 → 153页)
+│       └── guides/                    ← 所有攻略 Markdown (共90篇, 58个目录 → 154页)
 │           ├── shanghai/              ← 上海 (10篇) — 最大城市目录
 │           ├── beijing/               ← 北京 (4篇)
 │           ├── chongqing/             ← 重庆 (3篇)
 │           ├── chengdu/               ← 成都 (3篇)
-│           ├── foreigners/            ← 来华实用信息 (8篇)
+│           ├── foreigners/            ← 来华实用信息 (9篇)
 │           ├── zhangjiajie/           ← 张家界 (3篇)
 │           ├── ... (完整列表: 58个城市/景区目录)
 │           └── 具体列表见 npm run build 输出
@@ -639,5 +639,5 @@ npm install
 ---
 
 _此文件由马督工维护。每两天自动审查一次 (定时任务 18:00 CST)。_
-_上一次审查: 2026-07-11 — 新增 Privacy Policy 页面，更新 vercel.json、依赖版本、构建页数。_
+_上一次审查: 2026-07-16 — 新增 Medical Tourism in China 攻略，构建页数 153→154，foreigners 目录更新为 9 篇。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后检查 wonderquest-roadmap.md 了解当前进度。_
