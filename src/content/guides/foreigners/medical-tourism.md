@@ -224,6 +224,20 @@ I'm not going to pretend everything is perfect. Here are the real downsides:
 
 ---
 
+## 🧳 Before You Fly: Connectivity & Money
+
+Two things make a medical trip run smoothly, and both are far easier to sort at home than on arrival:
+
+- **Internet & VPN** — you'll need email for appointment confirmations and quotes, and a working VPN if you lean on Gmail or Google. Grab an eSIM before departure: [Airalo](https://airalo.tpfl.space/zh/XRGTKJEQ) or [Saily](https://saily.com/zh/plans?utm_source=getmadalot&utm_medium=affiliate&utm_campaign=wisdom-fusion). For the Great Firewall, [365VPN](https://www.365vpn.cc?aff=Anquin) / [ProtonVPN](https://go.getproton.me/aff_c?offer_id=26&aff_id=18944) cover the basics. Full walkthrough: [Internet & VPN guide](./internet-vpn.md).
+- **Payments** — international hospitals accept cards, but a lot of the trip runs on WeChat Pay / Alipay. Set both up early: [Payment Setup guide](./payment-setup.md).
+
+And if your trip is preventive rather than surgical, start here:
+
+- [The $500 Full-Body Check-Up: China's Health-Screening Trip](./11_china_health_checkup_tourism.md) — executive physicals, city picks, TCM add-ons.
+- [Dental Work in China: The Shanghai Cost Guide](./12_dental_work_china_cost_guide.md) — implants, crowns & veneers at ~70% off, with a 6-day itinerary.
+
+---
+
 ## 📊 The Bottom Line
 
 I've seen the math work out again and again. A friend from Los Angeles needed a hip replacement. His US insurance deductible was $8,000, and the surgery would have cost $55,000 — insurance would cover most of it, but he'd still be out $8,000 and months on the waiting list. He flew to Beijing, spent $11,000 on the surgery at BJU, stayed two weeks at a serviced apartment for $900, ate incredible food, and still came out ahead financially. Plus he got a two-week trip to China out of it.
@@ -248,3 +262,5 @@ Medical tourism to China isn't about cutting corners. It's about spending your h
 | 6 | [Health & Emergency](./health-emergency.md) |
 | 7 | [Culture & Daily Life](./culture-tips.md) |
 | 8 | **→ Medical Tourism (You are here)** |
+| 9 | [China Health Check-Up Tourism](./11_china_health_checkup_tourism.md) |
+| 10 | [Dental Work in China](./12_dental_work_china_cost_guide.md) |

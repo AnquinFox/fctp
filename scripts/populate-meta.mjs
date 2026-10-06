@@ -92,11 +92,15 @@ const foreignersTopicTags = {
   'transportation': ['transport', 'metro', 'taxi'],
   'health-emergency': ['health', 'emergency', 'hospital'],
   'culture-tips': ['culture', 'food', 'etiquette'],
+  'china-health-checkup-tourism': ['health', 'medical', 'checkup'],
+  'dental-work-china-cost-guide': ['health', 'dental', 'medical'],
 };
 
 function extractForeignersTags(fileName) {
-  const slug = fileName.replace('.md', '');
-  if (slug === 'index') return ['overview', 'survival-kit'];
+  const raw = fileName.replace('.md', '');
+  if (raw === 'index') return ['overview', 'survival-kit'];
+  // Normalize numbered/underscored filenames to the same slug used for pageSlug
+  const slug = raw.replace(/^\d+_/, '').toLowerCase().replace(/_/g, '-');
   return ['survival-kit', ...(foreignersTopicTags[slug] || [])];
 }
 
