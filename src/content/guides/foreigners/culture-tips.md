@@ -262,4 +262,4 @@ Chinese culture is **thousands of years old** and deeply influences daily life. 
 
 ---
 
-> 📖 **Previous**: [Health & Emergency Guide](./health-emergency.md) | **Back to**: [Guide Series Index](./index.md)
+> 📖 **Previous**: [Health & Emergency Guide](/guides/foreigners/health-emergency/) | **Back to**: [Guide Series Index](/guides/foreigners/foreigners/)

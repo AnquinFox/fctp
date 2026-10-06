@@ -203,4 +203,4 @@ Cash is still legal tender, but many merchants **prefer not to handle it**.
 
 ---
 
-> 📖 **Previous**: [Visa & Entry Guide](./visa-entry.md) | **Next**: [Internet & VPN Guide](./internet-vpn.md)
+> 📖 **Previous**: [Visa & Entry Guide](/guides/foreigners/visa-entry/) | **Next**: [Internet & VPN Guide](/guides/foreigners/internet-vpn/)

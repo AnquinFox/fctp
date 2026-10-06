@@ -230,4 +230,4 @@ Buses are the **most affordable** way to get around.
 
 ---
 
-> 📖 **Previous**: [Essential Apps Guide](./essential-apps.md) | **Next**: [Health & Emergency Guide](./health-emergency.md)
+> 📖 **Previous**: [Essential Apps Guide](/guides/foreigners/essential-apps/) | **Next**: [Health & Emergency Guide](/guides/foreigners/health-emergency/)

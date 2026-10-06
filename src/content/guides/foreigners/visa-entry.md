@@ -134,4 +134,4 @@ Citizens of **55 countries** can transit through China **visa-free for up to 240
 
 ---
 
-> 📖 **Next**: [Payment Setup Guide](./payment-setup.md) — Learn how to pay for everything in China
+> 📖 **Next**: [Payment Setup Guide](/guides/foreigners/payment-setup/) — Learn how to pay for everything in China

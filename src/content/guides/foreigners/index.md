@@ -21,44 +21,44 @@ This guide series covers **everything** a foreigner needs to know before and aft
 
 | # | Guide | What It Covers |
 |---|-------|---------------|
-| 1 | [Visa & Entry](./visa-entry.md) | Visa types, visa-free policies, arrival procedures, documents needed |
-| 2 | [Payment Setup](./payment-setup.md) | Alipay, WeChat Pay, foreign cards, cash backup, common errors |
-| 3 | [Internet & VPN](./internet-vpn.md) | eSIM, VPN setup, Great Firewall, Chinese app alternatives |
-| 4 | [Essential Apps](./essential-apps.md) | Must-have apps, transportation apps, food delivery, translation |
-| 5 | [Transportation](./transportation.md) | Metro, high-speed rail, taxis, Didi, domestic flights |
-| 6 | [Health & Emergency](./health-emergency.md) | Hospitals, insurance, emergency numbers, safety tips |
-| 7 | [Culture & Daily Life](./culture-tips.md) | Etiquette, dining, shopping, festivals, useful phrases |
-| 8 | [Medical Tourism](./medical-tourism.md) | Cost comparison with US, JCI hospitals, TCM, planning your trip |
+| 1 | [Visa & Entry](/guides/foreigners/visa-entry/) | Visa types, visa-free policies, arrival procedures, documents needed |
+| 2 | [Payment Setup](/guides/foreigners/payment-setup/) | Alipay, WeChat Pay, foreign cards, cash backup, common errors |
+| 3 | [Internet & VPN](/guides/foreigners/internet-vpn/) | eSIM, VPN setup, Great Firewall, Chinese app alternatives |
+| 4 | [Essential Apps](/guides/foreigners/essential-apps/) | Must-have apps, transportation apps, food delivery, translation |
+| 5 | [Transportation](/guides/foreigners/transportation/) | Metro, high-speed rail, taxis, Didi, domestic flights |
+| 6 | [Health & Emergency](/guides/foreigners/health-emergency/) | Hospitals, insurance, emergency numbers, safety tips |
+| 7 | [Culture & Daily Life](/guides/foreigners/culture-tips/) | Etiquette, dining, shopping, festivals, useful phrases |
+| 8 | [Medical Tourism](/guides/foreigners/medical-tourism/) | Cost comparison with US, JCI hospitals, TCM, planning your trip |
 | 9 | [Navigation Apps](./09_china_navigation_apps_amap_baidu_maps.md) | Amap, Baidu Maps & Maps.me — how to navigate China without Google Maps |
-| 10 | [Traveling to China with Kids](./10_china_travel_kids_family_parenting_guide.md) | A foreign parent's complete survival guide — food, transport, health, attractions & cultural tips |
+| 10 | [Traveling to China with Kids](/guides/foreigners/china-travel-kids-family-parenting-guide/) | A foreign parent's complete survival guide — food, transport, health, attractions & cultural tips |
 | 11 | [Wise & Revolut: Smart Payment Guide](./wise_revolut_china_payment.md) | Save ¥300-600 with Wise & Revolut — setup, ATM, Alipay/WeChat linking, side-by-side comparison |
-| 12 | **NEW!** [The $500 Full-Body Check-Up: China Health-Screening Trip](./11_china_health_checkup_tourism.md) | Executive check-up tourism — US $8,000 vs China $500, how to book, city picks, TCM & recovery travel |
-| 13 | **NEW!** [Dental Work in China: The Shanghai Cost Guide](./12_dental_work_china_cost_guide.md) | Implants, crowns & veneers at ~70% off — price tables, booking, 6-day Shanghai itinerary, aftercare food |
+| 12 | **NEW!** [The $500 Full-Body Check-Up: China Health-Screening Trip](/guides/foreigners/china-health-checkup-tourism/) | Executive check-up tourism — US $8,000 vs China $500, how to book, city picks, TCM & recovery travel |
+| 13 | **NEW!** [Dental Work in China: The Shanghai Cost Guide](/guides/foreigners/dental-work-china-cost-guide/) | Implants, crowns & veneers at ~70% off — price tables, booking, 6-day Shanghai itinerary, aftercare food |
 
 ---
 
 ## 鈿?Quick Start 鈥?What to Do First
 
 ### Before Flying:
-1. [ ] Check visa requirements 鈫?[Visa Guide](./visa-entry.md)
-2. [ ] Download eSIM (before departure!) 鈫?[Internet Guide](./internet-vpn.md)
-3. [ ] Download Alipay & WeChat 鈫?[Payment Guide](./payment-setup.md)
-4. [ ] Download Amap for navigation 鈫?[Apps Guide](./essential-apps.md)
-5. [ ] Buy travel insurance 鈫?[Health Guide](./health-emergency.md)
+1. [ ] Check visa requirements 鈫?[Visa Guide](/guides/foreigners/visa-entry/)
+2. [ ] Download eSIM (before departure!) 鈫?[Internet Guide](/guides/foreigners/internet-vpn/)
+3. [ ] Download Alipay & WeChat 鈫?[Payment Guide](/guides/foreigners/payment-setup/)
+4. [ ] Download Amap for navigation 鈫?[Apps Guide](/guides/foreigners/essential-apps/)
+5. [ ] Buy travel insurance 鈫?[Health Guide](/guides/foreigners/health-emergency/)
 
 ### After Landing:
-1. [ ] Activate eSIM 鈫?[Internet Guide](./internet-vpn.md)
-2. [ ] Set up WeChat Pay & Alipay 鈫?[Payment Guide](./payment-setup.md)
-3. [ ] Buy a metro card 鈫?[Transportation Guide](./transportation.md)
-4. [ ] Register accommodation with police 鈫?[Visa Guide](./visa-entry.md)
-5. [ ] Get some local cash 鈫?[Payment Guide](./payment-setup.md)
+1. [ ] Activate eSIM 鈫?[Internet Guide](/guides/foreigners/internet-vpn/)
+2. [ ] Set up WeChat Pay & Alipay 鈫?[Payment Guide](/guides/foreigners/payment-setup/)
+3. [ ] Buy a metro card 鈫?[Transportation Guide](/guides/foreigners/transportation/)
+4. [ ] Register accommodation with police 鈫?[Visa Guide](/guides/foreigners/visa-entry/)
+5. [ ] Get some local cash 鈫?[Payment Guide](/guides/foreigners/payment-setup/)
 
 ### First Day:
-1. [ ] Test mobile payment at a convenience store 鈫?[Payment Guide](./payment-setup.md)
-2. [ ] Download food delivery app 鈫?[Apps Guide](./essential-apps.md)
-3. [ ] Learn basic Chinese phrases 鈫?[Culture Guide](./culture-tips.md)
-4. [ ] Explore your neighborhood on foot 鈫?[Transportation Guide](./transportation.md)
-5. [ ] Find the nearest hospital 鈫?[Health Guide](./health-emergency.md)
+1. [ ] Test mobile payment at a convenience store 鈫?[Payment Guide](/guides/foreigners/payment-setup/)
+2. [ ] Download food delivery app 鈫?[Apps Guide](/guides/foreigners/essential-apps/)
+3. [ ] Learn basic Chinese phrases 鈫?[Culture Guide](/guides/foreigners/culture-tips/)
+4. [ ] Explore your neighborhood on foot 鈫?[Transportation Guide](/guides/foreigners/transportation/)
+5. [ ] Find the nearest hospital 鈫?[Health Guide](/guides/foreigners/health-emergency/)
 
 ---
 

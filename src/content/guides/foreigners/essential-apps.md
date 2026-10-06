@@ -38,7 +38,7 @@ China runs on apps. Here's everything you need to download **before arriving**.
 | **Alipay (支付宝)** | Mobile payment | Link your foreign card |
 | **Trip.com (携程)** | Hotel/flight booking | Accepts international cards |
 
-> 💡 See the [Payment Setup Guide](./payment-setup.md) for detailed setup instructions.
+> 💡 See the [Payment Setup Guide](/guides/foreigners/payment-setup/) for detailed setup instructions.
 
 ---
 
@@ -197,4 +197,4 @@ Mini-programs are apps within apps — no download needed!
 
 ---
 
-> 📖 **Previous**: [Internet & VPN Guide](./internet-vpn.md) | **Next**: [Transportation Guide](./transportation.md)
+> 📖 **Previous**: [Internet & VPN Guide](/guides/foreigners/internet-vpn/) | **Next**: [Transportation Guide](/guides/foreigners/transportation/)

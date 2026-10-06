@@ -191,4 +191,4 @@ China is generally very safe for travelers. Here's what you need to know about h
 
 ---
 
-> 📖 **Previous**: [Transportation Guide](./transportation.md) | **Next**: [Culture & Daily Life Guide](./culture-tips.md)
+> 📖 **Previous**: [Transportation Guide](/guides/foreigners/transportation/) | **Next**: [Culture & Daily Life Guide](/guides/foreigners/culture-tips/)

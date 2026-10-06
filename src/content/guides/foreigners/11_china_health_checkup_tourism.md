@@ -165,9 +165,9 @@ Chengdu, meanwhile, hands you this on your rest day:
 
 The check-up is easy. The *country* takes a little prep. Do these three things before you leave, and the trip runs itself:
 
-1. **[Visa & entry](./visa-entry.md)** — know your visa type and what to bring to the border.
-2. **[Payment setup](./payment-setup.md)** — get Alipay and WeChat Pay working *before* you land, or you'll be the person waving cash at a QR code.
-3. **[Internet & VPN](./internet-vpn.md)** — grab an eSIM and a working VPN before departure; you'll need Gmail to read your appointment emails.
+1. **[Visa & entry](/guides/foreigners/visa-entry/)** — know your visa type and what to bring to the border.
+2. **[Payment setup](/guides/foreigners/payment-setup/)** — get Alipay and WeChat Pay working *before* you land, or you'll be the person waving cash at a QR code.
+3. **[Internet & VPN](/guides/foreigners/internet-vpn/)** — grab an eSIM and a working VPN before departure; you'll need Gmail to read your appointment emails.
 
 Bring a paper copy of your passport and one printed page of your medical history. Chinese hospitals still love paper.
 

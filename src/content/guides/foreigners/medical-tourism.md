@@ -228,13 +228,13 @@ I'm not going to pretend everything is perfect. Here are the real downsides:
 
 Two things make a medical trip run smoothly, and both are far easier to sort at home than on arrival:
 
-- **Internet & VPN** — you'll need email for appointment confirmations and quotes, and a working VPN if you lean on Gmail or Google. Grab an eSIM before departure: [Airalo](https://airalo.tpfl.space/zh/XRGTKJEQ) or [Saily](https://saily.com/zh/plans?utm_source=getmadalot&utm_medium=affiliate&utm_campaign=wisdom-fusion). For the Great Firewall, [365VPN](https://www.365vpn.cc?aff=Anquin) / [ProtonVPN](https://go.getproton.me/aff_c?offer_id=26&aff_id=18944) cover the basics. Full walkthrough: [Internet & VPN guide](./internet-vpn.md).
-- **Payments** — international hospitals accept cards, but a lot of the trip runs on WeChat Pay / Alipay. Set both up early: [Payment Setup guide](./payment-setup.md).
+- **Internet & VPN** — you'll need email for appointment confirmations and quotes, and a working VPN if you lean on Gmail or Google. Grab an eSIM before departure: [Airalo](https://airalo.tpfl.space/zh/XRGTKJEQ) or [Saily](https://saily.com/zh/plans?utm_source=getmadalot&utm_medium=affiliate&utm_campaign=wisdom-fusion). For the Great Firewall, [365VPN](https://www.365vpn.cc?aff=Anquin) / [ProtonVPN](https://go.getproton.me/aff_c?offer_id=26&aff_id=18944) cover the basics. Full walkthrough: [Internet & VPN guide](/guides/foreigners/internet-vpn/).
+- **Payments** — international hospitals accept cards, but a lot of the trip runs on WeChat Pay / Alipay. Set both up early: [Payment Setup guide](/guides/foreigners/payment-setup/).
 
 And if your trip is preventive rather than surgical, start here:
 
-- [The $500 Full-Body Check-Up: China's Health-Screening Trip](./11_china_health_checkup_tourism.md) — executive physicals, city picks, TCM add-ons.
-- [Dental Work in China: The Shanghai Cost Guide](./12_dental_work_china_cost_guide.md) — implants, crowns & veneers at ~70% off, with a 6-day itinerary.
+- [The $500 Full-Body Check-Up: China's Health-Screening Trip](/guides/foreigners/china-health-checkup-tourism/) — executive physicals, city picks, TCM add-ons.
+- [Dental Work in China: The Shanghai Cost Guide](/guides/foreigners/dental-work-china-cost-guide/) — implants, crowns & veneers at ~70% off, with a 6-day itinerary.
 
 ---
 
@@ -254,13 +254,13 @@ Medical tourism to China isn't about cutting corners. It's about spending your h
 
 | # | Guide | 
 |---|-------|
-| 1 | [Visa & Entry](./visa-entry.md) |
-| 2 | [Payment Setup](./payment-setup.md) |
-| 3 | [Internet & VPN](./internet-vpn.md) |
-| 4 | [Essential Apps](./essential-apps.md) |
-| 5 | [Transportation](./transportation.md) |
-| 6 | [Health & Emergency](./health-emergency.md) |
-| 7 | [Culture & Daily Life](./culture-tips.md) |
+| 1 | [Visa & Entry](/guides/foreigners/visa-entry/) |
+| 2 | [Payment Setup](/guides/foreigners/payment-setup/) |
+| 3 | [Internet & VPN](/guides/foreigners/internet-vpn/) |
+| 4 | [Essential Apps](/guides/foreigners/essential-apps/) |
+| 5 | [Transportation](/guides/foreigners/transportation/) |
+| 6 | [Health & Emergency](/guides/foreigners/health-emergency/) |
+| 7 | [Culture & Daily Life](/guides/foreigners/culture-tips/) |
 | 8 | **→ Medical Tourism (You are here)** |
-| 9 | [China Health Check-Up Tourism](./11_china_health_checkup_tourism.md) |
-| 10 | [Dental Work in China](./12_dental_work_china_cost_guide.md) |
+| 9 | [China Health Check-Up Tourism](/guides/foreigners/china-health-checkup-tourism/) |
+| 10 | [Dental Work in China](/guides/foreigners/dental-work-china-cost-guide/) |

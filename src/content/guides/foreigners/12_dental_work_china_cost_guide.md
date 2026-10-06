@@ -143,4 +143,4 @@ Shanghai dental work isn't a hack — it's the same treatment, same materials, a
 
 Get the quote in writing. Book the buffer day. Bring stretchy pants. That's it 💪
 
-> 📌 **Before you go:** sort your [visa](./visa-entry.md), [payments](./payment-setup.md) and [eSIM/VPN](./internet-vpn.md) first — it makes everything downstream painless.
+> 📌 **Before you go:** sort your [visa](/guides/foreigners/visa-entry/), [payments](/guides/foreigners/payment-setup/) and [eSIM/VPN](/guides/foreigners/internet-vpn/) first — it makes everything downstream painless.

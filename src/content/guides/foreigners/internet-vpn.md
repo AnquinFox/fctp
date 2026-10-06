@@ -157,7 +157,7 @@ For daily life in China, Chinese apps work **better** than blocked foreign ones:
 | **Google Translate** | Baidu Translate (百度翻译) | Offline Chinese support |
 | **Spotify** | NetEase Music (网易云音乐) | Better Chinese music library |
 
-> 💡 See the [Essential Apps Guide](./essential-apps.md) for detailed app recommendations.
+> 💡 See the [Essential Apps Guide](/guides/foreigners/essential-apps/) for detailed app recommendations.
 
 ---
 
@@ -203,4 +203,4 @@ For daily life in China, Chinese apps work **better** than blocked foreign ones:
 
 ---
 
-> 📖 **Previous**: [Payment Setup Guide](./payment-setup.md) | **Next**: [Essential Apps Guide](./essential-apps.md)
+> 📖 **Previous**: [Payment Setup Guide](/guides/foreigners/payment-setup/) | **Next**: [Essential Apps Guide](/guides/foreigners/essential-apps/)
