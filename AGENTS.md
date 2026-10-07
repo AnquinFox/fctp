@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-10-05 20:08 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-10-07 20:08 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -46,12 +46,12 @@ fctp/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
 │       ├── config.ts                  ← Content Collection 配置
-│       └── guides/                    ← 所有攻略 Markdown (共91篇, 58个目录 → 155页)
-│           ├── shanghai/              ← 上海 (10篇) — 最大城市目录
+│       └── guides/                    ← 所有攻略 Markdown (共95篇, 58个目录 → 159页)
+│           ├── shanghai/              ← 上海 (10篇)
 │           ├── beijing/               ← 北京 (4篇)
 │           ├── chongqing/             ← 重庆 (3篇)
 │           ├── chengdu/               ← 成都 (3篇)
-│           ├── foreigners/            ← 来华实用信息 (10篇)
+│           ├── foreigners/            ← 来华实用信息 (14篇) — 最大目录
 │           ├── zhangjiajie/           ← 张家界 (3篇)
 │           ├── ... (完整列表: 58个城市/景区目录)
 │           └── 具体列表见 npm run build 输出
@@ -113,6 +113,7 @@ Vercel 自动构建 → wonderquest.xyz 上线
 | 图片 404 | 图片没复制到 `public/images/` | 每加新图都要物理复制到 fctp |
 | Windows Junction 不能用 | Vercel 是 Linux，不支持 Junction | 部署前图片必须物理存在 |
 | 中文攻略不显示 | frontmatter 里 `lang` 字段写错了 | 必须是 `zh` 或 `en` |
+| 站内链接 404 | 直接写了 `.md` 文件路径 | 改写成真实页面路由 (如 `/guides/foreigners/visa-entry/`)，不要用 `.md` 后缀 |
 
 ---
 
@@ -607,6 +608,9 @@ npm install
 | 2026-07-09 | SEO 落地页 (3页) + Plausible Analytics | 开始做英文搜索流量获取 |
 | 2026-07-09 | NordVPN affiliate 链接 | 第二个变现渠道，与 VPN 攻略自然契合 |
 | 2026-07-11 | Privacy Policy 页面 (/privacy) | 合规要求，Trip.com/Airalo 等 affiliate 项目需要 |
+| 2026-10-06 | 医疗旅游测试内容 (体检 + 牙科, 2篇) | 验证高客单价内容方向，长尾+高变现潜力 |
+| 2026-10-06 | 导航 App + Wise/Revolut 支付攻略 | 补齐来华实用信息缺口，覆盖落地后第一批刚需 |
+| 2026-10-06 | 全站站内链接改用真实路由 (60处) | 修复 foreigners 板块 .md 路径导致的 404 |
 
 ---
 
@@ -640,5 +644,5 @@ npm install
 ---
 
 _此文件由马督工维护。每两天自动审查一次 (定时任务 20:08 CST)。_
-_上一次审查: 2026-10-05 — 91篇, 155页, 依赖版本无变化, 构建 0 错误。_
+_上一次审查: 2026-10-07 — 95篇, 159页, 依赖版本无变化, 构建 0 错误。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后打开看板系统 (http://localhost:3456 → 总路线图) 了解当前进度。_
