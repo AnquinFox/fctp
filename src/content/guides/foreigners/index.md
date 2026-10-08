@@ -29,9 +29,9 @@ This guide series covers **everything** a foreigner needs to know before and aft
 | 6 | [Health & Emergency](/guides/foreigners/health-emergency/) | Hospitals, insurance, emergency numbers, safety tips |
 | 7 | [Culture & Daily Life](/guides/foreigners/culture-tips/) | Etiquette, dining, shopping, festivals, useful phrases |
 | 8 | [Medical Tourism](/guides/foreigners/medical-tourism/) | Cost comparison with US, JCI hospitals, TCM, planning your trip |
-| 9 | [Navigation Apps](./09_china_navigation_apps_amap_baidu_maps.md) | Amap, Baidu Maps & Maps.me — how to navigate China without Google Maps |
+| 9 | [Navigation Apps](/guides/foreigners/china-navigation-apps-amap-baidu-maps/) | Amap, Baidu Maps & Maps.me — how to navigate China without Google Maps |
 | 10 | [Traveling to China with Kids](/guides/foreigners/china-travel-kids-family-parenting-guide/) | A foreign parent's complete survival guide — food, transport, health, attractions & cultural tips |
-| 11 | [Wise & Revolut: Smart Payment Guide](./wise_revolut_china_payment.md) | Save ¥300-600 with Wise & Revolut — setup, ATM, Alipay/WeChat linking, side-by-side comparison |
+| 11 | [Wise & Revolut: Smart Payment Guide](/guides/foreigners/wise-revolut-china-payment/) | Save ¥300-600 with Wise & Revolut — setup, ATM, Alipay/WeChat linking, side-by-side comparison |
 | 12 | **NEW!** [The $500 Full-Body Check-Up: China Health-Screening Trip](/guides/foreigners/china-health-checkup-tourism/) | Executive check-up tourism — US $8,000 vs China $500, how to book, city picks, TCM & recovery travel |
 | 13 | **NEW!** [Dental Work in China: The Shanghai Cost Guide](/guides/foreigners/dental-work-china-cost-guide/) | Implants, crowns & veneers at ~70% off — price tables, booking, 6-day Shanghai itinerary, aftercare food |
 
