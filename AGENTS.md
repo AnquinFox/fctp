@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-10-07 20:08 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-10-09 20:08 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -633,9 +633,9 @@ npm install
 
 | 资源 | 位置 |
 |------|------|
-| 任务计划表 | 看板系统 → `http://localhost:3456` (CLI: `board/board-cli.mjs`) |
+| 任务计划表 | 看板系统 → `http://localhost:3456` (CLI: `E:\AIProject_Common\board\board-cli.mjs`) |
 | 产品决策记录 | `E:\AIProject_Common\OpenclawWorkspace-madugong\MEMORY.md` |
-| 看板数据 | `E:\AIProject_Common\OpenclawWorkspace-madugong\board\data.json` |
+| 看板数据 | `E:\AIProject_Common\board\data.json` |
 | 内容源 | `E:\AIProject_Common\wonder-quest\` |
 | GitHub 仓库 | github.com/AnquinFox/fctp |
 | Vercel 后台 | vercel.com (AnquinFox 账号) |
@@ -644,5 +644,5 @@ npm install
 ---
 
 _此文件由马督工维护。每两天自动审查一次 (定时任务 20:08 CST)。_
-_上一次审查: 2026-10-07 — 95篇, 159页, 依赖版本无变化, 构建 0 错误。_
+_上一次审查: 2026-10-09 — 95篇, 159页, 依赖版本无变化, 构建 0 错误。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后打开看板系统 (http://localhost:3456 → 总路线图) 了解当前进度。_
