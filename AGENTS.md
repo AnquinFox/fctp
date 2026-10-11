@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-10-09 20:08 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-10-11 20:08 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -59,7 +59,7 @@ fctp/
 │   ├── populate-meta.mjs              ← 自动提取封面+标签元数据
 │   └── sync-all.mjs                   ← 批量同步 wonder-quest → fctp
 └── public/
-    └── images/                        ← 攻略用图片 (58个城市图片目录)
+    └── images/                        ← 攻略用图片 (63个图片目录)
 ```
 
 ---
@@ -149,20 +149,35 @@ Vercel 自动构建 → wonderquest.xyz 上线
 
 ## 📝 攻略 Content Collection Schema
 
-在 `src/content/config.ts` 中定义。每篇攻略的 frontmatter：
+在 `src/content/config.ts` 中定义。**实际 schema 字段（以此为准）：**
+
+| 字段 | 类型 | 必填 | 说明 |
+|------|------|------|------|
+| `title` | string | ✅ | 攻略标题 |
+| `pageSlug` | string | ✅ | 页面路由 slug（foreigners 板块带 `foreigners/` 前缀）|
+| `city` | string | ✅ | 城市/板块目录名 |
+| `country` | string | 默认 `china` | 默认值，通常不写 |
+| `lang` | `'en'` \| `'zh'` | 默认 `en` | 语言标识 |
+| `duration` | string | ❌ | 如 `"3 Days"` |
+| `tags` | string[] | 默认 `[]` | 由脚本自动生成 |
+| `cover` | string | ❌ | 封面图路径，脚本取正文第一张图 |
+| `published` | date | ❌ | 发布日期 |
+| `updated` | date | ❌ | 更新日期 |
+| `alternateSlug` | string | ❌ | 中英互译对应的另一篇 slug |
+| `draft` | boolean | 默认 `false` | 草稿标记 |
+
+**脚本自动生成的 frontmatter 示例**（Fire 不写 frontmatter，全部由 `populate-meta.mjs` 补全）：
 
 ```yaml
-title: "攻略标题"
-description: "短描述"
-pubDate: 2026-07-01
+title: "Shanghai Classic 3-Day Itinerary"
+pageSlug: "shanghai-classic-3-day-itinerary"
 city: "shanghai"
-lang: "zh"          # zh 或 en
-tags: ["food", "culture"]
-image: "/images/shanghai/bund.jpg"  # 封面图
-readingTime: "8 min"
+lang: "en"
+tags: ["shanghai", "beijing"]
+cover: "/images/shanghai/bund.jpg"
 ```
 
-⚠️ **Schema 是强类型的**。如果 frontmatter 多了或少了一个字段，构建会报错。
+⚠️ **Schema 是强类型的**。字段类型不匹配构建会报错；`title` / `pageSlug` / `city` 缺失会直接导致该篇无法进入 collection。
 
 ---
 
@@ -644,5 +659,5 @@ npm install
 ---
 
 _此文件由马督工维护。每两天自动审查一次 (定时任务 20:08 CST)。_
-_上一次审查: 2026-10-09 — 95篇, 159页, 依赖版本无变化, 构建 0 错误。_
+_上一次审查: 2026-10-11 — 95篇, 159页, 依赖版本无变化, 构建 0 错误。同步了 Content Collection schema 章节（旧的 description/pubDate/image/readingTime 字段已废弃）与实际 config.ts；图片目录数修正为 63。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后打开看板系统 (http://localhost:3456 → 总路线图) 了解当前进度。_
