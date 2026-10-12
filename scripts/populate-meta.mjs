@@ -94,6 +94,8 @@ const foreignersTopicTags = {
   'culture-tips': ['culture', 'food', 'etiquette'],
   'china-health-checkup-tourism': ['health', 'medical', 'checkup'],
   'dental-work-china-cost-guide': ['health', 'dental', 'medical'],
+  'china-winter-travel-guide': ['winter', 'harbin', 'beijing', 'sanya'],
+  'china-spring-festival-travel-guide': ['spring-festival', 'beijing', 'chengdu'],
 };
 
 function extractForeignersTags(fileName) {
