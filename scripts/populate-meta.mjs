@@ -99,6 +99,7 @@ const foreignersTopicTags = {
   'china-chunyun-travel-rush-survival-guide': ['chunyun', 'spring-festival', 'train'],
   'harbin-ice-snow-festival-2026-27-guide': ['harbin', 'winter', 'festival'],
   'china-ski-resorts-guide': ['ski', 'winter', 'harbin'],
+  'china-medical-visa-entry-guide': ['health', 'medical', 'visa', 'entry'],
 };
 
 function extractForeignersTags(fileName) {
