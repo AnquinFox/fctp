@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-10-11 20:08 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-10-16 08:50 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -46,12 +46,12 @@ fctp/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
 │       ├── config.ts                  ← Content Collection 配置
-│       └── guides/                    ← 所有攻略 Markdown (共95篇, 58个目录 → 159页)
+│       └── guides/                    ← 所有攻略 Markdown (共101篇, 58个目录 → 165页)
 │           ├── shanghai/              ← 上海 (10篇)
 │           ├── beijing/               ← 北京 (4篇)
 │           ├── chongqing/             ← 重庆 (3篇)
 │           ├── chengdu/               ← 成都 (3篇)
-│           ├── foreigners/            ← 来华实用信息 (14篇) — 最大目录
+│           ├── foreigners/            ← 来华实用信息 (20篇) — 最大目录
 │           ├── zhangjiajie/           ← 张家界 (3篇)
 │           ├── ... (完整列表: 58个城市/景区目录)
 │           └── 具体列表见 npm run build 输出
@@ -95,6 +95,7 @@ Vercel 自动构建 → wonderquest.xyz 上线
 3. **你**把 MD 拖进 `fctp/src/content/guides/{city}/`
 4. **你**把图片复制到 `fctp/public/images/{city}/`
 5. ⚠️ **必跑** `node scripts/populate-meta.mjs` — 自动生成所有攻略的封面和标签元数据（如果内容创作者不写 frontmatter，跳过这步线上就没有封面和标签）
+   - **foreigners 新攻略**：还要把 slug 加进 `scripts/populate-meta.mjs` 的 `foreignersTopicTags` 映射表，否则该篇只会拿到 `survival-kit` 一个标签
 6. `git add -A` → `git commit -m "feat: add {city} guide"` → `git push origin master`
 7. Vercel 自动构建，1-2 分钟后线上可见
 
@@ -113,6 +114,7 @@ Vercel 自动构建 → wonderquest.xyz 上线
 | 图片 404 | 图片没复制到 `public/images/` | 每加新图都要物理复制到 fctp |
 | Windows Junction 不能用 | Vercel 是 Linux，不支持 Junction | 部署前图片必须物理存在 |
 | 中文攻略不显示 | frontmatter 里 `lang` 字段写错了 | 必须是 `zh` 或 `en` |
+| 新攻略标签只有 `survival-kit` | slug 没加进 `populate-meta.mjs` 的 `foreignersTopicTags` | 在映射表里按 slug 补一行，重跑脚本 |
 | 站内链接 404 | 直接写了 `.md` 文件路径 | 改写成真实页面路由 (如 `/guides/foreigners/visa-entry/`)，不要用 `.md` 后缀 |
 
 ---
@@ -308,7 +310,7 @@ npm run build
 # → 必须 0 errors！有 warning 最好也修掉
 # → 同时检查 Content Collection schema 校验
 # → 成功输出示例：
-#   18:02:09 [build] 153 page(s) built in 1.31s
+#   18:02:09 [build] 165 page(s) built in 1.49s
 #   18:02:09 [build] Complete!
 
 # 5. 本地预览生产构建 (验证 build 产物)
@@ -468,6 +470,28 @@ Vercel (接收请求 → 返回静态文件)
 
 **原则：除非有明确收益，否则不要动 DNS。**
 
+### 元数据脚本 populate-meta.mjs (封面 + 标签怎么来的)
+
+Fire 不写 frontmatter，所有元数据由 `node scripts/populate-meta.mjs` 回填。它做两件事：
+
+| 功能 | 实现 | 何时需要改脚本 |
+|------|------|---------------|
+| **封面 `cover`** | 取正文第一张图 `![...](/images/...)` | 不需要改，Fire 把想要的图放第一张即可 |
+| **城市标签** | `cityPatterns` 正则匹配中英文城市名（约40个城市），跨城市攻略自动多标签 | 新城市首次出现时，往 `cityPatterns` 加一条 |
+| **foreigners 主题标签** | `foreignersTopicTags` 映射表：slug → tags | ⚠️ **每个新增 foreigners 攻略都要加一行** |
+
+⚠️ **`foreignersTopicTags` 是硬编码白名单**。漏加 = 该篇只剩 `survival-kit` 标签，筛选栏和分类页都找不到它。
+
+```js
+// scripts/populate-meta.mjs
+const foreignersTopicTags = {
+  'visa-entry': ['visa', 'entry', 'passport'],
+  'china-ski-resorts-guide': ['ski', 'winter', 'harbin'],  // ← 新攻略照这个格式加
+};
+```
+
+脚本对已存在的 frontmatter 是**幂等回填**：重跑不会重复写，只在缺字段时补。跑完记得 `git diff` 看一眼改了哪些篇。
+
 ### 图片同步 (完整说明)
 
 **问题背景：** 图片源在 `wonder-quest/images/`，但网站需要从 `fctp/public/images/` 提供。两张皮。
@@ -626,6 +650,9 @@ npm install
 | 2026-10-06 | 医疗旅游测试内容 (体检 + 牙科, 2篇) | 验证高客单价内容方向，长尾+高变现潜力 |
 | 2026-10-06 | 导航 App + Wise/Revolut 支付攻略 | 补齐来华实用信息缺口，覆盖落地后第一批刚需 |
 | 2026-10-06 | 全站站内链接改用真实路由 (60处) | 修复 foreigners 板块 .md 路径导致的 404 |
+| 2026-10-12 | 冬季 + 2027 春节攻略上线 (2篇) | 补齐冬季/春节长尾关键词，Harbin/Sanya/Xiamen/Dali 新增城市标签 |
+| 2026-10-13 | 春运 + 哈尔滨冰雪节 + 中国滑雪攻略 (3篇) | 季节性流量窗口内容，提前 3 个月占位 |
+| 2026-10-13 | 医疗签证/入境攻略 + visa-entry 刷新 (免签 55→57国) | 政策时效性内容，保持签证信息准确 |
 
 ---
 
@@ -639,7 +666,7 @@ npm install
 6. **不要在没检查构建的情况下 push** — 先 `npm run build`，0 errors 再 push
 7. **不要动 DNS 配置** — 除非有明确的、讨论过的收益
 8. **不要 commit .env 文件** — API key 泄露后果严重
-9. **不要跳过 populate-meta.mjs** — Fire 不写 frontmatter，跳过导致封面/标签丢失
+9. **不要跳过 populate-meta.mjs** — Fire 不写 frontmatter，跳过导致封面/标签丢失；foreigners 新攻略还必须同步更新 `foreignersTopicTags`
 10. **不要添加大型依赖** — 保持 bundle 小，构建快。装新包前质疑必要性
 
 ---
@@ -658,6 +685,6 @@ npm install
 
 ---
 
-_此文件由马督工维护。每两天自动审查一次 (定时任务 20:08 CST)。_
-_上一次审查: 2026-10-11 — 95篇, 159页, 依赖版本无变化, 构建 0 错误。同步了 Content Collection schema 章节（旧的 description/pubDate/image/readingTime 字段已废弃）与实际 config.ts；图片目录数修正为 63。_
+_此文件由马督工维护。每两天自动审查一次 (定时任务 08:46 CST)。_
+_上一次审查: 2026-10-16 — 101篇, 165页, 58个城市目录/63个图片目录, 依赖版本无变化, 构建 0 错误。新增：populate-meta.mjs 的 `foreignersTopicTags` 机制（foreigners 新攻略必须补标签映射）+ 最近三批季节性内容决策记录。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后打开看板系统 (http://localhost:3456 → 总路线图) 了解当前进度。_
