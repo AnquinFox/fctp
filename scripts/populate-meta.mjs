@@ -100,6 +100,8 @@ const foreignersTopicTags = {
   'harbin-ice-snow-festival-2026-27-guide': ['harbin', 'winter', 'festival'],
   'china-ski-resorts-guide': ['ski', 'winter', 'harbin'],
   'china-medical-visa-entry-guide': ['health', 'medical', 'visa', 'entry'],
+  'china-240-hour-visa-free-transit-guide': ['visa', 'transit', 'entry'],
+  'china-hospital-international-department-booking-guide': ['health', 'medical', 'hospital'],
 };
 
 function extractForeignersTags(fileName) {
