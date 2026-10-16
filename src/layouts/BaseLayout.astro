@@ -90,8 +90,8 @@ const jsonLd: Record<string, unknown> = {
     <!-- JSON-LD Structured Data -->
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
 
-    <!-- Plausible Analytics -->
-    <script defer data-domain="wonderquest.xyz" src="https://plausible.io/js/script.js"></script>
+    <!-- Plausible Analytics (outbound-links variant: tracks eSIM/VPN affiliate click-outs) -->
+    <script defer data-domain="wonderquest.xyz" src="https://plausible.io/js/script.outbound-links.js"></script>
 
     <!-- Travelpayouts Drive — auto-affiliate links -->
     <script is:inline data-cfasync="false">
