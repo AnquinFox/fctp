@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-10-16 08:50 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-10-17 18:00 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -46,12 +46,12 @@ fctp/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
 │       ├── config.ts                  ← Content Collection 配置
-│       └── guides/                    ← 所有攻略 Markdown (共101篇, 58个目录 → 165页)
+│       └── guides/                    ← 所有攻略 Markdown (共103篇, 58个目录 → 167页)
 │           ├── shanghai/              ← 上海 (10篇)
 │           ├── beijing/               ← 北京 (4篇)
 │           ├── chongqing/             ← 重庆 (3篇)
 │           ├── chengdu/               ← 成都 (3篇)
-│           ├── foreigners/            ← 来华实用信息 (20篇) — 最大目录
+│           ├── foreigners/            ← 来华实用信息 (22篇) — 最大目录
 │           ├── zhangjiajie/           ← 张家界 (3篇)
 │           ├── ... (完整列表: 58个城市/景区目录)
 │           └── 具体列表见 npm run build 输出
@@ -223,8 +223,9 @@ cover: "/images/shanghai/bund.jpg"
 ### 分析统计
 
 - **Plausible Analytics**: 隐私友好的网站统计
-- 脚本: `<script defer data-domain="wonderquest.xyz" src="https://plausible.io/js/script.js">`
+- 脚本: `<script defer data-domain="wonderquest.xyz" src="https://plausible.io/js/script.outbound-links.js">`
 - 注入位置: `src/layouts/BaseLayout.astro`
+- ⚠️ 用的是 `outbound-links` 变体 (2026-10-16 切换)：自动追踪出站链接点击，用于统计 Trip.com / NordVPN / eSIM 等 affiliate 点击率。换回 `script.js` 会丢失全部出站事件
 
 ### Sitemap
 
@@ -310,7 +311,7 @@ npm run build
 # → 必须 0 errors！有 warning 最好也修掉
 # → 同时检查 Content Collection schema 校验
 # → 成功输出示例：
-#   18:02:09 [build] 165 page(s) built in 1.49s
+#   18:00:25 [build] 167 page(s) built in 1.49s
 #   18:02:09 [build] Complete!
 
 # 5. 本地预览生产构建 (验证 build 产物)
@@ -653,6 +654,8 @@ npm install
 | 2026-10-12 | 冬季 + 2027 春节攻略上线 (2篇) | 补齐冬季/春节长尾关键词，Harbin/Sanya/Xiamen/Dali 新增城市标签 |
 | 2026-10-13 | 春运 + 哈尔滨冰雪节 + 中国滑雪攻略 (3篇) | 季节性流量窗口内容，提前 3 个月占位 |
 | 2026-10-13 | 医疗签证/入境攻略 + visa-entry 刷新 (免签 55→57国) | 政策时效性内容，保持签证信息准确 |
+| 2026-10-16 | 240小时过境免签攻略 + 医院国际部挂号攻略 (2篇) | 政策时效内容 + 医疗刚需长尾，同步刷新 visa-entry 过境数字 |
+| 2026-10-16 | Plausible 切换到 outbound-links 变体 | 追踪 eSIM/VPN affiliate 出站点击，量化变现漏斗 |
 
 ---
 
@@ -685,6 +688,6 @@ npm install
 
 ---
 
-_此文件由马督工维护。每两天自动审查一次 (定时任务 08:46 CST)。_
-_上一次审查: 2026-10-16 — 101篇, 165页, 58个城市目录/63个图片目录, 依赖版本无变化, 构建 0 错误。新增：populate-meta.mjs 的 `foreignersTopicTags` 机制（foreigners 新攻略必须补标签映射）+ 最近三批季节性内容决策记录。_
+_此文件由马督工维护，由定时任务自动审查。_
+_上一次审查: 2026-10-17 — 103篇, 167页, 58个城市目录/63个图片目录, 依赖版本无变化, 构建 0 错误。新增：240小时过境免签 + 医院国际部挂号攻略记录、Plausible outbound-links 变体说明（出站链接追踪）；页面数 165→167。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后打开看板系统 (http://localhost:3456 → 总路线图) 了解当前进度。_
