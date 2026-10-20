@@ -104,6 +104,7 @@ const foreignersTopicTags = {
   'china-hospital-international-department-booking-guide': ['health', 'medical', 'hospital'],
   'china-hainan-30-day-visa-free-guide': ['visa', 'hainan', 'entry'],
   'china-eye-surgery-lasik-icl-guide': ['health', 'medical', 'hospital'],
+  'china-12306-train-booking-guide': ['train', 'transport', 'booking'],
 };
 
 function extractForeignersTags(fileName) {
