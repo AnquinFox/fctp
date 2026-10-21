@@ -7,6 +7,9 @@ city: foreigners
 cover: /images/general/medical_china_hospital_modern_exterior_beijing.webp
 tags:
   - survival-kit
+  - health
+  - medical
+  - overview
 ---
 # Medical Tourism in China: Why Getting Treatment Here Costs a Fraction of US Prices (and the Quality Is World-Class)
 

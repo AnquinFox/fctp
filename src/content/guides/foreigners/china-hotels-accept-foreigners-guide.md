@@ -5,6 +5,9 @@ city: foreigners
 cover: /images/foreigners/china_hotel_reception_desk_foreign_checkin_071.webp
 tags:
   - survival-kit
+  - hotel
+  - accommodation
+  - booking
 ---
 # Hotels in China That Accept Foreigners (2026)
 

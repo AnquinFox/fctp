@@ -105,6 +105,12 @@ const foreignersTopicTags = {
   'china-hainan-30-day-visa-free-guide': ['visa', 'hainan', 'entry'],
   'china-eye-surgery-lasik-icl-guide': ['health', 'medical', 'hospital'],
   'china-12306-train-booking-guide': ['train', 'transport', 'booking'],
+  'china-hotels-accept-foreigners-guide': ['hotel', 'accommodation', 'booking'],
+  'china-food-ordering-guide': ['food', 'restaurant', 'menu'],
+  'china-travel-budget-2026-guide': ['budget', 'cost', 'money'],
+  'china-navigation-apps-amap-baidu-maps': ['apps', 'navigation', 'maps'],
+  'wise-revolut-china-payment': ['payment', 'wise', 'revolut'],
+  'medical-tourism': ['health', 'medical', 'overview'],
 };
 
 function extractForeignersTags(fileName) {

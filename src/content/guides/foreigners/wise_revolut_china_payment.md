@@ -5,6 +5,9 @@ city: foreigners
 cover: /images/general/payment-mobile.webp
 tags:
   - survival-kit
+  - payment
+  - wise
+  - revolut
 ---
 # Wise & Revolut in China: The Smart Way to Pay Without Getting Ripped Off 💸
 

@@ -5,6 +5,9 @@ city: foreigners
 cover: /images/general/navi_phone_map_chinese_street_traveler_navigation.webp
 tags:
   - survival-kit
+  - apps
+  - navigation
+  - maps
 ---
 # China Navigation: Amap (English), Baidu Maps & Maps.me — Your Complete Guide
 

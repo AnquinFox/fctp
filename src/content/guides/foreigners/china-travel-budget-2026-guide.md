@@ -5,6 +5,9 @@ city: foreigners
 cover: /images/foreigners/china_budget_trip_planning_notebook_yuan_085.webp
 tags:
   - survival-kit
+  - budget
+  - cost
+  - money
 ---
 # China Travel Budget 2026: Real Cost Breakdown
 

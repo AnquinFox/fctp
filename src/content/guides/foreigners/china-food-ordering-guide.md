@@ -5,6 +5,9 @@ city: foreigners
 cover: /images/foreigners/china_food_qr_code_menu_scan_077.webp
 tags:
   - survival-kit
+  - food
+  - restaurant
+  - menu
 ---
 # China Food Guide: How to Order & Get What You Actually Want
 

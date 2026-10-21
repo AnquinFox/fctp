@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-10-19 18:30 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-10-21 18:30 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -46,12 +46,12 @@ fctp/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
 │       ├── config.ts                  ← Content Collection 配置
-│       └── guides/                    ← 所有攻略 Markdown (共105篇, 58个目录 → 169页)
+│       └── guides/                    ← 所有攻略 Markdown (共109篇, 58个目录 → 173页)
 │           ├── shanghai/              ← 上海 (10篇)
 │           ├── beijing/               ← 北京 (4篇)
 │           ├── chongqing/             ← 重庆 (3篇)
 │           ├── chengdu/               ← 成都 (3篇)
-│           ├── foreigners/            ← 来华实用信息 (24篇) — 最大目录
+│           ├── foreigners/            ← 来华实用信息 (28篇) — 最大目录
 │           ├── zhangjiajie/           ← 张家界 (3篇)
 │           ├── ... (完整列表: 58个城市/景区目录)
 │           └── 具体列表见 npm run build 输出
@@ -96,8 +96,9 @@ Vercel 自动构建 → wonderquest.xyz 上线
 4. **你**把图片复制到 `fctp/public/images/{city}/`
 5. ⚠️ **必跑** `node scripts/populate-meta.mjs` — 自动生成所有攻略的封面和标签元数据（如果内容创作者不写 frontmatter，跳过这步线上就没有封面和标签）
    - **foreigners 新攻略**：还要把 slug 加进 `scripts/populate-meta.mjs` 的 `foreignersTopicTags` 映射表，否则该篇只会拿到 `survival-kit` 一个标签
-6. `git add -A` → `git commit -m "feat: add {city} guide"` → `git push origin master`
-7. Vercel 自动构建，1-2 分钟后线上可见
+6. 跑完脚本后**自检标签**：确认没有 foreigners 篇目被打成单标签（见本节上方「常见坑」的自检命令）
+7. `git add -A` → `git commit -m "feat: add {city} guide"` → `git push origin master`
+8. Vercel 自动构建，1-2 分钟后线上可见
 
 ### 图片引用规范
 
@@ -115,6 +116,7 @@ Vercel 自动构建 → wonderquest.xyz 上线
 | Windows Junction 不能用 | Vercel 是 Linux，不支持 Junction | 部署前图片必须物理存在 |
 | 中文攻略不显示 | frontmatter 里 `lang` 字段写错了 | 必须是 `zh` 或 `en` |
 | 新攻略标签只有 `survival-kit` | slug 没加进 `populate-meta.mjs` 的 `foreignersTopicTags` | 在映射表里按 slug 补一行，重跑脚本 |
+| 老攻略标签突然只剩 `survival-kit` | 脚本对 foreigners 是**强制重算** tags（不是幂等），白名单里没有的 slug 会被洗干净 | 补白名单 → 重跑 → `git diff` 确认；跑完务必检查有没有其他篇被降级 |
 | 站内链接 404 | 直接写了 `.md` 文件路径 | 改写成真实页面路由 (如 `/guides/foreigners/visa-entry/`)，不要用 `.md` 后缀 |
 
 ---
@@ -483,6 +485,13 @@ Fire 不写 frontmatter，所有元数据由 `node scripts/populate-meta.mjs` �
 
 ⚠️ **`foreignersTopicTags` 是硬编码白名单**。漏加 = 该篇只剩 `survival-kit` 标签，筛选栏和分类页都找不到它。
 
+⚠️ **对 foreigners 目录，脚本每次跑都强制重算 tags**（`if (!tags || tags.length===0 || isForeigners)`）。这意味着白名单缺失的篇目会被**降级**而不是保持原状。历史遗留的三篇（`09_china_navigation_apps_amap_baidu_maps`、`wise_revolut_china_payment`、`medical-tourism`）在 2026-10-21 审查时被发现只剩 `survival-kit`，已补进白名单。**每次跑完脚本都要检查是否出现新的单标签篇目**：
+
+```bash
+# 列出 foreigners 里标签数 <= 1 的篇目（正常应为空）
+Get-ChildItem src\content\guides\foreigners\*.md | ForEach-Object { $c=(Select-String -Path $_.FullName -Pattern "^  - ").Count; if($c -le 1){ $_.BaseName } }
+```
+
 ```js
 // scripts/populate-meta.mjs
 const foreignersTopicTags = {
@@ -657,6 +666,8 @@ npm install
 | 2026-10-16 | 240小时过境免签攻略 + 医院国际部挂号攻略 (2篇) | 政策时效内容 + 医疗刚需长尾，同步刷新 visa-entry 过境数字 |
 | 2026-10-16 | Plausible 切换到 outbound-links 变体 | 追踪 eSIM/VPN affiliate 出站点击，量化变现漏斗 |
 | 2026-10-17 | 海南30天免签 + 眼科手术 (LASIK/ICL) 攻略 (2篇) | 政策时效长尾 + 高客单价医疗内容，foreignersTopicTags 同步补两条 |
+| 2026-10-20 | 12306 火车订票 + 外国人可住酒店 + 中餐点餐 + 2026 预算攻略 (4篇) | 落地后最高频刚需（行/住/食/钱），补齐 foreigners 板块的实操闭环 |
+| 2026-10-21 | 修复 foreigners 标签白名单缺失 (3篇) | 脚本对 foreigners 强制重算 tags，白名单漏项会把标签洗成单标签；补 `china-hotels-accept-foreigners-guide` / `china-food-ordering-guide` / `china-travel-budget-2026-guide` / `china-navigation-apps-amap-baidu-maps` / `wise-revolut-china-payment` / `medical-tourism` 六条 |
 
 ---
 
@@ -690,5 +701,5 @@ npm install
 ---
 
 _此文件由马督工维护，由定时任务自动审查。_
-_上一次审查: 2026-10-19 — 105篇, 169页, 58个城市目录/63个图片目录, 依赖版本无变化 (@astrojs/check@0.9.9 / sitemap@3.7.3 / astro@5.18.2 / typescript@5.9.3), 构建 0 错误、1.5s 完成。本次修正：foreigners 22→24篇、页面数 167→169、补充 2026-10-17 海南免签 + 眼科手术决策记录。_
+_上一次审查: 2026-10-21 18:30 — 109篇, 173页, 58个城市目录/63个图片目录, 依赖版本无变化 (@astrojs/check@0.9.9 / sitemap@3.7.3 / astro@5.18.2 / typescript@5.9.3), 构建 0 错误、1.5s 完成。本次修正：foreigners 24→28篇、页面数 169→173、攻略总数 105→109、补充 4 篇新攻略决策记录、新增「白名单缺失会降级已有标签」的坑与自检命令。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后打开看板系统 (http://localhost:3456 → 总路线图) 了解当前进度。_
