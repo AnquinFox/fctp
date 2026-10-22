@@ -9,6 +9,7 @@ tags:
   - xian
 draft: false
 cover: /images/chongqing/hotpot_food_local.webp
+alternateSlug: chongqing-3-day-local
 ---
 > 📌 2026 Edition | 🎯 First-timers / Trap-avoiders | 🎫 3 days
 > Chongqing —the internet hypes this place like crazy. "8D magical city," "your GPS will go haywire" —I was just as pumped before I came. After visiting, I realized most of the Insta-famous spots are just okay. But the genuinely good stuff? The travel guides barely mention it.

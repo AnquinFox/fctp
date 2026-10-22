@@ -7,6 +7,7 @@ tags:
   - shanghai
 draft: false
 cover: /images/shanghai/02_top15/shanghai_top15_01.webp
+alternateSlug: shanghai-top-15-attractions
 ---
 > 📅 2026版 | 📍 景点推荐/排名型 | ⏱️ 按需选择
 > 不搞虚的，直接给你上海最值得去的15个景点，附实用信息和避坑建议。

@@ -7,6 +7,7 @@ tags:
   - beijing
 draft: false
 cover: /images/beijing/gugong_panorama_gw.webp
+alternateSlug: beijing-4-day-travel-guide
 ---
 > 📅 2026版 | 📍 第一次来/文化爱好者 | ⏱️ 4天
 > 编者注：北京不是一座"打卡式旅游"的城市。故宫的红墙、胡同的灰砖、CBD的玻璃幕墙——时间在这里是分层的，不是线性的。四天时间，我们试着在这些层次里找到一条能呼吸的路线。

@@ -8,6 +8,7 @@ tags:
   - chengdu
 draft: false
 cover: /images/chongqing/hotpot_food_local.webp
+alternateSlug: chongqing-3-day-travel-guide
 ---
 > 📅 2026版 | 📍 第一次来/避坑型 | ⏱️ 3天
 > 重庆——网上把这地方吹得天花乱坠。"8D魔幻城市""你的GPS会失灵"——来之前我也一样激动。来了之后发现，网红景点大部分都一般。但真正好的东西？攻略里基本不提。

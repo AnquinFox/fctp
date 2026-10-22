@@ -8,6 +8,7 @@ tags:
   - xian
 draft: false
 cover: /images/shanghai/gowithmarkhazyl/zhujiajiao_gw.webp
+alternateSlug: shanghai-classic-3-day
 ---
 > 📅 2025-2026 Updated | 📍 Best for first-time visitors | ⏱️ 3-day highlights tour
 

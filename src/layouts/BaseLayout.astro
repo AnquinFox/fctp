@@ -71,7 +71,7 @@ const jsonLd: Record<string, unknown> = {
     <!-- hreflang — tells Google which language this page is in -->
     <link rel="alternate" hreflang={pageHreflang} href={canonical.href} />
     {alternateUrl && <link rel="alternate" hreflang={pageHreflang === 'en' ? 'zh-Hans' : 'en'} href={alternateUrl} />}
-    <link rel="alternate" hreflang="x-default" href={new URL('/', Astro.site).href} />
+    {alternateUrl && <link rel="alternate" hreflang="x-default" href={pageHreflang === 'en' ? canonical.href : alternateUrl} />}
 
     <!-- Open Graph -->
     <meta property="og:title" content={`${title} | WonderQuest`} />

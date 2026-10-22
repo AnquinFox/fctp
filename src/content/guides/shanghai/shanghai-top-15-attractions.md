@@ -8,6 +8,7 @@ tags:
   - xian
 draft: false
 cover: /images/shanghai/gowithmarkhazyl/bund_panorama_daytime_gw.webp
+alternateSlug: shanghai-top-15-must-see
 ---
 > 👑 Curated by a veteran Shanghai travel enthusiast | 📊 10M+ reads | 🆕 2026 Latest Rankings
 

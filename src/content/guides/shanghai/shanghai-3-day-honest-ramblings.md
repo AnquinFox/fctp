@@ -8,6 +8,7 @@ tags:
 draft: false
 duration: '3 Days '
 cover: /images/shanghai/gowithmarkhazyl/shanghai_tower_gw.webp
+alternateSlug: shanghai-3-day-casual
 ---
 > 📌 2026 Edition | 🎯 First-timers / Independent travelers | 🎫 3 days
 > Here's the thing about Shanghai —over-planning actually makes you more anxious. Too many places to go, never enough time. So this isn't a "Top 10 Must-Sees" guide. It's just my rhythm. How I'd spend three comfortable days.

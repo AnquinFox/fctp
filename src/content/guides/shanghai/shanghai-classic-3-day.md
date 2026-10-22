@@ -7,6 +7,7 @@ tags:
   - shanghai
 draft: false
 cover: /images/shanghai/01_classic_3day/shanghai_classic_3day_01.webp
+alternateSlug: shanghai-classic-3-day-itinerary
 ---
 > 📅 2026版 | 📍 经典路线/打卡型 | ⏱️ 3天
 > 第一次来上海？这条路线覆盖了最经典的地标，不会踩雷，也不会浪费时间。

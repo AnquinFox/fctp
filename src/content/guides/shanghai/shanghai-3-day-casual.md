@@ -7,6 +7,7 @@ tags:
   - shanghai
 draft: false
 cover: /images/shanghai/gowithmarkhazyl/shanghai_tower_gw.webp
+alternateSlug: shanghai-3-day-honest-ramblings
 ---
 > 📅 2026版 | 📍 第一次来/自由行 | ⏱️ 3天
 > 上海这地方，攻略做多了反而会焦虑——想去的地方太多，时间永远不够。所以这篇不搞"必去景点TOP10"那一套，就按我自己的节奏，聊聊三天怎么逛比较舒服。

@@ -7,6 +7,7 @@ tags:
   - shanghai
 draft: false
 cover: /images/shanghai/gowithmarkhazyl/yuyuan_bridge_night_gw.webp
+alternateSlug: shanghai-deep-dive-guide
 ---
 > 📅 2026版 | 📍 深度游/文化爱好者 | ⏱️ 按需安排
 > 不走马观花，带你真正看懂上海。每个景点都有故事，每条路都有历史。

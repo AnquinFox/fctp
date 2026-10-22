@@ -8,6 +8,7 @@ tags:
   - xian
 draft: false
 cover: /images/shanghai/gowithmarkhazyl/yuyuan_bridge_night_gw.webp
+alternateSlug: shanghai-deep-dive
 ---
 > 📸 High-res photos | 📝 In-depth coverage of every attraction | 🗺Transport/tickets included | 🔄 2026 Edition
 

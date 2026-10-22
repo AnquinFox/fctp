@@ -9,6 +9,7 @@ tags:
 draft: false
 duration: '4 Days '
 cover: /images/beijing/gugong_panorama_gw.webp
+alternateSlug: beijing-4-day-imperial
 ---
 > 📅 2026 Edition | 📍 First-timers / Culture lovers | ⏱️ 4 days
 > Editor's note: Beijing is NOT a city for "checklist tourism." The Forbidden City's red walls, the hutong's gray tiles, the CBD's glass facades —time here is layered, not linear. Over four days, we try to find a breathable route through these layers.
