@@ -1,6 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import BaseLayout from '../../layouts/BaseLayout.astro';
+import RevenueLinks from '../../components/RevenueLinks.astro';
 
 export async function getStaticPaths() {
   const guides = await getCollection('guides');
@@ -23,6 +24,12 @@ const alternateUrl = alternateSlug
 const description = lang === 'zh'
   ? `${title} — ${city}旅行攻略，包含实用建议、本地人推荐和外国游客必备信息。`
   : `${title} — A detailed ${city} travel guide with honest tips, local insights, and practical advice for foreign visitors.`;
+
+// 同城其它攻略 → 站内导流（减跳出、加 PV、提内链权重）
+const related = guides
+  .filter(g => g.data.city === city && g.data.pageSlug !== slug)
+  .slice(0, 5)
+  .map(g => ({ slug: g.data.pageSlug, title: g.data.title, city: g.data.city }));
 ---
 
 <BaseLayout
@@ -50,6 +57,8 @@ const description = lang === 'zh'
     <div class="article-content" style="font-size:1.08rem">
       <Content />
     </div>
+
+    <RevenueLinks city={city} lang={lang} tags={tags} related={related} />
 
     <footer style="margin-top:4rem;padding-top:2rem;border-top:1px solid #eee">
       <p style="color:#999;font-size:0.9rem">

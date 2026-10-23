@@ -1,0 +1,136 @@
+---
+/**
+ * RevenueLinks — 攻略页底部的变现 + 站内导流模块
+ *
+ * 两个作用：
+ * 1. 变现：放真正带佣金的链接（Airalo eSIM / NordVPN 有 aff_id）
+ * 2. 留人：相关攻略内链，减少跳出、增加 PV
+ *
+ * 合规：所有商业链接一律 rel="nofollow sponsored"，避免被 Google 判为门页。
+ */
+interface Props {
+  city?: string;
+  lang?: string;
+  tags?: string[];
+  related?: { slug: string; title: string; city: string }[];
+}
+
+const { city = '', lang = 'en', tags = [], related = [] } = Astro.props;
+const isZh = lang === 'zh';
+
+// 真正带佣金的链接（有 tracking ID）
+const ETSY = [
+  {
+    name: 'Airalo eSIM',
+    url: 'https://airalo.tp.st/4w5I5IQK',
+    label: isZh ? '落地即用流量' : 'Data the moment you land',
+    note: isZh ? '绕开网络限制，$5 起' : 'Bypasses the firewall. From $5',
+  },
+  {
+    name: 'NordVPN',
+    url: 'https://go.nordvpn.net/aff_c?offer_id=15&aff_id=152088',
+    label: isZh ? '在中国可用的 VPN' : 'VPN that works in China',
+    note: isZh ? '提前装好，落地前开通' : 'Install before you fly',
+  },
+];
+
+// 与页面标签相关的站内深度内容（无佣金，纯导流）
+const DEEP_DIVE: Record<string, { slug: string; labelEn: string; labelZh: string }[]> = {
+  internet: [
+    { slug: 'internet-vpn', labelEn: 'Full internet & VPN guide', labelZh: '上网与 VPN 完全指南' },
+    { slug: 'essential-apps', labelEn: 'Apps you need installed', labelZh: '必备 App 清单' },
+  ],
+  payment: [
+    { slug: 'payment-setup', labelEn: 'Set up Alipay & WeChat Pay', labelZh: '支付宝/微信支付设置' },
+    { slug: 'wise-revolut-china-payment', labelEn: 'Wise vs Revolut in China', labelZh: 'Wise 与 Revolut 对比' },
+  ],
+  transport: [
+    { slug: 'china-12306-train-booking-guide', labelEn: 'Book trains on 12306', labelZh: '12306 购票实操' },
+    { slug: 'china-navigation-apps-amap-baidu-maps', labelEn: 'Navigation apps that work', labelZh: '可用导航 App' },
+  ],
+  medical: [
+    { slug: 'china-hospital-international-department-booking-guide', labelEn: 'Hospital international departments', labelZh: '医院国际部预约' },
+    { slug: 'china-medical-visa-entry-guide', labelEn: 'Medical visa & entry', labelZh: '医疗签证与入境' },
+  ],
+};
+
+function catsFor(tags: string[]): string[] {
+  const t = tags.join(' ').toLowerCase();
+  const out: string[] = [];
+  if (/internet|vpn|esim|sim|wifi/.test(t)) out.push('internet');
+  if (/payment|money|bank|alipay|wechat/.test(t)) out.push('payment');
+  if (/transport|train|metro|subway|flight/.test(t)) out.push('transport');
+  if (/medical|health|hospital|dental/.test(t)) out.push('medical');
+  return out;
+}
+const cats = catsFor(tags);
+const depDives = [...new Set(cats.flatMap((c) => DEEP_DIVE[c] || []))].slice(0, 4);
+
+// 变现链接只在「出行准备类」页面上出现（上网/支付/交通/医疗），
+// 城市观光页不硬塞，避免全站铺联盟链接被 Google 当作门页降权。
+const showEssentials = cats.length > 0;
+
+const shell: Record<string, string> = {
+  marginTop: '3rem',
+  padding: '1.5rem',
+  background: '#fff',
+  border: '1px solid #eee',
+  borderRadius: '12px',
+};
+const h3: Record<string, string> = {
+  margin: '0 0 1rem',
+  fontSize: '1.05rem',
+  letterSpacing: '.02em',
+};
+const linkCard: Record<string, string> = {
+  display: 'block',
+  padding: '.85rem 1rem',
+  marginBottom: '.6rem',
+  background: '#fafafa',
+  border: '1px solid #eee',
+  borderRadius: '8px',
+  textDecoration: 'none',
+  color: '#1a1a2e',
+};
+---
+
+{(showEssentials || depDives.length > 0 || related.length > 0) && (
+  <aside style="margin-top:2rem">
+    {showEssentials && (
+      <section style={shell} data-revenue="essentials">
+        <h3 style={h3}>{isZh ? '出发前先办这三件' : 'Before you fly'}</h3>
+        {ETSY.map((x) => (
+          <a href={x.url} rel="nofollow sponsored noopener" target="_blank" style={linkCard} data-aff={x.name}>
+            <strong style="color:#e63946">{x.name}</strong>
+            <span style="color:#444;margin-left:.5rem">{x.label}</span>
+            <div style="color:#888;font-size:.85rem;margin-top:.2rem">{x.note}</div>
+          </a>
+        ))}
+      </section>
+    )}
+
+    {depDives.length > 0 && (
+      <section style={shell}>
+        <h3 style={h3}>{isZh ? '这些也值得读' : 'Also worth reading'}</h3>
+        {depDives.map((d) => (
+          <a href={`/guides/${d.slug}/`} style={linkCard}>
+            {isZh ? d.labelZh : d.labelEn} &rarr;
+          </a>
+        ))}
+      </section>
+    )}
+
+    {related.length > 0 && (
+      <section style={shell}>
+        <h3 style={h3}>{isZh ? `更多${city}攻略` : `More ${city} guides`}</h3>
+        <ul style="margin:0;padding-left:1.1rem;color:#444">
+          {related.map((r) => (
+            <li style="margin-bottom:.45rem">
+              <a href={`/guides/${r.slug}/`}>{r.title}</a>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </aside>
+)}
