@@ -1,7 +1,7 @@
 # AGENTS.md — WonderQuest (fctp)
 
 > **阅读时间：5分钟。** 这是你接手这个项目需要的全部上下文。
-> **最后更新：2026-10-21 18:30 CST。** 任何重大变更后必须更新此文件。
+> **最后更新：2026-10-23 18:55 CST。** 任何重大变更后必须更新此文件。
 
 ---
 
@@ -41,7 +41,8 @@ fctp/
 │   ├── components/
 │   │   ├── PrepSection.astro          ← 首页 Section 1: 极简准备区
 │   │   ├── FuturisticSection.astro    ← 首页 Section 2: 科幻UI城市
-│   │   └── TraditionalSection.astro   ← 首页 Section 3: 羊皮纸传统
+│   │   ├── TraditionalSection.astro   ← 首页 Section 3: 羊皮纸传统
+│   │   └── RevenueLinks.astro         ← 攻略页底部：联盟 CTA + 主题深读 + 同城内链
 │   ├── layouts/
 │   │   └── BaseLayout.astro           ← 全局布局 (含 header/footer)
 │   └── content/
@@ -199,11 +200,26 @@ cover: "/images/shanghai/bund.jpg"
 | 平台 | 状态 | 链接位置 |
 |------|------|---------|
 | Trip.com | ✅ 已嵌入 | 上海攻略文末住宿建议段 |
-| NordVPN | ✅ 已嵌入 | internet-vpn 攻略 |
+| NordVPN | ✅ 已嵌入 | internet-vpn 攻略 + `RevenueLinks` 组件（带 aff_id） |
+| Airalo eSIM | ✅ 已嵌入 | `RevenueLinks` 组件（tp.st 短链） |
 | Klook | 🔴 待注册 | 待定 |
 
 - Affiliate 链接以自然推荐形式嵌入，不做硬广告
 - 写法原则：给真正的建议，链接是可选的增值
+
+### RevenueLinks 组件 (2026-10-23)
+
+攻略页底部统一变现 + 导流模块，在 `src/pages/guides/[...slug].astro` 里一次性挂载，**不需要逐篇改 MD**。三块内容按条件渲染：
+
+| 区块 | 触发条件 | 内容 |
+|------|---------|------|
+| Before you fly（联盟 CTA） | 页面 tags 命中 `internet` / `payment` / `transport` / `medical` 之一 | Airalo eSIM + NordVPN |
+| Also worth reading（主题深读） | 同上，按命中主题查 `DEEP_DIVE` 映射 | 最多 4 条站内深度内容 |
+| More {city} guides（同城内链） | 同城还有其他攻略 | 最多 5 条同城攻略，减跳出、加内链权重 |
+
+⚠️ **合规硬规则**：所有商业链接必须 `rel="nofollow sponsored noopener"` + `target="_blank"`，避免被 Google 判为门页（doorway page）。城市观光页故意不塞联盟链接——只在刚需页（上网/支付/交通/医疗）出现。
+
+⚠️ 新增主题类别时：改 `RevenueLinks.astro` 的 `catsFor()` 正则 + `DEEP_DIVE` 映射表，不要动页面模板。
 
 ---
 
@@ -221,6 +237,20 @@ cover: "/images/shanghai/bund.jpg"
 
 - 每页含结构化数据 (JSON-LD Schema)
 - hreflang 自动检测（根据攻略语言标识）
+
+### hreflang 规则 (2026-10-22 修正)
+
+`BaseLayout.astro` 里三条 alternate 标签的当前逻辑：
+
+| 标签 | 值 |
+|------|-----|
+| `hreflang={pageHreflang}` | 指向自身 canonical（`en` 或 `zh-Hans`）|
+| 对侧语言 | 仅当 frontmatter 有 `alternateSlug` 时输出，指向译文页 |
+| `x-default` | 仅当有 `alternateSlug` 时输出；英文页指向自身，中文页指向英文版 |
+
+⚠️ **曾经的 bug**：`x-default` 全站一律指向首页 `/`，等于告诉 Google「所有页面的默认版本都是首页」，会稀释收录。已修复——**别再改回去**。
+
+⚠️ **`alternateSlug` 必须成对写**：A 篇写 `alternateSlug: B`，B 篇也要写 `alternateSlug: A`，否则单向 hreflang 无效。2026-10-22 已为 6 组同主题中英重复页补齐配对（beijing / chongqing / shanghai 各 2 组）。
 
 ### 分析统计
 
@@ -667,6 +697,8 @@ npm install
 | 2026-10-16 | Plausible 切换到 outbound-links 变体 | 追踪 eSIM/VPN affiliate 出站点击，量化变现漏斗 |
 | 2026-10-17 | 海南30天免签 + 眼科手术 (LASIK/ICL) 攻略 (2篇) | 政策时效长尾 + 高客单价医疗内容，foreignersTopicTags 同步补两条 |
 | 2026-10-20 | 12306 火车订票 + 外国人可住酒店 + 中餐点餐 + 2026 预算攻略 (4篇) | 落地后最高频刚需（行/住/食/钱），补齐 foreigners 板块的实操闭环 |
+| 2026-10-22 | 修复全站 hreflang：x-default 不再指向首页，补 6 组中英 alternateSlug 配对 | 旧逻辑让所有页面的 x-default 都指向 `/`，稀释收录；单向 alternate 无效 |
+| 2026-10-23 | 新增 `RevenueLinks` 组件：联盟 CTA + 主题深读 + 同城内链 | 变现入口从「散落正文」收拢到组件；14 个刚需页出 CTA，全部 nofollow sponsored 规避门页风险；同城内链减跳出 |
 | 2026-10-21 | 修复 foreigners 标签白名单缺失 (3篇) | 脚本对 foreigners 强制重算 tags，白名单漏项会把标签洗成单标签；补 `china-hotels-accept-foreigners-guide` / `china-food-ordering-guide` / `china-travel-budget-2026-guide` / `china-navigation-apps-amap-baidu-maps` / `wise-revolut-china-payment` / `medical-tourism` 六条 |
 
 ---
@@ -701,5 +733,5 @@ npm install
 ---
 
 _此文件由马督工维护，由定时任务自动审查。_
-_上一次审查: 2026-10-21 18:30 — 109篇, 173页, 58个城市目录/63个图片目录, 依赖版本无变化 (@astrojs/check@0.9.9 / sitemap@3.7.3 / astro@5.18.2 / typescript@5.9.3), 构建 0 错误、1.5s 完成。本次修正：foreigners 24→28篇、页面数 169→173、攻略总数 105→109、补充 4 篇新攻略决策记录、新增「白名单缺失会降级已有标签」的坑与自检命令。_
+_上一次审查: 2026-10-23 18:55 — 109篇, 173页, 58个城市目录/63个图片目录, 依赖版本无变化 (@astrojs/check@0.9.9 / sitemap@3.7.3 / astro@5.18.2 / typescript@5.9.3), 构建 0 错误、1.86s 完成。本次补充：RevenueLinks 变现组件说明（三区块触发条件 + nofollow sponsored 合规硬规则）、hreflang 三条标签的当前逻辑与 x-default 旧 bug 备忘、2 条关键决策记录。_
 _AI agent 接手这个项目时，请先完整阅读此文件 (5分钟)，然后打开看板系统 (http://localhost:3456 → 总路线图) 了解当前进度。_
