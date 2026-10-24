@@ -61,9 +61,9 @@ An eSIM gives you **uninterrupted internet access** from the moment you land, wi
 
 | Provider | Data | Price | Validity | QR Code | Link |
 |----------|------|-------|----------|---------|------|
-| **Airalo** | 1-20GB | $5-30 | 7-30 days | <img src="/images/general/airalo-qr.webp" width="80" alt="Airalo QR" /> | [🔗 Get Airalo](https://www.airalo.com/) |
-| **Saily** | 1-20GB | $5-30 | 7-30 days | <img src="/images/general/saily-qr.webp" width="80" alt="Saily QR" /> | [🔗 Get Saily](https://saily.com/) |
-| **Drimsim** | Global eSIM | Varies | Flexible | <img src="/images/general/DrimsimQR.webp" width="80" alt="Drimsim QR" /> | [🔗 Get Drimsim](https://drimsim.app/) |
+| **Airalo** | 1-20GB | $5-30 | 7-30 days | <img src="/images/general/airalo-qr.webp" width="80" alt="Airalo QR" /> | [🔗 Get Airalo](https://airalo.tp.st/luWEIvXX) |
+| **Saily** | 1-20GB | $5-30 | 7-30 days | <img src="/images/general/saily-qr.webp" width="80" alt="Saily QR" /> | [🔗 Get Saily](https://saily.tp.st/TeeVKQag) |
+| **Drimsim** | Global eSIM | Varies | Flexible | <img src="/images/general/DrimsimQR.webp" width="80" alt="Drimsim QR" /> | [🔗 Get Drimsim](https://drimsim.tp.st/h5pySm4s) |
 
 ### How to Set Up eSIM:
 
